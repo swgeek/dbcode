@@ -2,105 +2,9 @@
 import DbInterface
 import os.path
 import SHA1HashUtilities
+import DepotInterface
 
-objectStoresTable = "objectStores"
-objectStoresSchema = "depotId INTEGER PRIMARY KEY AUTOINCREMENT, description varchar(500), path varchar(500)"
-
-FileListingTable = "fileListing"
-FileListingSchema = "filehash char(40), depotId INTEGER, filesize int, FOREIGN KEY (depotId) REFERENCES objectStores(depotId), PRIMARY KEY (filehash, depotId)"
-
-LocationCountTable = "locationCount"
-LocationCountSchema = "filehash char(40) PRIMARY KEY, locations INTEGER"
-
-def createListingDb(dbFilePath):
-
-	directory, filename = os.path.split(dbFilePath)
-	if not os.path.isdir(directory):
-		raise Exception("dir %s does not exist" % directory)
-
-	if os.path.isfile(dbFilePath):
-		raise Exception("file %s already exists" % dbFilePath)
-
-	DbInterface.DbInterface.CreateEmptyDbFile(dbFilePath)
-	newDb = DbInterface.DbInterface(dbFilePath)
-
-	newDb.OpenConnection()
-
-	createTableCommand = "create table %s (%s);" % (objectStoresTable, objectStoresSchema)
-	newDb.ExecuteNonQuerySql(createTableCommand)
-
-	createTableCommand = "create table %s (%s);" % (FileListingTable, FileListingSchema)
-	newDb.ExecuteNonQuerySql(createTableCommand)
-
-	newDb.CloseConnection()
-
-
-def createLocationCountTable(db):
-	dropTableCommand = "drop table %s" % LocationCountTable
-	db.ExecuteNonQuerySql(dropTableCommand)
-
-	createTableCommand = "create table %s (%s);" % (LocationCountTable, LocationCountSchema)
-	db.ExecuteNonQuerySql(createTableCommand)
-
-
-def initializeLocationCounts(db):
-	command = "insert into %s (filehash, locations) select filehash, count(filehash) from %s group by filehash;" % (LocationCountTable, FileListingTable)
-	db.ExecuteNonQuerySql(command)
-
-
-def getCountOfLocationCounts(db):
-	command = "select locations, count(locations) from %s group by locations;" % LocationCountTable
-	results = db.ExecuteSqlQueryReturningMultipleRows(command)
-	for row in results:
-		print row
-
-def incrementLocationCountWithinTransaction(db, filehash):
-	command = "select locations from %s where filehash = \"%s\"" % (LocationCountTable, filehash)
-	oldCount = db.ExecuteSqlQueryReturningSingleInt(command)
-	newCount = oldCount + 1
-	command = "update %s set locations = %d where filehash = \"%s\";" % (LocationCountTable, newCount, filehash)
-	db.ExecuteNonQuerySqlWithinTransaction(command)
-
-
-def newDepotEntry(db, description, path):
-	db.OpenConnection()
-
-	command = "insert into %s (description, path) values (\"%s\", \"%s\");" % (objectStoresTable, description, path)
-	db.ExecuteNonQuerySql(command)
-
-	command = "select depotId from %s where description = \"%s\" and path = \"%s\" " % (objectStoresTable, description, path)
-	depotId = db.ExecuteSqlQueryReturningSingleInt(command)
-
-	db.CloseConnection()
-
-	return depotId
-
-
-def newFileListingEntry(db, filehash, depotId, filesize):
-	db.OpenConnection()
-	command = "insert into %s (filehash, depotId, filesize) values (\"%s\", \"%s\", %d);" % (FileListingTable, filehash, depotId, filesize)
-	db.ExecuteNonQuerySql(command)
-	db.CloseConnection()
-
-
-def newFileListingEntryAsPartOfTransaction(db, filehash, depotId, filesize):
-	command = "insert into %s (filehash, depotId, filesize) values (\"%s\", \"%s\", %d);" % (FileListingTable, filehash, depotId, filesize)
-	db.ExecuteNonQuerySqlWithinTransaction(command)
-
-
-def getCountForEachDepot(db):
-	command = "select depotId from %s" % objectStoresTable
-	results = db.ExecuteSqlQueryReturningMultipleRows(command)
-	print "depotList"
-	for row in results:
-		depotId = row[0]
-		command = "select count(filehash) from %s where depotId = %d" % (FileListingTable, depotId)
-		count = db.ExecuteSqlQueryReturningSingleInt(command)
-		print "%d: %d" % (depotId, count)
-
-
-
-
+# BIG NOTE: moved stuff to DepotInterface, need to update code below. Will do that next time I use it.
 
 databaseFilePathName = "C:\\depotListing\\listingDb.sqlite"
 
@@ -146,13 +50,12 @@ db = DbInterface.DbInterface(databaseFilePathName)
 #depotId =  newDepotEntry(db, "new store backup, 750G drive", depotPath)
 
 #depot 11 in db
-
-
 depotPath = "F:\\moreBackup"
-depotId =  newDepotEntry(db, "new store backup, 750G drive", depotPath)
+#depotId =  newDepotEntry(db, "new store backup, 750G drive", depotPath)
+
+depotId = 11
 print "depotid is %d" % depotId
 
-exit(1)
 
 db.startTransaction()
 

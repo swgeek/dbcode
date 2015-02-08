@@ -1,14 +1,11 @@
 # ad hoc stuff for now.
 import DbInterface
+import DepotInterface
 import os
 import ctypes
+import shutil
 
 
-
-# copied from depotListing. Obviously TODO: put in common file.
-objectStoresTable = "objectStores"
-FileListingTable = "fileListing"
-LocationCountTable = "locationCount"
 
 # get number of files without backup copy for each depot
 def getCountOfNonBackedUpForEachDepot(db):
@@ -31,7 +28,7 @@ def getCountOfNonBackedUpForEachDepot(db):
 def windowsSpecificGetFreeSpace(drive):
 	freeSpace = ctypes.c_ulonglong(0)
 	ctypes.windll.kernel32.GetDiskFreeSpaceExW(ctypes.c_wchar_p(drive), None, None, ctypes.pointer(freeSpace))
-	return freeSpace
+	return freeSpace.value
 
 
 def backupSingleLocationFilesInDepot(db, depotId, backupDepotId):
@@ -46,9 +43,6 @@ def backupSingleLocationFilesInDepot(db, depotId, backupDepotId):
 	drive, path = os.path.splitdrive(backupDepotPath)
 	print "drive is %s" % drive
 
-	print windowsSpecificGetFreeSpace(drive)
-	exit(1)
-
 	command = "select filehash, filesize from %s join %s using (filehash) where locations = 1 and depotId = %d" % (FileListingTable, LocationCountTable, depotId)
 	count = 0
 
@@ -57,29 +51,51 @@ def backupSingleLocationFilesInDepot(db, depotId, backupDepotId):
 	while row:
 		filehash = row[0]
 		filesize = row[1]
-		filepath = os.path.join(depotPath, filehash)
-		newFilePath = os.path.join(backupDepotPath, filehash)
 
-		# check if have space first!
+		# first check have space
+		remainingSpace = windowsSpecificGetFreeSpace(drive)
+		tenGig = 10000000000
+		if filesize > (remainingSpace - tenGig):
+			print "cannot copy file, nearly out of space"
+			break
+
+		subdir = filehash[0:2]
+		filepath = os.path.join(depotPath, subdir, filehash)
+		newFilePath = os.path.join(backupDepotPath, subdir, filehash)
+
 		print "copying %s to %s" % (filepath, newFilePath)
-		print "size = %d" % filesize
+
+		parentDir = os.path.dirname(newFilePath)
+		if not os.path.isdir(parentDir):
+			os.mkdir(parentDir)
+
+		shutil.copyfile(filepath, newFilePath)
+
 		print count
 		count += 1
 		row = reader.next()
 
+	print "copied %d files" % count
 
 
 
-databaseFilePathName = "C:\\depotListing\\listingDb.sqlite"
-db = DbInterface.DbInterface(databaseFilePathName)
 
-backupSingleLocationFilesInDepot(db, 1, 11)
 
-'''
-	for row in results:
-		depotId = row[0]
-		command = "select count(filehash) from %s where depotId = %d" % (FileListingTable, depotId)
-		count = db.ExecuteSqlQueryReturningSingleInt(command)
-		print "%d: %d" % (depotId, count)
-'''
+
+
+#backupSingleLocationFilesInDepot(db, 1, 11)
+
+oldDatabaseFilePathName = "C:\\depot\\db.sqlite"
+
+
+
+
+
+
+
+
+
+#DepotInterface.createFilenameCountTable(db)
+#DepotInterface.initializeFilenameCounts(db)
+#DepotInterface.getCountOfFilenameCounts(db)
 
