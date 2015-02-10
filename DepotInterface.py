@@ -10,6 +10,7 @@ import os.path
 import SHA1HashUtilities
 import DbInterface
 import string
+import time
 
 FilesTable = "files"
 FilesSchema = "filehash char(40) PRIMARY KEY, filesize int, status varchar(60)"
@@ -36,6 +37,8 @@ DirSubDirSchema = "dirPathHash char(40), subDirPathHash char(40), PRIMARY KEY (d
 OriginalDirectoryForFileTable = "originalDirectoryForFile"
 OriginalDirectoryForFileSchema = "filehash char(40), filename varchar(500), dirPathHash char(40), PRIMARY KEY (filehash, filename, dirPathHash)"
 
+NotFoundFilesTable = "notFoundV2"
+NotFoundFilesSchema = "filehash char(40) PRIMARY KEY, oldStatus varchar(60), filesize int, filenames varchar(500), directories varchar(500)"
 
 # from old depot/database
 OldStatusTable = "oldStatus"
@@ -94,6 +97,10 @@ def createTable(db, tableName, tableSchema):
 	createTableCommand = "create table %s (%s);" % (tableName, tableSchema)
 	db.ExecuteNonQuerySql(createTableCommand)
 
+def dropTable(db, tableName):
+	createTableCommand = "drop table %s;" % tableName
+	db.ExecuteNonQuerySql(createTableCommand)
+
 
 def createLocationCountTable(db):
 	createTable(db, LocationCountTable, LocationCountSchema)
@@ -139,6 +146,9 @@ def createDirSubDirTable(db):
 def createLargestFilesTable(db):
 	createTable(db, LargestFilesTable, LargestFilesSchema)
 
+
+def createNotFoundFilesTable(db):
+	createTable(db, NotFoundFilesTable, NotFoundFilesSchema)
 
 
 # new table entries
@@ -243,6 +253,65 @@ def addLargestFileEntry(db, filehash, filesize, status, filenames, directories, 
 
 	db.ExecuteNonQuerySql(command)
 
+def removeFromLargestFilesCache(db, filehash):
+	command = "delete from %s where filehash = '%s';" % (LargestFilesTable, filehash)
+	db.ExecuteNonQuerySql(command)
+
+def printFileInfo(db, filehash):
+	command = "select * from %s where filehash = '%s';" % (FilesTable, filehash)
+	results = db.ExecuteSqlQueryReturningMultipleRows(command)
+	print results
+
+	command = "select * from %s where filehash = '%s';" % (FileListingTable, filehash)
+	results = db.ExecuteSqlQueryReturningMultipleRows(command)
+	print results
+
+	command = "select * from %s where filehash = '%s';" % (OriginalDirectoryForFileTable, filehash)
+	results = db.ExecuteSqlQueryReturningMultipleRows(command)
+	print results
+
+	command = "select * from %s where filehash = '%s';" % (LocationCountTable, filehash)
+	results = db.ExecuteSqlQueryReturningMultipleRows(command)
+	print results
+
+	command = "select * from %s where filehash = '%s';" % (FilenameCountTable, filehash)
+	results = db.ExecuteSqlQueryReturningMultipleRows(command)
+	print results
+
+
+# handle deleted files etc...
+def handleNotFoundFileEntry(db, filehash, filesize, filenames, directories):
+	oldStatus = getOldStatus(db, filehash)
+	printFileInfo(db, filehash)
+	commandList = []
+
+	# put all this in single commit
+	command = "insert into %s (filehash, oldStatus, filesize, filenames, directories) values (\"%s\", \"%s\", %d, \"%s\", \"%s\");" % \
+				(NotFoundFilesTable, filehash, oldStatus, filesize, filenames, directories)
+	commandList.append(command)
+
+	command = "delete from %s where filehash = '%s';" % (FilesTable, filehash)
+	commandList.append(command)
+
+	command = "delete from %s where filehash = '%s';" % (FileListingTable, filehash)
+	commandList.append(command)
+
+	command = "delete from %s where filehash = '%s';" % (OriginalDirectoryForFileTable, filehash)
+	commandList.append(command)
+
+	command = "delete from %s where filehash = '%s';" % (LocationCountTable, filehash)
+	commandList.append(command)
+
+	command = "delete from %s where filehash = '%s';" % (FilenameCountTable, filehash)
+	commandList.append(command)
+
+	print commandList
+
+	db.ExecuteMultipleSqlStatementsWithRollback(commandList)
+ 
+ 	time.sleep(10)
+	printFileInfo(db, filehash)
+
 # initialize derived tables
 
 def initializeLocationCounts(db):
@@ -325,6 +394,11 @@ def getFilenames(db, filehash):
 	return filenames
 
 
+def getDirectoryPath(db, dirPathHash):
+	command = "select dirPath from %s where dirPathHash = '%s';" % (OriginalDirectoriesTable, dirPathHash)
+	return db.ExecuteSqlQueryForSingleString(command)
+
+
 def getDirectories(db, filehash):
 	command = "select dirPathHash from %s where filehash = '%s'" % (OriginalDirectoryForFileTable, filehash)
 	results = db.ExecuteSqlQueryReturningMultipleRows(command)
@@ -343,6 +417,15 @@ def getDepotIds(db, filehash):
 	return depotIds
 
 
+def getDepotPath(db, depotId):
+	command = "select path from %s where depotId = %d;" % (objectStoresTable, depotId)
+	result = db.ExecuteSqlQueryForSingleString(command)
+	return result
+
+def getOldStatus(db, filehash):
+	command = "select oldStatus from %s where filehash = '%s';" % (OldStatusTable, filehash)
+	result = db.ExecuteSqlQueryForSingleString(command)
+	return result
 
 # move stuff below here around to organize
 def getReaderForFilesByDescendingFilesize(db):
@@ -355,6 +438,7 @@ def getReaderForFilesWithFilenameStartingWithDotUnderscore(db):
 	return db.ExecuteSqlQueryReturningReader(command)
 
 
+# temporary, will replace with better query, e.g. top 10 todo 
 def getReaderForLargestFilesFromCache(db):
 	command = "select * from %s order by filesize desc" % LargestFilesTable
 	return db.ExecuteSqlQueryReturningReader(command)
