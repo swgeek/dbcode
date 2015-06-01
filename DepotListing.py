@@ -50,11 +50,16 @@ db = DbInterface.DbInterface(databaseFilePathName)
 #depotId =  newDepotEntry(db, "new store backup, 750G drive", depotPath)
 
 #depot 11 in db
-depotPath = "F:\\moreBackup"
+#depotPath = "F:\\moreBackup"
 #depotId =  newDepotEntry(db, "new store backup, 750G drive", depotPath)
 
-depotId = 11
+#depot 12 in db
+depotPath = "F:\\backup1d"
+#depotId =  DepotInterface.newDepotEntry(db, "new store backup, 1tb drive", depotPath)
+
+depotId = 12
 print "depotid is %d" % depotId
+
 
 
 db.startTransaction()
@@ -71,15 +76,15 @@ for dirName in os.listdir(depotPath):
 		# add into database
 
 		filesize = os.path.getsize(os.path.join(dirPath, fileName))
-		newFileListingEntryAsPartOfTransaction(db, fileName, depotId, filesize)
+		DepotInterface.newFileListingEntryAsPartOfTransaction(db, fileName, depotId, filesize)
 		#incrementLocationCountWithinTransaction(db, fileName)
 
 db.EndTransaction()
 
-getCountForEachDepot(db)
+DepotInterface.getCountForEachDepot(db)
 
-getCountOfLocationCounts(db)
+#getCountOfLocationCounts(db)
 
-createLocationCountTable(db)
-initializeLocationCounts(db)
-getCountOfLocationCounts(db)
+#createLocationCountTable(db)
+#initializeLocationCounts(db)
+#getCountOfLocationCounts(db)

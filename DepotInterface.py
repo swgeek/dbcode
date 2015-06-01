@@ -11,63 +11,11 @@ import SHA1HashUtilities
 import DbInterface
 import string
 import time
-
-FilesTable = "files"
-FilesSchema = "filehash char(40) PRIMARY KEY, filesize int, status varchar(60)"
-
-objectStoresTable = "objectStores"
-objectStoresSchema = "depotId INTEGER PRIMARY KEY AUTOINCREMENT, description varchar(500), path varchar(500)"
-
-FileListingTable = "fileListing"
-FileListingSchema = "filehash char(40), depotId INTEGER, filesize int, FOREIGN KEY (depotId) REFERENCES objectStores(depotId), PRIMARY KEY (filehash, depotId)"
-
-FilenamesTable = "filenames"
-FilenamesSchema = "filehash char(40), filename varchar(500), PRIMARY KEY (filehash, filename)"
-
-OriginalDirectoriesTable = "originalDirectories"
-OriginalDirectoriesSchema = "dirPathHash char(40) PRIMARY KEY, dirPath varchar(500)"
-
-DirSubDirTable = "subDirsTable"
-DirSubDirSchema = "dirPathHash char(40), subDirPathHash char(40), PRIMARY KEY (dirPathHash, subDirPathHash)"
-
-# some redundancy between this and FileNamesTable. Probably best to make FilenamesTable a derived table?
-# or could have a hash for either filename or fullpath (including name), but still overlap.
-# or make part of this table a foreign key so the link is obvious?
-# my preference is to make FileNamesTable a derived table
-OriginalDirectoryForFileTable = "originalDirectoryForFile"
-OriginalDirectoryForFileSchema = "filehash char(40), filename varchar(500), dirPathHash char(40), PRIMARY KEY (filehash, filename, dirPathHash)"
-
-NotFoundFilesTable = "notFoundV2"
-NotFoundFilesSchema = "filehash char(40) PRIMARY KEY, oldStatus varchar(60), filesize int, filenames varchar(500), directories varchar(500)"
-
-# from old depot/database
-OldStatusTable = "oldStatus"
-OldStatusSchema = "filehash char(40) PRIMARY KEY, oldStatus varchar(60)"
-
-OldFileLinkTable = "oldFileLink"
-OldFileLinkSchema = "filehash char(40) PRIMARY KEY, linkFileHash char(40)"
+import shutil
+from DbSchema import *
 
 
-#putting this in old section as may prefer to use dirhash, not actual char path
-OldOriginalRootDirectoryTable = "OldOriginalRootDirectory"
-OldOriginalRootDirectorySchema = "rootdir varchar(500) PRIMARY KEY"
 
-
-# derivedTables, for convenience, TODO: change names so obvious derived
-LocationCountTable = "locationCount"
-LocationCountSchema = "filehash char(40) PRIMARY KEY, locations INTEGER"
-
-FilenameCountTable = "filenameCount"
-FilenameCountSchema = "filehash char(40) PRIMARY KEY, names INTEGER"
-
-
-# temp working tables, e.g. for caching largest files so do not have to keep doing expensive queries
-# for now, say 1000 entries
-LargestFilesTable = "largestFiles"
-LargestFilesSchema = "filehash char(40) PRIMARY KEY, filesize INTEGER, status varchar(60), filenames varchar(500), directories varchar(500), depotIds varchar(50) "
-
-
-# database and table creation stuff
 
 def createListingDb(dbFilePath):
 
@@ -151,6 +99,16 @@ def createNotFoundFilesTable(db):
 	createTable(db, NotFoundFilesTable, NotFoundFilesSchema)
 
 
+def createToDeleteTable(db):
+	createTable(db, ToDeleteTable, ToDeleteSchema)
+
+def createToKeepForNowTable(db):
+	createTable(db, ToKeepForNowTable, ToKeepForNowSchema)
+
+
+def createCurrentBackupTable(db):
+	createTable(db, CurrentBackupTable, CurrentBackupSchema)
+
 # new table entries
 
 # TODO: there is duplicated code with transaction and non transaction versions. Figure out best way to abstract
@@ -200,6 +158,12 @@ def newFileListingEntryAsPartOfTransaction(db, filehash, depotId, filesize):
 	db.ExecuteNonQuerySqlWithinTransaction(command)
 
 
+def updateFileListingEntryAsPartOfTransaction(db, filehash, oldDepotId, newDepotId):
+	command = "update %s set depotId = %d where filehash =  \"%s\" and depotId = %d ;" % (FileListingTable, newDepotId, filehash, oldDepotId)
+	db.ExecuteNonQuerySqlWithinTransaction(command)
+
+
+
 def incrementLocationCountWithinTransaction(db, filehash):
 	command = "select locations from %s where filehash = \"%s\"" % (LocationCountTable, filehash)
 	oldCount = db.ExecuteSqlQueryReturningSingleInt(command)
@@ -227,6 +191,7 @@ def addOldFileLinkAsPartOfTransaction(db, filehash, filelinkhash):
 	command = "insert into %s (filehash, linkFileHash) values (\"%s\", \"%s\");" % (OldFileLinkTable, filehash, filelinkhash )
 	db.ExecuteNonQuerySqlWithinTransaction(command)
 
+
 def addDirPathAsPartOfTransaction(db, dirPathHash, dirpath):
 	command = "insert into %s (dirPathHash, dirPath) values (\"%s\", \"%s\");" % (OriginalDirectoriesTable, dirPathHash, dirpath )
 	db.ExecuteNonQuerySqlWithinTransaction(command)
@@ -253,9 +218,21 @@ def addLargestFileEntry(db, filehash, filesize, status, filenames, directories, 
 
 	db.ExecuteNonQuerySql(command)
 
+
+def updateDepotPath(db, depotId, newpath):
+	command = "update %s set path = '%s' where depotId = %d;" % (objectStoresTable, newpath, depotId)
+	result = db.ExecuteSqlQueryForSingleString(command)
+	return result
+
+
+def addToKeepForNowEntry(db, filehash):
+	command = "insert into %s (filehash) values (\"%s\");" % (ToKeepForNowTable, filehash)
+	db.ExecuteNonQuerySql(command)
+
 def removeFromLargestFilesCache(db, filehash):
 	command = "delete from %s where filehash = '%s';" % (LargestFilesTable, filehash)
 	db.ExecuteNonQuerySql(command)
+
 
 def printFileInfo(db, filehash):
 	command = "select * from %s where filehash = '%s';" % (FilesTable, filehash)
@@ -280,27 +257,43 @@ def printFileInfo(db, filehash):
 
 
 # handle deleted files etc...
-def handleNotFoundFileEntry(db, filehash, filesize, filenames, directories):
-	oldStatus = getOldStatus(db, filehash)
-	printFileInfo(db, filehash)
-	commandList = []
 
-	# put all this in single commit
+def addToDeleteEntry(db, filehash, filesize, filenames, directories):
+	oldStatus = getOldStatus(db, filehash)
+	command = "insert into %s (filehash, oldStatus, filesize, filenames, directories) values (\"%s\", \"%s\", %d, \"%s\", \"%s\");" % \
+				(ToDeleteTable, filehash, oldStatus, filesize, filenames, directories)
+	db.ExecuteNonQuerySql(command)
+
+
+def addNotFoundEntry(db, filehash, filesize, filenames, directories):
+	oldStatus = getOldStatus(db, filehash)
 	command = "insert into %s (filehash, oldStatus, filesize, filenames, directories) values (\"%s\", \"%s\", %d, \"%s\", \"%s\");" % \
 				(NotFoundFilesTable, filehash, oldStatus, filesize, filenames, directories)
-	commandList.append(command)
+	db.ExecuteNonQuerySql(command)
+
+
+def AddFileBackedUpInCurrentPass(db, filehash):
+	command = "insert into %s (filehash) values(\"%s\");" % (CurrentBackupTable, filehash)
+	db.ExecuteNonQuerySql(command)
+
+
+def deleteFileInfoFromTodoTables(db, filehash):
+	print "before:"
+	printFileInfo(db, filehash)
+
+	commandList = []
 
 	command = "delete from %s where filehash = '%s';" % (FilesTable, filehash)
 	commandList.append(command)
 
-	command = "delete from %s where filehash = '%s';" % (FileListingTable, filehash)
-	commandList.append(command)
+#	command = "delete from %s where filehash = '%s';" % (FileListingTable, filehash)
+#	commandList.append(command)
 
 	command = "delete from %s where filehash = '%s';" % (OriginalDirectoryForFileTable, filehash)
 	commandList.append(command)
 
-	command = "delete from %s where filehash = '%s';" % (LocationCountTable, filehash)
-	commandList.append(command)
+#	command = "delete from %s where filehash = '%s';" % (LocationCountTable, filehash)
+#	commandList.append(command)
 
 	command = "delete from %s where filehash = '%s';" % (FilenameCountTable, filehash)
 	commandList.append(command)
@@ -310,11 +303,15 @@ def handleNotFoundFileEntry(db, filehash, filesize, filenames, directories):
 	db.ExecuteMultipleSqlStatementsWithRollback(commandList)
  
  	time.sleep(10)
+
+ 	print "after:"
 	printFileInfo(db, filehash)
 
 # initialize derived tables
 
-def initializeLocationCounts(db):
+def ReInitializeLocationCounts(db):
+	dropTable(db, LocationCountTable)
+	createLocationCountTable(db)
 	command = "insert into %s (filehash, locations) select filehash, count(filehash) from %s group by filehash;" % (LocationCountTable, FileListingTable)
 	db.ExecuteNonQuerySql(command)
 
@@ -407,6 +404,19 @@ def getDirectories(db, filehash):
 		directories.append(row[0])
 	return directories
 
+def getFilenamesAndDirectories(db, filehash):
+	command = "select filename, dirPathHash from %s where filehash = '%s'" % (OriginalDirectoryForFileTable, filehash)
+	dirRows = db.ExecuteSqlQueryReturningMultipleRows(command)
+	results = []
+	for row in dirRows:
+		results.append((row[0], row[1]))
+	return results
+
+def getFilesInDirectory(db, dirpathhash):
+	command = "select * from %s where dirPathHash = '%s'" % (OriginalDirectoryForFileTable, dirpathhash)
+	results = db.ExecuteSqlQueryReturningMultipleRows(command)
+	return results
+
 
 def getDepotIds(db, filehash):
 	command = "select depotId from %s where filehash = '%s'" % (FileListingTable, filehash)
@@ -427,6 +437,21 @@ def getOldStatus(db, filehash):
 	result = db.ExecuteSqlQueryForSingleString(command)
 	return result
 
+def getToDeleteFileInfo(db, filehash):
+	command = "select * from %s where filehash = '%s';" % (ToDeleteTable, filehash)
+	result = db.ExecuteSqlQueryReturningMultipleRows(command)
+	if len(result) == 0:
+		return None
+	return result[0]
+
+def getNotFoundFileInfo(db, filehash):
+	command = "select * from %s where filehash = '%s';" % (NotFoundFilesTable, filehash)
+	result = db.ExecuteSqlQueryReturningMultipleRows(command)
+	if len(result) == 0:
+		return None
+	return result[0]
+
+
 # move stuff below here around to organize
 def getReaderForFilesByDescendingFilesize(db):
 	command = "select * from %s order by filesize desc" % FilesTable
@@ -443,6 +468,13 @@ def getReaderForLargestFilesFromCache(db):
 	command = "select * from %s order by filesize desc" % LargestFilesTable
 	return db.ExecuteSqlQueryReturningReader(command)
 	
+
+def checkIfFileBackedUpInCurrentPass(db, filehash):
+	command = "select * from %s where filehash = '%s'" % (CurrentBackupTable, filehash)
+	result = db.ExecuteSqlQueryReturningMultipleRows(command)
+	return len(result) == 1
+
+
 # create "cache tables, i.e. temp tables for working"
 
 def cacheLargestFilesInfo(db):
@@ -472,3 +504,50 @@ def cacheLargestFilesInfo(db):
 		filehash, filesize, status, filenamesString, directoriesString, depotIdsString = entry
 		addLargestFileEntry(db, filehash, filesize, status, filenamesString, directoriesString, depotIdsString)
 
+
+def getAllFileInfo(db, filehash):
+
+	command = "select * from %s where filehash = '%s';" % (FilesTable, filehash)
+	results = db.ExecuteSqlQueryReturningMultipleRows(command)
+	print results
+	if len(results) == 0:
+		print "***** NONE ***** "
+		filesize = None
+		status = None
+	else:
+		tt, filesize, status = results[0]
+
+	filenames = getFilenames(db, filehash)
+	# use ; as separator in case filename contains spaces
+	filenamesString = ';'.join(filenames)
+
+	directories = getDirectories(db, filehash)
+	directoriesString = string.join(directories)
+
+	depotIds = getDepotIds(db, filehash)
+	depotIdsString = string.join(map(str, depotIds))
+
+	return filehash, filesize, status, filenamesString, directoriesString, depotIdsString
+
+########## extract etc. this is not db interface so should be moved elsewhere
+def extractFile(db, filehash, destinationDir, filename):
+	extracted = False
+	depotIds = getDepotIds(db, filehash)
+	for depot in depotIds:
+		depotPath = getDepotPath(db, depot)
+		if not os.path.isdir(depotPath):
+			continue
+		subdir = filehash[0:2]
+		filepath = os.path.join(depotPath, subdir, filehash)
+		newFilePath = os.path.join(destinationDir, filename)
+		print "copying %s to %s" % (filepath, newFilePath)
+		shutil.copyfile(filepath, newFilePath)
+		extracted = True
+		break
+
+	return extracted
+
+def getDepotInfo(db):
+	command = "select * from %s;" % objectStoresTable
+	result = db.ExecuteSqlQueryReturningMultipleRows(command)
+	return result

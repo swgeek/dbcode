@@ -5,8 +5,9 @@
 # interface to database. Abstract out so can swap databases without changing code elsewhere
 
 import os
-import DbInterface
+import CoreDb
 import SHA1HashUtilities
+import DbSchema
 
 FilesTable = "FilesV2"
 OriginalDirectoriesForFileTable = "OriginalDirectoriesForFileV5"
@@ -23,7 +24,7 @@ class DbHelper:
 
     def __init__(self, databaseFilePathName):
         #TODO: have to define DB interface. Maybe do that first, before this...
-        self.db = DbInterface.DbInterface(databaseFilePathName)
+        self.db = CoreDb.CoreDb(databaseFilePathName)
 
         # TODO: check which of these we are using
         self.NumOfNewFiles = 0
@@ -167,7 +168,7 @@ class DbHelper:
 
 
     def FileAlreadyInDatabaseUnknownSize(self, hashValue):
-        commandString = "select * from %s where filehash = \"%s\"" % (FilesTable, hashValue)
+        commandString = "select * from %s where filehash = \"%s\"" % (DbSchema.FilesTable, hashValue)
         results = self.db.ExecuteSqlQueryReturningMultipleRows(commandString)
 
         if len(results) == 0:
@@ -347,12 +348,12 @@ class DbHelper:
 
 
     def setFileStatus(self, fileHash, newStatus):
-        command = "update %s set status = \"%s\" where filehash = \"%s\";" % (FilesTable, newStatus, fileHash)
+        command = "update %s set status = \"%s\" where filehash = \"%s\";" % (DbSchema.FilesTable, newStatus, fileHash)
         self.db.ExecuteNonQuerySql(command)
 
 
     def getFileStatus(self, fileHash):
-        command = "select status from %s where filehash = \"%s\";" % (FilesTable, fileHash)
+        command = "select status from %s where filehash = \"%s\";" % (DbSchema.FilesTable, fileHash)
         return self.db.ExecuteSqlQueryForSingleString(command)
 
 
@@ -672,8 +673,8 @@ class DbHelper:
 
 
 
-    def GetFileLocations(self, filehash):
-        command =  "select objectStore1, objectStore2, objectStore3 from fileLocations where filehash = \"%s\"" % filehash
+    def getFileLocations(self, filehash):
+        command =  "select depotId from %s where filehash = \"%s\"" %( DbSchema.FileListingTable, filehash)
         result = self.db.GetDatasetForSqlQuery(command)
         if len(result) == 0:
             return None

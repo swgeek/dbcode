@@ -1,10 +1,16 @@
-# translation of legacy code from c# to python. Will rearchitect at some point
 import os.path
 import sqlite3
 import sys
 
-class DbInterface:
+# core database connection and commands
+# really want to switch to postgres, so temporary
+#
+class CoreDb:
     def __init__(self, dbFilePath):
+
+        if not os.path.isfile(dbFilePath):
+            print "file %s does not exist! Exiting" % dbFilePath
+            sys.exit(1)
 
         self.dbFilePath = dbFilePath
 
@@ -19,6 +25,15 @@ class DbInterface:
         self.connection = None
 
 
+    def ExecuteSqlQueryReturningMultipleRows(self, sqlStatement):
+        connection = sqlite3.connect(self.dbFilePath)
+        with connection: # if do not use with, then have to do "commit" at end
+            cursor = connection.cursor()
+            cursor.execute(sqlStatement)
+            rows = cursor.fetchall()
+        return rows
+
+'''
 
     @staticmethod
     def CreateEmptyDbFile(dbFilePath):
@@ -31,14 +46,6 @@ class DbInterface:
         # TODO: add exception handling code
         dbConnection = sqlite3.connect(dbFilePath)
         dbConnection.close()
-
-
-    # creating empty code to facilitate port, remove
-    def OpenConnection(self):
-        pass
-
-    def CloseConnection(self):
-        pass
 
 
     def ExecuteNonQuerySql(self, sqlStatement):
@@ -65,7 +72,6 @@ class DbInterface:
                 connection.close()
 
 
-
     def ExecuteSqlQueryReturningSingleRow(self, sqlStatement):
         connection = sqlite3.connect(self.dbFilePath)
         with connection: # if do not use with, then have to do "commit" at end
@@ -82,7 +88,6 @@ class DbInterface:
             cursor.execute(sqlStatement)
             rows = cursor.fetchall()
         return rows
-
 
 
     # bad name, I know. Maybe use return dataset or iter... Just get it working for now
@@ -157,4 +162,4 @@ class DbInterface:
     def EndTransaction(self):
         self.connection.commit()
         self.connection = None
-
+'''
