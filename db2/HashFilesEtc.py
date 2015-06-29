@@ -4,15 +4,7 @@
 import Sha1HashUtilities
 import miscQueries
 import os
-
-def checkIfFileInDatabase(db, filepath):
-	# hash file
-	filehash = Sha1HashUtilities.HashFile(filepath)
-
-	print filepath
-	print filehash
-	# check if file in database
-	return miscQueries.checkIfFilehashInDatabase(db, filehash.upper())
+import CopyFilesEtc
 
 
 # TODO: subdirectories too!
@@ -22,29 +14,43 @@ def checkIfFilesInDirAreInDatabase(db, dirpath):
 		print checkIfFileInDatabase(db, filepath)
 
 
-def checkIfAllFilesInDirAreInDatabase(db, dirpath):
-	for dirName, subDirList, fileList in os.walk(dirpath):
-		print dirName
-		print subDirList
-		print fileList
-		print ""
 
+#
+# will eventually split stuff into threads (e.g. check if in db in one thread, 
+# move into db in second thread, update db in third thread). May need to switch
+# to postgres first.
+#
+def getListOfFilesNotInDb(db, rootDirPath, logger):
+	filesToAdd = []
 
-def addFilesToDepot(db, rootDirPath):
 	for dirpath, subDirList, fileList in os.walk(rootDirPath):
-		print dirpath
+		logger.log("dir: %s" % dirpath)
 		# check if dirName is in depot, add if not
 		#print subDirList
-		print fileList
+		#logger.log(fileList)
 		for filename in fileList:
 			filepath = os.path.join(dirpath, filename)
-			print "\t%s" % filepath
-			if checkIfFileInDatabase(db, filepath):
-				print "already in database"
+			logger.log("\tfile: %s" % filepath)
+			filehash = Sha1HashUtilities.HashFile(filepath)
+			logger.log("\tfilehash: %s" % filehash)
+			if miscQueries.checkIfFilehashInDatabase(db, filehash.upper()):
+				logger.log("already in database")
 			else:
-				print "not in database, need to add"
-				# add file to depot
-				
-			# check if filepath in database, add if not
+				logger.log("not in database, need to add")
+				filesToAdd.append((filename, dirpath, filehash))
 
-		print ""
+	return filesToAdd
+				
+
+
+def getListOfFilesInSubdir(rootDirPath, logger):
+	filesToAdd = []
+
+	for dirpath, subDirList, fileList in os.walk(rootDirPath):
+		logger.log(dirpath)
+		for filename in fileList:
+			filepath = os.path.join(dirpath, filename)
+			filehash = Sha1HashUtilities.HashFile(filepath)
+			filesToAdd.append((filename, dirpath, filehash))
+
+	return filesToAdd

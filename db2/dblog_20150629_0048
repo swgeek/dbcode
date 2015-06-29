@@ -1,0 +1,1660 @@
+[(1, u'main store, 4tb drive', u'G:\\objectstore1'), (2, u'newest store, 750gb drive', u'E:\\objectstore2')]
+got depotId 2
+H:\alexBucket
+H:\alexBucket\alex
+H:\alexBucket\alex\export
+H:\alexBucket\alex\export\4x6
+H:\alexBucket\alex\export\5x7
+H:\alexBucket\alex\export\5x7v2
+H:\alexBucket\alex\export\fullsize_s
+H:\alexBucket\alex\export\tryColorCorrectPsd
+H:\alexBucket\alex\export\wedding
+H:\alexBucket\alex\export\wedding\content
+H:\alexBucket\alex\export\wedding\content\images
+H:\alexBucket\alex\export\wedding\content\images\large
+H:\alexBucket\alex\export\wedding\content\images\thumb
+H:\alexBucket\alex\export\wedding\resources
+H:\alexBucket\alex\export\wedding\resources\css
+H:\alexBucket\alex\export\wedding\resources\js
+H:\alexBucket\alex\export\wedding\resources\misc
+H:\alexBucket\alex\lcat
+H:\alexBucket\alex\rawAndPsd
+H:\alexBucket\alex\rawAndPsd\brcPsdToPrint
+H:\alexBucket\alex\rawAndPsd\bwOriginals
+H:\alexBucket\alex\rawAndPsd\finalRaw
+H:\alexBucket\alex\rawAndPsd\PsdToPrint
+[('wedding_01.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '5573abf78f99dbdfa0f8a282ad2bc6794a83d9a0'), ('wedding_02.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '41d7af19aa18aea2a3eec1071f58e196083360ae'), ('wedding_03.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '5a7ea9bf005a8bad273dfc4d3d8e8073825aa54d'), ('wedding_04.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '33153c7fb290b294cf505f60176e094d0dfbee8c'), ('wedding_05.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '1a30d8541f98ade52a1981eb62085d8482cc377c'), ('wedding_06.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '0c6b3450636e7413ea3597160174d6cf70565b9e'), ('wedding_07.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '04a1286ef71933169b17cd26c6634a8577f9e265'), ('wedding_08.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '63cb00fb99e98bdbfc13282c0914c8cf559839f5'), ('wedding_09.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '58fe2e97aaa6720b3906d3d296d4f5b1e8390741'), ('wedding_10.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '01f33062748710048420b6cc1e101f7871250987'), ('wedding_11.jpg', 'H:\\alexBucket\\alex\\export\\4x6', 'bbdc86b6a57999fae4168219e71f7fc664e191b6'), ('wedding_12.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '53fcaa0aadd8418ea587678d0886993a18955383'), ('wedding_13.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '7036e9b7b85380bfded6e30fe7bc6cf3e0700727'), ('wedding_14.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '233545683efe4d878de110c601fc17e8e1c040ca'), ('wedding_15.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '7f536e7dacdedc9848b0a4fb97bfae13d894c4ef'), ('wedding_16.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '8cbca4f107da88e3161daae7970788451b5e5daf'), ('wedding_17.jpg', 'H:\\alexBucket\\alex\\export\\4x6', 'd9c161409d49aa47d9be30f3f37d10e67cb5c886'), ('wedding_18.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '70d123a1c4344922f3665ca0a2a7afe1f642c662'), ('wedding_19.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '76cf34647793264000278585d8d07d059d48203d'), ('wedding_20.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '0dbbd6e3b3b25ef271360894d92649ec5a05259a'), ('wedding_21.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '4ef1094dcfc6e854153ca6025c6fc069d5a4cbd4'), ('wedding_22.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '11ad0469d4f9d2e130c1a8ee831c4986fe95e734'), ('wedding_23.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '2cd6515db38e0c4312369613da3e0b94cdaaf8c4'), ('wedding_24.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '39202f56a4945011427f446dd211fecee11d18c6'), ('wedding_25.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '7966fa76c8052a1ca9158485c9af389dc85b7e20'), ('wedding_26.jpg', 'H:\\alexBucket\\alex\\export\\4x6', 'e4354ba8f045ab7e513adc57ea65d09d5325fe75'), ('wedding_27.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '5a0aa96759b308fceedc4ada10b478a385faf974'), ('wedding_28.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '2b5c9c7c7e2f392153d6063a6fefbd9f153f9bd8'), ('wedding_29.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '8fcabc37bcbfe74fdaa83b3bbe473b60e05d77c6'), ('wedding_30.jpg', 'H:\\alexBucket\\alex\\export\\4x6', 'fe322dbdf8566bdbefeb545c73c9a6852bcecbe9'), ('wedding_31.jpg', 'H:\\alexBucket\\alex\\export\\4x6', 'b2905057497ed45b9f287fed9d693a794a5b036f'), ('wedding_32.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '0f4d40a5d60e42b1117b7ad21787dd7a52323afa'), ('wedding_33.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '2bc367488da5c09d189008d8a9b44ad65ec8479d'), ('wedding_34.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '2aef431266fb2882e1e1684088fd545e6214e9eb'), ('wedding_35.jpg', 'H:\\alexBucket\\alex\\export\\4x6', '5944e879fce377ebfc0ac5f91e7d4f5fb5ad4d03'), ('wedding_01.jpg', 'H:\\alexBucket\\alex\\export\\5x7', 'f1382377885a32a7dbc9054795cfc4ddf0e0ef29'), ('wedding_02.jpg', 'H:\\alexBucket\\alex\\export\\5x7', 'c8b3fc959e90f8ff813b821a904f8855dd4f6968'), ('wedding_03.jpg', 'H:\\alexBucket\\alex\\export\\5x7', '82e96535c4ac50953d69275230b94af9583e0447'), ('wedding_04_.jpg', 'H:\\alexBucket\\alex\\export\\5x7', '19bd5a57c8888b463fc6f48370455d16405afce7'), ('wedding_05.jpg', 'H:\\alexBucket\\alex\\export\\5x7', 'c41572bb76d8f4237ab9d2921b73af86848d2684'), ('wedding_06.jpg', 'H:\\alexBucket\\alex\\export\\5x7', '98ff2fe45014584a039b9c49310a91f631c723e7'), ('wedding_07.jpg', 'H:\\alexBucket\\alex\\export\\5x7', '545ab2e2e525a5092b8f451950fcb9b5fbc3abbe'), ('wedding_08.jpg', 'H:\\alexBucket\\alex\\export\\5x7', '4447ea787e6ac49d69187a148b628dc327454751'), ('wedding_09.jpg', 'H:\\alexBucket\\alex\\export\\5x7', '84dcc2cf51019a2865cfed029b83976eaf31e573'), ('wedding_10.jpg', 'H:\\alexBucket\\alex\\export\\5x7', 'f9fb2b99deafdd92311f0e05ef607275e649a126'), ('wedding_11.jpg', 'H:\\alexBucket\\alex\\export\\5x7', '34b8d6dbdc7c5557b6c96b82ededf0b95d520d1e'), ('wedding_12.jpg', 'H:\\alexBucket\\alex\\export\\5x7', '32412e6e60360fef0f8dd662f982add42d7c5232'), ('wedding_13.jpg', 'H:\\alexBucket\\alex\\export\\5x7', 'ecf3abe3a746264a60f6b34343aaf72abc5fe423'), ('wedding_14.jpg', 'H:\\alexBucket\\alex\\export\\5x7', 'cdb0e66efb16c990a27f7d5292be59bbf0d6a710'), ('wedding_15.jpg', 'H:\\alexBucket\\alex\\export\\5x7', 'd9858e7b6fdc55fe44dd50131a34947b0ec62bc9'), ('wedding_16.jpg', 'H:\\alexBucket\\alex\\export\\5x7', '659b896cff537e40fb7d1817abc992a3457859bb'), ('wedding_17.jpg', 'H:\\alexBucket\\alex\\export\\5x7', '4de7dadc98f45b5102af76dd9aa7498a997c2947'), ('wedding_18.jpg', 'H:\\alexBucket\\alex\\export\\5x7', 'bbe88e798199a67257849f90a4e5a7a1ac994912'), ('wedding_19.jpg', 'H:\\alexBucket\\alex\\export\\5x7', '1e0511bb68455725ff5c1ec63dbbeb5941e60ac7'), ('wedding_20.jpg', 'H:\\alexBucket\\alex\\export\\5x7', '7fef8b62e87fd6a9bfa4699a9e1b744140b623a4'), ('wedding_21.jpg', 'H:\\alexBucket\\alex\\export\\5x7', 'ed1a636665076def01fa09cc63e637fd94303bc2'), ('wedding_22.jpg', 'H:\\alexBucket\\alex\\export\\5x7', '5a34b7658f30171019481e3a0c0c90712f7e666b'), ('wedding_23-2.jpg', 'H:\\alexBucket\\alex\\export\\5x7', 'a803aa2b4fbdcea3007b329118cfbff828b57ff7'), ('wedding_23.jpg', 'H:\\alexBucket\\alex\\export\\5x7', '2ca1b934c07952b09d305efe7b545b476d54ba77'), ('wedding_24.jpg', 'H:\\alexBucket\\alex\\export\\5x7', '1e60ad6b22b5ca8575d140f15548a132d730bdb0'), ('wedding_25-2.jpg', 'H:\\alexBucket\\alex\\export\\5x7', 'c25ae7f030c94197d8d1cd6bbec5b58ed72e6f5f'), ('wedding_25.jpg', 'H:\\alexBucket\\alex\\export\\5x7', '1b3e4a26855334a3ee4a8aa2e7c3378c3722b2bd'), ('wedding_26.jpg', 'H:\\alexBucket\\alex\\export\\5x7', '4492d8ff5d735b52a635e219a69a26690e44d5a1'), ('wedding_27.jpg', 'H:\\alexBucket\\alex\\export\\5x7', 'd3cae6dd0f48e5a782385bbefc247e4e4098e004'), ('wedding_28.jpg', 'H:\\alexBucket\\alex\\export\\5x7', '8d3bb37f8b26dd9d5f8634c667c3ee4edef6b66f'), ('wedding_29.jpg', 'H:\\alexBucket\\alex\\export\\5x7', 'f444fce2aa9da3b2c93f55b68a0f94bea539cadb'), ('wedding_30.jpg', 'H:\\alexBucket\\alex\\export\\5x7', 'ccb2286185135e9758b8a679d671043aea64e5f1'), ('wedding_31.jpg', 'H:\\alexBucket\\alex\\export\\5x7', 'f4d9bd6265a26be2ac46661cf53e5eee08d0c592'), ('wedding_32.jpg', 'H:\\alexBucket\\alex\\export\\5x7', '2ec44de26532785f3e10303263079347c0c685cc'), ('wedding_33.jpg', 'H:\\alexBucket\\alex\\export\\5x7', '3a4695eae0d598161867d10412ddb5b59294493c'), ('wedding_34.jpg', 'H:\\alexBucket\\alex\\export\\5x7', '59c672fc496b7042b128968b11a032e31172d44a'), ('wedding_35.jpg', 'H:\\alexBucket\\alex\\export\\5x7', 'e34bf5794d32ef0b96363d54bd474b90210b1e74'), ('wedding_01.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', 'aef5c58a569cdfacd000d9b1de17724a81c8526c'), ('wedding_02.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', 'bf73f886cb4e3b6d40e0a117613ac5811f877c48'), ('wedding_03.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', 'e8b890ab6cc25c0239e271faca5137955a4cfcb2'), ('wedding_04_.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', 'f798aaa2afdf3f75514dcbd3ef9d831443a4558e'), ('wedding_05.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', 'e5b46fce9c1a941d35bfa46f88bd9381f93f373f'), ('wedding_06.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', '9c901881324ea6a5505a41d2b0b8ec8de3342a5c'), ('wedding_07.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', 'f0e714050a4630d1a5a20c97d30326e02ef40a39'), ('wedding_08.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', '3e624a76400b5c8afbc4299688721e93c49980c9'), ('wedding_09.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', '5c95335b699bad3bdcf3a88b167c297b9d0a2fbd'), ('wedding_10.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', '673ff8b6743338bf19ceab3933fe1135962872e9'), ('wedding_11.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', 'c48ef95d4ec70b0788233b2164a542e286629f3f'), ('wedding_12.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', 'e31a67425f148a52d653713ee22834ccd1fb5ce2'), ('wedding_13.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', '44e06369bd576d69757d77d3b4b72dbb96f0f81d'), ('wedding_14.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', 'bbf6524413c2ea1e9936a4edcdd839b8c32066b7'), ('wedding_15.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', '64d3fd92c57f6fe1253e3a1d3444cc88bb30723c'), ('wedding_16.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', '85c7d264a3343a2c525e6044ee65f82d7287b556'), ('wedding_17.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', 'cfb3209687c88b74c5d4471037ed2c04073bfc7d'), ('wedding_18.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', '085490a207f8409a46be21401b754448cb9a795d'), ('wedding_19.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', 'dff4d58a7c01e0a6a61df0623f83eca47a09b6de'), ('wedding_20.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', '07e64c775df4125c5921825d439c1cc91e2c3cef'), ('wedding_21.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', '3802dea147946c9b2c9a7495e69c45bcd32f6ca2'), ('wedding_22.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', '26d8f333e1cd3cd2d3dfc21e1abd03ea3b5295db'), ('wedding_23-2.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', '469311c1f6fbd10b8b18e3289d666c9711174baf'), ('wedding_23.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', 'ed4892ca4d1f47e081f2c6180e413421f4d34382'), ('wedding_24.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', 'fd6d50e18e677b28ea47297ad97e2ca0f8fa8c17'), ('wedding_25-2.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', '1fd3fb0fc476d74d06cef9b2e8097046ab0524a7'), ('wedding_25.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', '5face6666c66935e1b06247c20f4fc99ec9b42ce'), ('wedding_26-2.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', '194c0ec5854bb7ff477e54670364f5776faef45e'), ('wedding_26.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', '7e9d0de87208ce70ef1e8340dc965806bdc311c4'), ('wedding_27.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', '5d011a37a152eeeb00f9675a72db926bd9189f99'), ('wedding_28.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', 'b7ea83d85e873ca53f4046651c0c57b979cacba6'), ('wedding_29.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', 'a4601aa5056fab4eac69880cfc74b1145010017f'), ('wedding_30.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', 'eecb73712cc0aebcfd92f38cd690e259ecc16910'), ('wedding_31.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', 'f78360f43886be5d46ce412ad5fa0bc0491f6fc0'), ('wedding_32.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', 'dcc552123f778b2bb1bae6ecc19c730bb02d6062'), ('wedding_33.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', 'd62d3803e3d7cf4035aa0e8ce75da27d34affa34'), ('wedding_34.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', '0e16e523f3fcb9a3c0b06afbfab765487b9daa18'), ('wedding_35.jpg', 'H:\\alexBucket\\alex\\export\\5x7v2', '31612c3aad4bdf7bca2b8d1157407f4078226c88'), ('wedding_01.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', '077dda77ed85985ac7833186c710e05b6eac2240'), ('wedding_02.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', 'b12b4d25d92d1e6529ae0fdcd39db2eb10bc2d44'), ('wedding_03.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', '6ae63375c934d87fa612d818a4d80a8ab00a3ea3'), ('wedding_04.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', 'ae1b862bc18a8781d2bab323cd71713a7fb9a465'), ('wedding_05.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', 'bc2acb2552644e87dea8ea7edef9104ce2337dfa'), ('wedding_06.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', 'b5f6d7813d2745405aa73c55b63ec880ec86f0d8'), ('wedding_07.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', '0411964b9496382a8b219235880bfc0584330fbc'), ('wedding_08.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', '46d04d8a9ac05239b9205a4a89f902de58b881f3'), ('wedding_09.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', 'cd908a0e82d40455c1d28aa70f13263d5907090c'), ('wedding_10.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', '39c5995f952f1809a2f88bda5a50a821a7f50b40'), ('wedding_11.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', '2c0b678f701678a5f0892fd74129dd6b7d809df5'), ('wedding_12.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', 'dd50128db1228721be532d708b7fe36560fe88e8'), ('wedding_13.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', '70f1808053ca034030e29eebceac18f470d2f4f0'), ('wedding_14.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', '9dc244927e77ded564a4bd02988a79b4b5a3479d'), ('wedding_15.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', '7568e7dc642a02305c49283d7946dd2c7d03078e'), ('wedding_16.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', '71c59136dccca44c924dc2706cdacbc40ec9ecce'), ('wedding_17.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', '29f984c261d7ae11918120a02a1e96ac733356ad'), ('wedding_18.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', '4a1785e47bb6598239d6bc7c4699dad3a208d5ec'), ('wedding_19.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', '65881439ea9ea4d20ddb5b19fc3dda9686fb35f6'), ('wedding_20.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', '9580cec9cfc37dc8295de359fac4198f6b999fb5'), ('wedding_21.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', '1ce19300d0185477981618cddf1db64ba0910624'), ('wedding_22.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', '741cd21bd440036b14dd6ce4befdd9ea532a9ee3'), ('wedding_23.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', 'dbeab6a7b4da1f48d3fefd3a1554fe712e1d86e1'), ('wedding_24.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', 'f84111b8750508364b45364b391dc86e5becd321'), ('wedding_25.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', 'd154d395f7cbe9d4a76645fb4dd22151734dd218'), ('wedding_26.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', '2cc9dc01976202b70fed8eddd9e92bacf60fea7a'), ('wedding_27.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', '63e61c4e528ef9a1345760517f1a3c0a68ef69d9'), ('wedding_28.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', '64e0e5f30b8f4d6abb28de64a1e516cd3c4a3bb8'), ('wedding_29.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', 'c608084df655f69484eba9395d73540e296b99f0'), ('wedding_30.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', 'efaf4f122bbe8f1d56d682609e1b6241650601ff'), ('wedding_31.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', '077bb8602e9f7fe3ab262202b1fc81cb10fa8747'), ('wedding_32.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', '3b8d83528f629acae9f4e8d94096f60b1e72b81b'), ('wedding_33.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', 'a843c754d6ddadef01730b3ab8457bfd2744442e'), ('wedding_34.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', '5e5e15f213740248739840bd252049300715c268'), ('wedding_35.jpg', 'H:\\alexBucket\\alex\\export\\fullsize_s', '16a6b4f2e7ce9ff563e62587943518406036340e'), ('wedding_01.psd', 'H:\\alexBucket\\alex\\export\\tryColorCorrectPsd', '1c029a2ea4c904972f35695e16fbcc227f750b70'), ('index.html', 'H:\\alexBucket\\alex\\export\\wedding', '577080e6529d080b4df29fec6c115de526117ba2'), ('index_2.html', 'H:\\alexBucket\\alex\\export\\wedding', '506d8bdc7c1897b11c7e254c7ece422ea9c0f41a'), ('index_3.html', 'H:\\alexBucket\\alex\\export\\wedding', '5b4340d783b4ee0af1cfbf9e38043323c0935288'), ('custom.css', 'H:\\alexBucket\\alex\\export\\wedding\\content', '04fe2b59123e01568a9cb36eb57018d233cad6d5'), ('logo.png', 'H:\\alexBucket\\alex\\export\\wedding\\content', '78e752ec381390bdebf123946ce2f5a7e292d7d9'), ('wedding_01_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '00f3dc5088e860db5473743108375fcf03dc8f87'), ('wedding_02_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '49ff38f67f2c1d175c0ee11e9b03b9cc2627cdda'), ('wedding_03_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '4e6bf3148f2f074f6ac2cda2b58b2f3784640717'), ('wedding_04_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', 'ef022e335dc7c1eed8ae8267d83058aa1ec3ff28'), ('wedding_05_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '9a9f7e717410d4d8be589c5beb9cd552f9995153'), ('wedding_06_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '0a6eeb8a6aaef651d6c08465e23f0508695badb2'), ('wedding_07_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '29f7c22be122a6b008fecb0033bcfdd05e129e17'), ('wedding_08_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '3922a43726f8ef7036503c741f71d1de4e5ed5ce'), ('wedding_09_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '6cd622430d05b79ad70371b1ceaba86745c64140'), ('wedding_10_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '3da7c0b51c4b2443d579478933f50ee073d405f5'), ('wedding_11_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '77ad487c90217daa870b475216000f372212e242'), ('wedding_12_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '73782e3496192f5c4422924a280af2c55756074c'), ('wedding_13_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', 'f53bc68e2a0dccfdbb324f6dbdf8ae503ad2585e'), ('wedding_14_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '5853750dbed2b5ff625549ae3af1a61edb2ea3c8'), ('wedding_15_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '461283ceea65f0bba34216ac590509dc435b45b7'), ('wedding_16_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '601231943d6a0672c30935f0dc86791b0ef4945e'), ('wedding_17_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '0ede6d8aa4042cb3bb1c84a0632055e7a9ed6ade'), ('wedding_18_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '14dd2d597171fce5f2b90f8f4c631a64641c043e'), ('wedding_19_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '867408dd19283fb3b17f92cca5501029283a2deb'), ('wedding_20_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', 'a9ae2698a8d98f29c8d13bece6dffbf69812574c'), ('wedding_21_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '3b594e3e7e0b244a666dcd1261c98f1814e1e70d'), ('wedding_22_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '3ce498fb6bcd43c5ac61145efb8bb9615f03f6d4'), ('wedding_23_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '00ae9610095c412bb21c4ef66882deb0af04cf65'), ('wedding_24_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', 'b3b4f6c679d9ff352d1efd7e8c7c4b2c03dfcefc'), ('wedding_25_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '48be2aa4cab58b35d3db2038afcad287abb10197'), ('wedding_26_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '697b82f04bbae12369d325a8532877e8df1b9713'), ('wedding_27_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', 'bc645f5373f7fb4fc9d4a59ef086fd304215affd'), ('wedding_28_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '20f2dc22af621e45d79e8723aed268138d51b06c'), ('wedding_29_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', 'e68030e3cdf0d77fec7357aff4c5301116ef3db8'), ('wedding_30_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', 'bc19bad1c9a1ce7f78afb95589ef17a93e92224a'), ('wedding_31_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', 'd935306d5f48f3d29a4eb90321d3f9e0394dd721'), ('wedding_32_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '41cb2474afe6b56267005c6b5c8fc1ac6bf19000'), ('wedding_33_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '32e6a1b66f9d686fcbcc2ed44ce488e136f92c93'), ('wedding_34_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '9f8d0613280ba4a93e8f8b9c63bfb169e56df061'), ('wedding_35_large.html', 'H:\\alexBucket\\alex\\export\\wedding\\content', '7dd2bd5901e5eaa77b5b197379cd89f039bbb3fb'), ('wedding_01.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', '89acbe918b934999b28048e1870d315a5554916b'), ('wedding_02.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', 'ab982ed63a1051fd37907883adceee112bb3b2b6'), ('wedding_03.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', '91f61e10bda4b8aa9eaba1bed9e8bb357f1861fc'), ('wedding_04.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', '7f75b06c10732b652cd67f2afdb93d5dfa2d38a1'), ('wedding_05.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', 'be024f72f34e2f972ed6112eaee42a3fca6360e3'), ('wedding_06.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', '1ae54979ccce6b3a8a4b2f62ff57f3aa142b0df4'), ('wedding_07.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', '1f9a74e660a87a0bdb364d9878ba1035faf8ab5f'), ('wedding_08.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', 'e705dce62f0277a689b91cfe6ba473d499249af0'), ('wedding_09.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', '0446a8c2c3326485649516a4358ad7a12cead3f7'), ('wedding_10.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', '92cc4c7ce5b7b7ee9610f9c9fb72327aa16d6fd1'), ('wedding_11.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', 'afdde89704abe03580cfc1b2dc9fcdd9d68b1855'), ('wedding_12.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', '6e28d3dd0886392cfce21e70f4a7798d086f1220'), ('wedding_13.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', 'af50ac4ea5c365d09b78ab128412ece915176296'), ('wedding_14.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', 'f3ce3cf073b0217082b3d7caeb70b37c43481fa2'), ('wedding_15.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', 'bf4de076c7ee5fd4d22574296eebe2d3f7e62414'), ('wedding_16.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', '876aa6ad94457be6e52a7c0e5345828bf970fbc8'), ('wedding_17.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', 'f587c45591904f6d207a9d750f23c411476db59d'), ('wedding_18.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', '700331f3a7a9102e04a690e5e7a2d4396fd7d459'), ('wedding_19.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', '40aae798693ff75ff5e2b0025f51d48fc66670b6'), ('wedding_20.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', '9fe1fb1bf2ea4663de7025cf3b071ea324a89289'), ('wedding_21.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', 'fa9c4196e88984252e5ca13c22b0d257004a9145'), ('wedding_22.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', '3f43670c76a8e98ee3bc0f8c5eb5bf43fe68c766'), ('wedding_23.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', 'bbcc95dcb916457c20fd1726d25de9cec750acc9'), ('wedding_24.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', '57017d103724f198dd79637bb5d5e57d8b5b8078'), ('wedding_25.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', '68b47e85d398acc772df4768ae41d339c07f215a'), ('wedding_26.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', 'cf6a2c7329a1de6324dbfd323a3e1f61e058d12e'), ('wedding_27.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', '6a3374f6a0108b30110b00e09793ed4dc26a3e50'), ('wedding_28.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', '645ed4e1916dcca0dfb285b01b0c8a23ee1e817a'), ('wedding_29.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', '5086721e35f20393447418ba41ab20f7de7dffc7'), ('wedding_30.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', '77050d4f40b5a8b2e8782c7627e619cd9aa4a206'), ('wedding_31.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', 'ed7f270cfa4a5a47e44346709e67ff8d3e8f0847'), ('wedding_32.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', 'a94240b23ef9af4e042a29055199e264d56d1164'), ('wedding_33.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', '40b1077ebc8dcfa557eb387a1522e37f6fb407fb'), ('wedding_34.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', '1cf0d8d408528e17e8a9b3c066fe5758fe36c28b'), ('wedding_35.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\large', 'eb39b7a86ef59964d5785a2a9b021e756db63e07'), ('wedding_01.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', '61d7571ab87531044567e5e757cbf6b01a9b2ab9'), ('wedding_02.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', '06d9503ea500b483ddb40c9cd63818bac66b86db'), ('wedding_03.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', '3c69c7bd8c8c235c5cb0208e09bab80e62376571'), ('wedding_04.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', '830cf7627a36775f89c6217424720b2369941230'), ('wedding_05.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', 'e216b33ba32a5ebd1f269f3ec59ec9443b9f91f5'), ('wedding_06.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', '09e7fe33915c7df21d23c29cac3e240a2b68c704'), ('wedding_07.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', '7e7c7d8e69424cf73ce9c4a9a28b9f1605124df4'), ('wedding_08.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', 'af151c82453f4b5415fec01bd31d640fccca2da6'), ('wedding_09.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', '1f4985bad222ca8501de2741c094840808fc1a48'), ('wedding_10.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', '096f3297395892ede75a208dae0415ce9355c1e2'), ('wedding_11.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', 'c259e2435a6a183bd5adba55a66dd2c01d877798'), ('wedding_12.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', '45b035de5cef04d1873b3b15d4acab26d138352c'), ('wedding_13.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', 'a488f22acd65e2459077ea515d48e0c7a519297b'), ('wedding_14.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', '71fdd1a90cac807b5ff37a897ade86b48a70a382'), ('wedding_15.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', 'c9c9cc78e999d26e52d4562ad95981ee01d10566'), ('wedding_16.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', '83cd2ed0490bff683b96dafa9955a2229554fc11'), ('wedding_17.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', '46f14f2319201c37fd6dc892f673e6de5807bd45'), ('wedding_18.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', '6ad654252fbc0d56f752f997124670d170a198b8'), ('wedding_19.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', '825bcfdd198fa5fcd45f030df9e99b4a70a8fe9a'), ('wedding_20.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', '5183e53caf3a66bdb35f54899a473af1c143c37e'), ('wedding_21.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', 'f28032bbfc23859e9dc07403cad206eded6d6241'), ('wedding_22.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', '496ac28d5fdc3faff105a15828f9d7c2f4b14aef'), ('wedding_23.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', '232cfd0aecc4e6c6e585e44adb3e3b5334347082'), ('wedding_24.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', '644431377b52543fbc8c67fd829885e82f844ea3'), ('wedding_25.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', '7924eae8a09ba46db48b162d8b464e4279c6a14c'), ('wedding_26.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', '953cee51a57582648a989d0db23995b632ec91d6'), ('wedding_27.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', 'f59b035dd52b0aa763eaea23a5ad7587a3102538'), ('wedding_28.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', 'dbf8587126d14fe3de22e3a46b73669b0d55b000'), ('wedding_29.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', '2268dacbb4636d87b29821bb634d968dc4ebf19e'), ('wedding_30.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', '63e4c6d1e9196f7d7fcb47855d71d4c2ba624099'), ('wedding_31.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', 'd1ba16bb4a79cf38b798ff338c7720f0c757ad03'), ('wedding_32.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', 'a51eabee11c0a6c6af1730f5c86e565582ffa040'), ('wedding_33.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', '0d76a32413becac906167c1c18e2fc060636515b'), ('wedding_34.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', '79f8ee8ea9b55b626bbf77ab6ab72ae82970f11e'), ('wedding_35.jpg', 'H:\\alexBucket\\alex\\export\\wedding\\content\\images\\thumb', '4db02981738242087fd563176205f04fbf74780e'), ('version_info.png', 'H:\\alexBucket\\alex\\export\\wedding\\resources', 'c784641fbdc0e8dbcd7127994c23380fa11d0d31'), ('ie6.css', 'H:\\alexBucket\\alex\\export\\wedding\\resources\\css', 'd069bfdbc5c9f54310b731af6aed7bb913a6d8a6'), ('ie7.css', 'H:\\alexBucket\\alex\\export\\wedding\\resources\\css', 'b20c35f9032729480f87e75190330af06f9f1005'), ('master.css', 'H:\\alexBucket\\alex\\export\\wedding\\resources\\css', 'ba8119b8a85ba61b7d8cad5571095613aaa43440'), ('live_update.js', 'H:\\alexBucket\\alex\\export\\wedding\\resources\\js', 'd3d4c35db15f6e2f48d85ebe396066dd6d6f3185'), ('pngfix.js', 'H:\\alexBucket\\alex\\export\\wedding\\resources\\js', 'e6e51197c78975be6c3b07cb046695e22da783a4'), ('icon_fullsize.png', 'H:\\alexBucket\\alex\\export\\wedding\\resources\\misc', 'd606fe58bd2b16c7c2418495810b8449a2caebbc'), ('shadow-grid.gif', 'H:\\alexBucket\\alex\\export\\wedding\\resources\\misc', '423f73e827b7ec186c5f263b39017a3fe6db86ad'), ('shadow.png', 'H:\\alexBucket\\alex\\export\\wedding\\resources\\misc', '5aa05d2bd7f08f1840c41c04b600fe0809c444a6'), ('lcat.lrcat', 'H:\\alexBucket\\alex\\lcat', '07dcf204696e4c136771ade2deedf993a613960a'), ('wedding_01.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', 'a96a4ce03f589040182e3994c301994eafc5afe7'), ('wedding_02.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', 'd842b449e099d5631388f921201180bf563473e0'), ('wedding_03.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', '8362c446439107288cb265aa51ac594ce9cbfe78'), ('wedding_04_.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', '763591e2c12109fa715a4b858818145313baa533'), ('wedding_05.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', '87e6178d9536d9155835f5d6e269af4edbd6fdb0'), ('wedding_07.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', '71608155402abf73b538cebec64d3d8f558cfafb'), ('wedding_08.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', '7d352372cbaacd1a2fe8dfe88f20767bd0bf3694'), ('wedding_09.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', 'a51e1b9f8701608665cd0a7428e71e5ab028d816'), ('wedding_10.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', '2ac24dd05c5715b0eb6ffef1a26a4169a522e456'), ('wedding_11.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', '9ed110d0e60b6b3b51170ff6728370cc927e8f7c'), ('wedding_12.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', '7f49896234731ff113d570dc6e006c646c165979'), ('wedding_13.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', '609a5b9ba90d3312ba59637fcb492bc93a56166c'), ('wedding_14.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', '6c90fd0c680149228beb2d70cda8c87ab603f027'), ('wedding_15.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', '0e350436d1424d9de26c9eab6ac4aea21bdf7735'), ('wedding_16.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', 'de51ae3f2c7794be3c27191ee426f2cb7a065e49'), ('wedding_17.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', '1c16dbb8a2856add815e1cd0904b40bbbc39449d'), ('wedding_20.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', '199777fc14fe5c92b9d915060c316dacb9996a75'), ('wedding_21.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', 'eca753196a8dae3ffdf05674c35d5c8a2cb6fc90'), ('wedding_22.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', 'cca0ccf644b7e9d1a806e6102214b5b13b93e2a2'), ('wedding_23.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', '274222f1f3e295400d0a957b92e2061b3d82b427'), ('wedding_24.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', 'efec228f803a624a793eb94bc09df0b394eedfb4'), ('wedding_25.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', 'e4857e13aa889fcca7e1269e64ab37f82c4d2747'), ('wedding_26.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', '3620551a3528b37a3a7819bb4daa83afe2ffde0a'), ('wedding_29.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', 'f0425c531a1c5e1ae500aa15eaed2120aa3d2003'), ('wedding_31.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', 'afd95be0c5a22587f412591d0f2fa50aeccf2d57'), ('wedding_32.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', '48d4c6abfe3db98c2a114c828f8cc17ba32d43bc'), ('wedding_33.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', '58e4aca2ba7a50b5c9c8fca6b509819942e46323'), ('wedding_34.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\brcPsdToPrint', '76789ce02db5b34cea7e8f53c0c7c7326f9796cf'), ('wedding_04_.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\bwOriginals', '8451727ae857cd5ada60783060ccbd85010757b7'), ('wedding_05.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\bwOriginals', '8076d7ecf5499015a0268f1724dd9484a387ac11'), ('wedding_07.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\bwOriginals', '8bcdf54b02392c48a53dfce673f893a7fd1c0740'), ('wedding_09.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\bwOriginals', '77160f5f0c93460ff521e943ce5c896e4c9994ef'), ('wedding_13_bw.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\bwOriginals', '5311ccf232910c26fbff8094fc9ec7cfcd6c8083'), ('wedding_14_bw.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\bwOriginals', 'fdac038910f6224bd84685b7af9848cce9035023'), ('wedding_15_bw.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\bwOriginals', 'cb41a4d6df10feea9a075d6a8496b2047878ba43'), ('wedding_18_bw.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\bwOriginals', '83baec600aaabbdba0d1e81835d6df8e32ddc779'), ('wedding_23_bw.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\bwOriginals', '05b24a8581941c4bc244a7659fed00412fe72049'), ('wedding_24_bw.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\bwOriginals', '464465e37902bad3432edd5435617a5023f7b911'), ('wedding_25.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\bwOriginals', '76674b03be40472301eeb5a54c2799d8c3201b7b'), ('wedding_32.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\bwOriginals', 'e9e81ac80d7c0bfc1c164cefe384c8e5612ee40f'), ('wedding_33.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\bwOriginals', '1821e43494a941b0cacb599be90fc62b4ae1f17e'), ('wedding_01.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', 'c6a698ecb5fe75849c90aa40951d830de073aae8'), ('wedding_02.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', '363177d3b03368c2ed33fd41df4a4b3956cc39b1'), ('wedding_03.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', '4450319ec41f37d6869ece3afd98470f288e62e8'), ('wedding_04.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', 'c8d87f17b49004f7e5bdc902a8c7cfe7397474e0'), ('wedding_05.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', 'e85905e9b4375bf8c0bff4cad0655203c0d89beb'), ('wedding_06.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', '219dd743f972ca101882e59ccc2b42ef28cf6f76'), ('wedding_07.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', 'e6c8b73501dbd8809661bfbf0362e365a2a5756e'), ('wedding_08.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', '09692562fa1f7c38296fae970b85078ccfa3e271'), ('wedding_09.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', 'b97ff415c0c5f79165154358596e79f73f5ce18a'), ('wedding_10.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', '09296f1dd6e7c6da584e7b9fe5123d7153546942'), ('wedding_11.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', '41f44a0b04b100cd443f24ffb5f2936413fe3172'), ('wedding_12.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', '62ab38e8d8c2338b27ba451b08a9eb90066ab152'), ('wedding_13.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', '3672d735b6da0b97fcd17bb587b06183edcb101f'), ('wedding_14.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', '280baffe0738f7f277bfed9f5fc506b2be225265'), ('wedding_15.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', '03a3dce2bfd0c87de8fbbe9000ad6f65c798bdcd'), ('wedding_16.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', 'dca6378f5d1b212f72f343b3587b490fc6a33848'), ('wedding_17.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', '50693f7a8ded0f8afbf2b81647f86eaec2aa4ec7'), ('wedding_18.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', 'f9ee19d9e6012b234c253b7961fbe43a378a79ae'), ('wedding_19.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', 'd331d65072991d2e78968a458503b53b9e5fd32f'), ('wedding_20.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', 'c5c7cf2cb4c0c432d2e9a90235cee38e482a86d8'), ('wedding_21.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', '35204b6ff358cdd3075588c421fc9ffbaebc82ae'), ('wedding_22.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', '3b3f5d79b8887cf0e51540b6607022a7c5c9253c'), ('wedding_23.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', '9e722a271144fbd44894276f475840d2645ba746'), ('wedding_24.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', 'dee4b1a544f5b4698d92384925868be4a3cd7c4b'), ('wedding_25.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', '2840b125b9476d62869e25fc09517d83f00ad039'), ('wedding_26.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', '137b609b366b3a4d1f05b76ed3015e2de16844cb'), ('wedding_27.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', 'c998d035065df81604e97c9be8f4eb4705279961'), ('wedding_28.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', '3c6a101840bea907a50a0c4248418421007287d2'), ('wedding_29.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', '9db86c77022870d3c44ac832e0c7c60423c03594'), ('wedding_30.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', 'a512b8eecf60a17a876c9c3cbcfd3a2d7370a3f8'), ('wedding_31.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', 'db4982cb7a027b1807cfdd3855f544656ed9557d'), ('wedding_32.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', '36a866a442b78f46aea0612f8b80437163ce4cfc'), ('wedding_33.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', 'ea3e5d50479aa8b1590f5b18da407f35ab7d8be8'), ('wedding_34.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', '08ca1d3f5145928cfdcf9d83e2cde1b9000d7e6d'), ('wedding_35.CR2', 'H:\\alexBucket\\alex\\rawAndPsd\\finalRaw', 'c859dd2297387e9ad47fcb3fb5e3406dfbfa773e'), ('wedding_18.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\PsdToPrint', '406d7cb1d890e9de7fc2b5e4625e567d2e053588'), ('wedding_27.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\PsdToPrint', 'e15d708d3ff224514e12e80397303b23d157ae09'), ('wedding_28.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\PsdToPrint', '9021fd128bf99b31e55ceea4b3891e057162130e'), ('wedding_30.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\PsdToPrint', 'aa34715f2a0a215a7bea9b57c23354d844a39e4c'), ('wedding_35.psd', 'H:\\alexBucket\\alex\\rawAndPsd\\PsdToPrint', '53d654ae247803596cc5ee7e5369ecd5ab16387f')]
+handling wedding_01.jpg, H:\alexBucket\alex\export\4x6, 5573abf78f99dbdfa0f8a282ad2bc6794a83d9a0
+already in database
+ inserting dir H:\alexBucket\alex\export\4x6
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_01.jpg
+handling wedding_02.jpg, H:\alexBucket\alex\export\4x6, 41d7af19aa18aea2a3eec1071f58e196083360ae
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_02.jpg
+handling wedding_03.jpg, H:\alexBucket\alex\export\4x6, 5a7ea9bf005a8bad273dfc4d3d8e8073825aa54d
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_03.jpg
+handling wedding_04.jpg, H:\alexBucket\alex\export\4x6, 33153c7fb290b294cf505f60176e094d0dfbee8c
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_04.jpg
+handling wedding_05.jpg, H:\alexBucket\alex\export\4x6, 1a30d8541f98ade52a1981eb62085d8482cc377c
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_05.jpg
+handling wedding_06.jpg, H:\alexBucket\alex\export\4x6, 0c6b3450636e7413ea3597160174d6cf70565b9e
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_06.jpg
+handling wedding_07.jpg, H:\alexBucket\alex\export\4x6, 04a1286ef71933169b17cd26c6634a8577f9e265
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_07.jpg
+handling wedding_08.jpg, H:\alexBucket\alex\export\4x6, 63cb00fb99e98bdbfc13282c0914c8cf559839f5
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_08.jpg
+handling wedding_09.jpg, H:\alexBucket\alex\export\4x6, 58fe2e97aaa6720b3906d3d296d4f5b1e8390741
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_09.jpg
+handling wedding_10.jpg, H:\alexBucket\alex\export\4x6, 01f33062748710048420b6cc1e101f7871250987
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_10.jpg
+handling wedding_11.jpg, H:\alexBucket\alex\export\4x6, bbdc86b6a57999fae4168219e71f7fc664e191b6
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_11.jpg
+handling wedding_12.jpg, H:\alexBucket\alex\export\4x6, 53fcaa0aadd8418ea587678d0886993a18955383
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_12.jpg
+handling wedding_13.jpg, H:\alexBucket\alex\export\4x6, 7036e9b7b85380bfded6e30fe7bc6cf3e0700727
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_13.jpg
+handling wedding_14.jpg, H:\alexBucket\alex\export\4x6, 233545683efe4d878de110c601fc17e8e1c040ca
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_14.jpg
+handling wedding_15.jpg, H:\alexBucket\alex\export\4x6, 7f536e7dacdedc9848b0a4fb97bfae13d894c4ef
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_15.jpg
+handling wedding_16.jpg, H:\alexBucket\alex\export\4x6, 8cbca4f107da88e3161daae7970788451b5e5daf
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_16.jpg
+handling wedding_17.jpg, H:\alexBucket\alex\export\4x6, d9c161409d49aa47d9be30f3f37d10e67cb5c886
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_17.jpg
+handling wedding_18.jpg, H:\alexBucket\alex\export\4x6, 70d123a1c4344922f3665ca0a2a7afe1f642c662
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_18.jpg
+handling wedding_19.jpg, H:\alexBucket\alex\export\4x6, 76cf34647793264000278585d8d07d059d48203d
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_19.jpg
+handling wedding_20.jpg, H:\alexBucket\alex\export\4x6, 0dbbd6e3b3b25ef271360894d92649ec5a05259a
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_20.jpg
+handling wedding_21.jpg, H:\alexBucket\alex\export\4x6, 4ef1094dcfc6e854153ca6025c6fc069d5a4cbd4
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_21.jpg
+handling wedding_22.jpg, H:\alexBucket\alex\export\4x6, 11ad0469d4f9d2e130c1a8ee831c4986fe95e734
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_22.jpg
+handling wedding_23.jpg, H:\alexBucket\alex\export\4x6, 2cd6515db38e0c4312369613da3e0b94cdaaf8c4
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_23.jpg
+handling wedding_24.jpg, H:\alexBucket\alex\export\4x6, 39202f56a4945011427f446dd211fecee11d18c6
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_24.jpg
+handling wedding_25.jpg, H:\alexBucket\alex\export\4x6, 7966fa76c8052a1ca9158485c9af389dc85b7e20
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_25.jpg
+handling wedding_26.jpg, H:\alexBucket\alex\export\4x6, e4354ba8f045ab7e513adc57ea65d09d5325fe75
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_26.jpg
+handling wedding_27.jpg, H:\alexBucket\alex\export\4x6, 5a0aa96759b308fceedc4ada10b478a385faf974
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_27.jpg
+handling wedding_28.jpg, H:\alexBucket\alex\export\4x6, 2b5c9c7c7e2f392153d6063a6fefbd9f153f9bd8
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_28.jpg
+handling wedding_29.jpg, H:\alexBucket\alex\export\4x6, 8fcabc37bcbfe74fdaa83b3bbe473b60e05d77c6
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_29.jpg
+handling wedding_30.jpg, H:\alexBucket\alex\export\4x6, fe322dbdf8566bdbefeb545c73c9a6852bcecbe9
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_30.jpg
+handling wedding_31.jpg, H:\alexBucket\alex\export\4x6, b2905057497ed45b9f287fed9d693a794a5b036f
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_31.jpg
+handling wedding_32.jpg, H:\alexBucket\alex\export\4x6, 0f4d40a5d60e42b1117b7ad21787dd7a52323afa
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_32.jpg
+handling wedding_33.jpg, H:\alexBucket\alex\export\4x6, 2bc367488da5c09d189008d8a9b44ad65ec8479d
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_33.jpg
+handling wedding_34.jpg, H:\alexBucket\alex\export\4x6, 2aef431266fb2882e1e1684088fd545e6214e9eb
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_34.jpg
+handling wedding_35.jpg, H:\alexBucket\alex\export\4x6, 5944e879fce377ebfc0ac5f91e7d4f5fb5ad4d03
+already in database
+ dir H:\alexBucket\alex\export\4x6 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\4x6 for wedding_35.jpg
+handling wedding_01.jpg, H:\alexBucket\alex\export\5x7, f1382377885a32a7dbc9054795cfc4ddf0e0ef29
+already in database
+ inserting dir H:\alexBucket\alex\export\5x7
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_01.jpg
+handling wedding_02.jpg, H:\alexBucket\alex\export\5x7, c8b3fc959e90f8ff813b821a904f8855dd4f6968
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_02.jpg
+handling wedding_03.jpg, H:\alexBucket\alex\export\5x7, 82e96535c4ac50953d69275230b94af9583e0447
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_03.jpg
+handling wedding_04_.jpg, H:\alexBucket\alex\export\5x7, 19bd5a57c8888b463fc6f48370455d16405afce7
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_04_.jpg
+handling wedding_05.jpg, H:\alexBucket\alex\export\5x7, c41572bb76d8f4237ab9d2921b73af86848d2684
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_05.jpg
+handling wedding_06.jpg, H:\alexBucket\alex\export\5x7, 98ff2fe45014584a039b9c49310a91f631c723e7
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_06.jpg
+handling wedding_07.jpg, H:\alexBucket\alex\export\5x7, 545ab2e2e525a5092b8f451950fcb9b5fbc3abbe
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_07.jpg
+handling wedding_08.jpg, H:\alexBucket\alex\export\5x7, 4447ea787e6ac49d69187a148b628dc327454751
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_08.jpg
+handling wedding_09.jpg, H:\alexBucket\alex\export\5x7, 84dcc2cf51019a2865cfed029b83976eaf31e573
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_09.jpg
+handling wedding_10.jpg, H:\alexBucket\alex\export\5x7, f9fb2b99deafdd92311f0e05ef607275e649a126
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_10.jpg
+handling wedding_11.jpg, H:\alexBucket\alex\export\5x7, 34b8d6dbdc7c5557b6c96b82ededf0b95d520d1e
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_11.jpg
+handling wedding_12.jpg, H:\alexBucket\alex\export\5x7, 32412e6e60360fef0f8dd662f982add42d7c5232
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_12.jpg
+handling wedding_13.jpg, H:\alexBucket\alex\export\5x7, ecf3abe3a746264a60f6b34343aaf72abc5fe423
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_13.jpg
+handling wedding_14.jpg, H:\alexBucket\alex\export\5x7, cdb0e66efb16c990a27f7d5292be59bbf0d6a710
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_14.jpg
+handling wedding_15.jpg, H:\alexBucket\alex\export\5x7, d9858e7b6fdc55fe44dd50131a34947b0ec62bc9
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_15.jpg
+handling wedding_16.jpg, H:\alexBucket\alex\export\5x7, 659b896cff537e40fb7d1817abc992a3457859bb
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_16.jpg
+handling wedding_17.jpg, H:\alexBucket\alex\export\5x7, 4de7dadc98f45b5102af76dd9aa7498a997c2947
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_17.jpg
+handling wedding_18.jpg, H:\alexBucket\alex\export\5x7, bbe88e798199a67257849f90a4e5a7a1ac994912
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_18.jpg
+handling wedding_19.jpg, H:\alexBucket\alex\export\5x7, 1e0511bb68455725ff5c1ec63dbbeb5941e60ac7
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_19.jpg
+handling wedding_20.jpg, H:\alexBucket\alex\export\5x7, 7fef8b62e87fd6a9bfa4699a9e1b744140b623a4
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_20.jpg
+handling wedding_21.jpg, H:\alexBucket\alex\export\5x7, ed1a636665076def01fa09cc63e637fd94303bc2
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_21.jpg
+handling wedding_22.jpg, H:\alexBucket\alex\export\5x7, 5a34b7658f30171019481e3a0c0c90712f7e666b
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_22.jpg
+handling wedding_23-2.jpg, H:\alexBucket\alex\export\5x7, a803aa2b4fbdcea3007b329118cfbff828b57ff7
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_23-2.jpg
+handling wedding_23.jpg, H:\alexBucket\alex\export\5x7, 2ca1b934c07952b09d305efe7b545b476d54ba77
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_23.jpg
+handling wedding_24.jpg, H:\alexBucket\alex\export\5x7, 1e60ad6b22b5ca8575d140f15548a132d730bdb0
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_24.jpg
+handling wedding_25-2.jpg, H:\alexBucket\alex\export\5x7, c25ae7f030c94197d8d1cd6bbec5b58ed72e6f5f
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_25-2.jpg
+handling wedding_25.jpg, H:\alexBucket\alex\export\5x7, 1b3e4a26855334a3ee4a8aa2e7c3378c3722b2bd
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_25.jpg
+handling wedding_26.jpg, H:\alexBucket\alex\export\5x7, 4492d8ff5d735b52a635e219a69a26690e44d5a1
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_26.jpg
+handling wedding_27.jpg, H:\alexBucket\alex\export\5x7, d3cae6dd0f48e5a782385bbefc247e4e4098e004
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_27.jpg
+handling wedding_28.jpg, H:\alexBucket\alex\export\5x7, 8d3bb37f8b26dd9d5f8634c667c3ee4edef6b66f
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_28.jpg
+handling wedding_29.jpg, H:\alexBucket\alex\export\5x7, f444fce2aa9da3b2c93f55b68a0f94bea539cadb
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_29.jpg
+handling wedding_30.jpg, H:\alexBucket\alex\export\5x7, ccb2286185135e9758b8a679d671043aea64e5f1
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_30.jpg
+handling wedding_31.jpg, H:\alexBucket\alex\export\5x7, f4d9bd6265a26be2ac46661cf53e5eee08d0c592
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_31.jpg
+handling wedding_32.jpg, H:\alexBucket\alex\export\5x7, 2ec44de26532785f3e10303263079347c0c685cc
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_32.jpg
+handling wedding_33.jpg, H:\alexBucket\alex\export\5x7, 3a4695eae0d598161867d10412ddb5b59294493c
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_33.jpg
+handling wedding_34.jpg, H:\alexBucket\alex\export\5x7, 59c672fc496b7042b128968b11a032e31172d44a
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_34.jpg
+handling wedding_35.jpg, H:\alexBucket\alex\export\5x7, e34bf5794d32ef0b96363d54bd474b90210b1e74
+already in database
+ dir H:\alexBucket\alex\export\5x7 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7 for wedding_35.jpg
+handling wedding_01.jpg, H:\alexBucket\alex\export\5x7v2, aef5c58a569cdfacd000d9b1de17724a81c8526c
+already in database
+ inserting dir H:\alexBucket\alex\export\5x7v2
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_01.jpg
+handling wedding_02.jpg, H:\alexBucket\alex\export\5x7v2, bf73f886cb4e3b6d40e0a117613ac5811f877c48
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_02.jpg
+handling wedding_03.jpg, H:\alexBucket\alex\export\5x7v2, e8b890ab6cc25c0239e271faca5137955a4cfcb2
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_03.jpg
+handling wedding_04_.jpg, H:\alexBucket\alex\export\5x7v2, f798aaa2afdf3f75514dcbd3ef9d831443a4558e
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_04_.jpg
+handling wedding_05.jpg, H:\alexBucket\alex\export\5x7v2, e5b46fce9c1a941d35bfa46f88bd9381f93f373f
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_05.jpg
+handling wedding_06.jpg, H:\alexBucket\alex\export\5x7v2, 9c901881324ea6a5505a41d2b0b8ec8de3342a5c
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_06.jpg
+handling wedding_07.jpg, H:\alexBucket\alex\export\5x7v2, f0e714050a4630d1a5a20c97d30326e02ef40a39
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_07.jpg
+handling wedding_08.jpg, H:\alexBucket\alex\export\5x7v2, 3e624a76400b5c8afbc4299688721e93c49980c9
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_08.jpg
+handling wedding_09.jpg, H:\alexBucket\alex\export\5x7v2, 5c95335b699bad3bdcf3a88b167c297b9d0a2fbd
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_09.jpg
+handling wedding_10.jpg, H:\alexBucket\alex\export\5x7v2, 673ff8b6743338bf19ceab3933fe1135962872e9
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_10.jpg
+handling wedding_11.jpg, H:\alexBucket\alex\export\5x7v2, c48ef95d4ec70b0788233b2164a542e286629f3f
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_11.jpg
+handling wedding_12.jpg, H:\alexBucket\alex\export\5x7v2, e31a67425f148a52d653713ee22834ccd1fb5ce2
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_12.jpg
+handling wedding_13.jpg, H:\alexBucket\alex\export\5x7v2, 44e06369bd576d69757d77d3b4b72dbb96f0f81d
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_13.jpg
+handling wedding_14.jpg, H:\alexBucket\alex\export\5x7v2, bbf6524413c2ea1e9936a4edcdd839b8c32066b7
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_14.jpg
+handling wedding_15.jpg, H:\alexBucket\alex\export\5x7v2, 64d3fd92c57f6fe1253e3a1d3444cc88bb30723c
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_15.jpg
+handling wedding_16.jpg, H:\alexBucket\alex\export\5x7v2, 85c7d264a3343a2c525e6044ee65f82d7287b556
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_16.jpg
+handling wedding_17.jpg, H:\alexBucket\alex\export\5x7v2, cfb3209687c88b74c5d4471037ed2c04073bfc7d
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_17.jpg
+handling wedding_18.jpg, H:\alexBucket\alex\export\5x7v2, 085490a207f8409a46be21401b754448cb9a795d
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_18.jpg
+handling wedding_19.jpg, H:\alexBucket\alex\export\5x7v2, dff4d58a7c01e0a6a61df0623f83eca47a09b6de
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_19.jpg
+handling wedding_20.jpg, H:\alexBucket\alex\export\5x7v2, 07e64c775df4125c5921825d439c1cc91e2c3cef
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_20.jpg
+handling wedding_21.jpg, H:\alexBucket\alex\export\5x7v2, 3802dea147946c9b2c9a7495e69c45bcd32f6ca2
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_21.jpg
+handling wedding_22.jpg, H:\alexBucket\alex\export\5x7v2, 26d8f333e1cd3cd2d3dfc21e1abd03ea3b5295db
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_22.jpg
+handling wedding_23-2.jpg, H:\alexBucket\alex\export\5x7v2, 469311c1f6fbd10b8b18e3289d666c9711174baf
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_23-2.jpg
+handling wedding_23.jpg, H:\alexBucket\alex\export\5x7v2, ed4892ca4d1f47e081f2c6180e413421f4d34382
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_23.jpg
+handling wedding_24.jpg, H:\alexBucket\alex\export\5x7v2, fd6d50e18e677b28ea47297ad97e2ca0f8fa8c17
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_24.jpg
+handling wedding_25-2.jpg, H:\alexBucket\alex\export\5x7v2, 1fd3fb0fc476d74d06cef9b2e8097046ab0524a7
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_25-2.jpg
+handling wedding_25.jpg, H:\alexBucket\alex\export\5x7v2, 5face6666c66935e1b06247c20f4fc99ec9b42ce
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_25.jpg
+handling wedding_26-2.jpg, H:\alexBucket\alex\export\5x7v2, 194c0ec5854bb7ff477e54670364f5776faef45e
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_26-2.jpg
+handling wedding_26.jpg, H:\alexBucket\alex\export\5x7v2, 7e9d0de87208ce70ef1e8340dc965806bdc311c4
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_26.jpg
+handling wedding_27.jpg, H:\alexBucket\alex\export\5x7v2, 5d011a37a152eeeb00f9675a72db926bd9189f99
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_27.jpg
+handling wedding_28.jpg, H:\alexBucket\alex\export\5x7v2, b7ea83d85e873ca53f4046651c0c57b979cacba6
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_28.jpg
+handling wedding_29.jpg, H:\alexBucket\alex\export\5x7v2, a4601aa5056fab4eac69880cfc74b1145010017f
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_29.jpg
+handling wedding_30.jpg, H:\alexBucket\alex\export\5x7v2, eecb73712cc0aebcfd92f38cd690e259ecc16910
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_30.jpg
+handling wedding_31.jpg, H:\alexBucket\alex\export\5x7v2, f78360f43886be5d46ce412ad5fa0bc0491f6fc0
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_31.jpg
+handling wedding_32.jpg, H:\alexBucket\alex\export\5x7v2, dcc552123f778b2bb1bae6ecc19c730bb02d6062
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_32.jpg
+handling wedding_33.jpg, H:\alexBucket\alex\export\5x7v2, d62d3803e3d7cf4035aa0e8ce75da27d34affa34
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_33.jpg
+handling wedding_34.jpg, H:\alexBucket\alex\export\5x7v2, 0e16e523f3fcb9a3c0b06afbfab765487b9daa18
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_34.jpg
+handling wedding_35.jpg, H:\alexBucket\alex\export\5x7v2, 31612c3aad4bdf7bca2b8d1157407f4078226c88
+already in database
+ dir H:\alexBucket\alex\export\5x7v2 already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\5x7v2 for wedding_35.jpg
+handling wedding_01.jpg, H:\alexBucket\alex\export\fullsize_s, 077dda77ed85985ac7833186c710e05b6eac2240
+already in database
+ inserting dir H:\alexBucket\alex\export\fullsize_s
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_01.jpg
+handling wedding_02.jpg, H:\alexBucket\alex\export\fullsize_s, b12b4d25d92d1e6529ae0fdcd39db2eb10bc2d44
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_02.jpg
+handling wedding_03.jpg, H:\alexBucket\alex\export\fullsize_s, 6ae63375c934d87fa612d818a4d80a8ab00a3ea3
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_03.jpg
+handling wedding_04.jpg, H:\alexBucket\alex\export\fullsize_s, ae1b862bc18a8781d2bab323cd71713a7fb9a465
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_04.jpg
+handling wedding_05.jpg, H:\alexBucket\alex\export\fullsize_s, bc2acb2552644e87dea8ea7edef9104ce2337dfa
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_05.jpg
+handling wedding_06.jpg, H:\alexBucket\alex\export\fullsize_s, b5f6d7813d2745405aa73c55b63ec880ec86f0d8
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_06.jpg
+handling wedding_07.jpg, H:\alexBucket\alex\export\fullsize_s, 0411964b9496382a8b219235880bfc0584330fbc
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_07.jpg
+handling wedding_08.jpg, H:\alexBucket\alex\export\fullsize_s, 46d04d8a9ac05239b9205a4a89f902de58b881f3
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_08.jpg
+handling wedding_09.jpg, H:\alexBucket\alex\export\fullsize_s, cd908a0e82d40455c1d28aa70f13263d5907090c
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_09.jpg
+handling wedding_10.jpg, H:\alexBucket\alex\export\fullsize_s, 39c5995f952f1809a2f88bda5a50a821a7f50b40
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_10.jpg
+handling wedding_11.jpg, H:\alexBucket\alex\export\fullsize_s, 2c0b678f701678a5f0892fd74129dd6b7d809df5
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_11.jpg
+handling wedding_12.jpg, H:\alexBucket\alex\export\fullsize_s, dd50128db1228721be532d708b7fe36560fe88e8
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_12.jpg
+handling wedding_13.jpg, H:\alexBucket\alex\export\fullsize_s, 70f1808053ca034030e29eebceac18f470d2f4f0
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_13.jpg
+handling wedding_14.jpg, H:\alexBucket\alex\export\fullsize_s, 9dc244927e77ded564a4bd02988a79b4b5a3479d
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_14.jpg
+handling wedding_15.jpg, H:\alexBucket\alex\export\fullsize_s, 7568e7dc642a02305c49283d7946dd2c7d03078e
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_15.jpg
+handling wedding_16.jpg, H:\alexBucket\alex\export\fullsize_s, 71c59136dccca44c924dc2706cdacbc40ec9ecce
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_16.jpg
+handling wedding_17.jpg, H:\alexBucket\alex\export\fullsize_s, 29f984c261d7ae11918120a02a1e96ac733356ad
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_17.jpg
+handling wedding_18.jpg, H:\alexBucket\alex\export\fullsize_s, 4a1785e47bb6598239d6bc7c4699dad3a208d5ec
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_18.jpg
+handling wedding_19.jpg, H:\alexBucket\alex\export\fullsize_s, 65881439ea9ea4d20ddb5b19fc3dda9686fb35f6
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_19.jpg
+handling wedding_20.jpg, H:\alexBucket\alex\export\fullsize_s, 9580cec9cfc37dc8295de359fac4198f6b999fb5
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_20.jpg
+handling wedding_21.jpg, H:\alexBucket\alex\export\fullsize_s, 1ce19300d0185477981618cddf1db64ba0910624
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_21.jpg
+handling wedding_22.jpg, H:\alexBucket\alex\export\fullsize_s, 741cd21bd440036b14dd6ce4befdd9ea532a9ee3
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_22.jpg
+handling wedding_23.jpg, H:\alexBucket\alex\export\fullsize_s, dbeab6a7b4da1f48d3fefd3a1554fe712e1d86e1
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_23.jpg
+handling wedding_24.jpg, H:\alexBucket\alex\export\fullsize_s, f84111b8750508364b45364b391dc86e5becd321
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_24.jpg
+handling wedding_25.jpg, H:\alexBucket\alex\export\fullsize_s, d154d395f7cbe9d4a76645fb4dd22151734dd218
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_25.jpg
+handling wedding_26.jpg, H:\alexBucket\alex\export\fullsize_s, 2cc9dc01976202b70fed8eddd9e92bacf60fea7a
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_26.jpg
+handling wedding_27.jpg, H:\alexBucket\alex\export\fullsize_s, 63e61c4e528ef9a1345760517f1a3c0a68ef69d9
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_27.jpg
+handling wedding_28.jpg, H:\alexBucket\alex\export\fullsize_s, 64e0e5f30b8f4d6abb28de64a1e516cd3c4a3bb8
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_28.jpg
+handling wedding_29.jpg, H:\alexBucket\alex\export\fullsize_s, c608084df655f69484eba9395d73540e296b99f0
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_29.jpg
+handling wedding_30.jpg, H:\alexBucket\alex\export\fullsize_s, efaf4f122bbe8f1d56d682609e1b6241650601ff
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_30.jpg
+handling wedding_31.jpg, H:\alexBucket\alex\export\fullsize_s, 077bb8602e9f7fe3ab262202b1fc81cb10fa8747
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_31.jpg
+handling wedding_32.jpg, H:\alexBucket\alex\export\fullsize_s, 3b8d83528f629acae9f4e8d94096f60b1e72b81b
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_32.jpg
+handling wedding_33.jpg, H:\alexBucket\alex\export\fullsize_s, a843c754d6ddadef01730b3ab8457bfd2744442e
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_33.jpg
+handling wedding_34.jpg, H:\alexBucket\alex\export\fullsize_s, 5e5e15f213740248739840bd252049300715c268
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_34.jpg
+handling wedding_35.jpg, H:\alexBucket\alex\export\fullsize_s, 16a6b4f2e7ce9ff563e62587943518406036340e
+already in database
+ dir H:\alexBucket\alex\export\fullsize_s already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\fullsize_s for wedding_35.jpg
+handling wedding_01.psd, H:\alexBucket\alex\export\tryColorCorrectPsd, 1c029a2ea4c904972f35695e16fbcc227f750b70
+already in database
+ inserting dir H:\alexBucket\alex\export\tryColorCorrectPsd
+ inserting original dir H:\alexBucket\alex\export\tryColorCorrectPsd for wedding_01.psd
+handling index.html, H:\alexBucket\alex\export\wedding, 577080e6529d080b4df29fec6c115de526117ba2
+already in database
+ inserting dir H:\alexBucket\alex\export\wedding
+ inserting original dir H:\alexBucket\alex\export\wedding for index.html
+handling index_2.html, H:\alexBucket\alex\export\wedding, 506d8bdc7c1897b11c7e254c7ece422ea9c0f41a
+already in database
+ dir H:\alexBucket\alex\export\wedding already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding for index_2.html
+handling index_3.html, H:\alexBucket\alex\export\wedding, 5b4340d783b4ee0af1cfbf9e38043323c0935288
+already in database
+ dir H:\alexBucket\alex\export\wedding already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding for index_3.html
+handling custom.css, H:\alexBucket\alex\export\wedding\content, 04fe2b59123e01568a9cb36eb57018d233cad6d5
+already in database
+ inserting dir H:\alexBucket\alex\export\wedding\content
+ inserting original dir H:\alexBucket\alex\export\wedding\content for custom.css
+handling logo.png, H:\alexBucket\alex\export\wedding\content, 78e752ec381390bdebf123946ce2f5a7e292d7d9
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for logo.png
+handling wedding_01_large.html, H:\alexBucket\alex\export\wedding\content, 00f3dc5088e860db5473743108375fcf03dc8f87
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_01_large.html
+handling wedding_02_large.html, H:\alexBucket\alex\export\wedding\content, 49ff38f67f2c1d175c0ee11e9b03b9cc2627cdda
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_02_large.html
+handling wedding_03_large.html, H:\alexBucket\alex\export\wedding\content, 4e6bf3148f2f074f6ac2cda2b58b2f3784640717
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_03_large.html
+handling wedding_04_large.html, H:\alexBucket\alex\export\wedding\content, ef022e335dc7c1eed8ae8267d83058aa1ec3ff28
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_04_large.html
+handling wedding_05_large.html, H:\alexBucket\alex\export\wedding\content, 9a9f7e717410d4d8be589c5beb9cd552f9995153
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_05_large.html
+handling wedding_06_large.html, H:\alexBucket\alex\export\wedding\content, 0a6eeb8a6aaef651d6c08465e23f0508695badb2
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_06_large.html
+handling wedding_07_large.html, H:\alexBucket\alex\export\wedding\content, 29f7c22be122a6b008fecb0033bcfdd05e129e17
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_07_large.html
+handling wedding_08_large.html, H:\alexBucket\alex\export\wedding\content, 3922a43726f8ef7036503c741f71d1de4e5ed5ce
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_08_large.html
+handling wedding_09_large.html, H:\alexBucket\alex\export\wedding\content, 6cd622430d05b79ad70371b1ceaba86745c64140
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_09_large.html
+handling wedding_10_large.html, H:\alexBucket\alex\export\wedding\content, 3da7c0b51c4b2443d579478933f50ee073d405f5
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_10_large.html
+handling wedding_11_large.html, H:\alexBucket\alex\export\wedding\content, 77ad487c90217daa870b475216000f372212e242
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_11_large.html
+handling wedding_12_large.html, H:\alexBucket\alex\export\wedding\content, 73782e3496192f5c4422924a280af2c55756074c
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_12_large.html
+handling wedding_13_large.html, H:\alexBucket\alex\export\wedding\content, f53bc68e2a0dccfdbb324f6dbdf8ae503ad2585e
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_13_large.html
+handling wedding_14_large.html, H:\alexBucket\alex\export\wedding\content, 5853750dbed2b5ff625549ae3af1a61edb2ea3c8
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_14_large.html
+handling wedding_15_large.html, H:\alexBucket\alex\export\wedding\content, 461283ceea65f0bba34216ac590509dc435b45b7
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_15_large.html
+handling wedding_16_large.html, H:\alexBucket\alex\export\wedding\content, 601231943d6a0672c30935f0dc86791b0ef4945e
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_16_large.html
+handling wedding_17_large.html, H:\alexBucket\alex\export\wedding\content, 0ede6d8aa4042cb3bb1c84a0632055e7a9ed6ade
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_17_large.html
+handling wedding_18_large.html, H:\alexBucket\alex\export\wedding\content, 14dd2d597171fce5f2b90f8f4c631a64641c043e
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_18_large.html
+handling wedding_19_large.html, H:\alexBucket\alex\export\wedding\content, 867408dd19283fb3b17f92cca5501029283a2deb
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_19_large.html
+handling wedding_20_large.html, H:\alexBucket\alex\export\wedding\content, a9ae2698a8d98f29c8d13bece6dffbf69812574c
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_20_large.html
+handling wedding_21_large.html, H:\alexBucket\alex\export\wedding\content, 3b594e3e7e0b244a666dcd1261c98f1814e1e70d
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_21_large.html
+handling wedding_22_large.html, H:\alexBucket\alex\export\wedding\content, 3ce498fb6bcd43c5ac61145efb8bb9615f03f6d4
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_22_large.html
+handling wedding_23_large.html, H:\alexBucket\alex\export\wedding\content, 00ae9610095c412bb21c4ef66882deb0af04cf65
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_23_large.html
+handling wedding_24_large.html, H:\alexBucket\alex\export\wedding\content, b3b4f6c679d9ff352d1efd7e8c7c4b2c03dfcefc
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_24_large.html
+handling wedding_25_large.html, H:\alexBucket\alex\export\wedding\content, 48be2aa4cab58b35d3db2038afcad287abb10197
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_25_large.html
+handling wedding_26_large.html, H:\alexBucket\alex\export\wedding\content, 697b82f04bbae12369d325a8532877e8df1b9713
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_26_large.html
+handling wedding_27_large.html, H:\alexBucket\alex\export\wedding\content, bc645f5373f7fb4fc9d4a59ef086fd304215affd
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_27_large.html
+handling wedding_28_large.html, H:\alexBucket\alex\export\wedding\content, 20f2dc22af621e45d79e8723aed268138d51b06c
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_28_large.html
+handling wedding_29_large.html, H:\alexBucket\alex\export\wedding\content, e68030e3cdf0d77fec7357aff4c5301116ef3db8
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_29_large.html
+handling wedding_30_large.html, H:\alexBucket\alex\export\wedding\content, bc19bad1c9a1ce7f78afb95589ef17a93e92224a
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_30_large.html
+handling wedding_31_large.html, H:\alexBucket\alex\export\wedding\content, d935306d5f48f3d29a4eb90321d3f9e0394dd721
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_31_large.html
+handling wedding_32_large.html, H:\alexBucket\alex\export\wedding\content, 41cb2474afe6b56267005c6b5c8fc1ac6bf19000
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_32_large.html
+handling wedding_33_large.html, H:\alexBucket\alex\export\wedding\content, 32e6a1b66f9d686fcbcc2ed44ce488e136f92c93
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_33_large.html
+handling wedding_34_large.html, H:\alexBucket\alex\export\wedding\content, 9f8d0613280ba4a93e8f8b9c63bfb169e56df061
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_34_large.html
+handling wedding_35_large.html, H:\alexBucket\alex\export\wedding\content, 7dd2bd5901e5eaa77b5b197379cd89f039bbb3fb
+already in database
+ dir H:\alexBucket\alex\export\wedding\content already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content for wedding_35_large.html
+handling wedding_01.jpg, H:\alexBucket\alex\export\wedding\content\images\large, 89acbe918b934999b28048e1870d315a5554916b
+already in database
+ inserting dir H:\alexBucket\alex\export\wedding\content\images\large
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_01.jpg
+handling wedding_02.jpg, H:\alexBucket\alex\export\wedding\content\images\large, ab982ed63a1051fd37907883adceee112bb3b2b6
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_02.jpg
+handling wedding_03.jpg, H:\alexBucket\alex\export\wedding\content\images\large, 91f61e10bda4b8aa9eaba1bed9e8bb357f1861fc
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_03.jpg
+handling wedding_04.jpg, H:\alexBucket\alex\export\wedding\content\images\large, 7f75b06c10732b652cd67f2afdb93d5dfa2d38a1
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_04.jpg
+handling wedding_05.jpg, H:\alexBucket\alex\export\wedding\content\images\large, be024f72f34e2f972ed6112eaee42a3fca6360e3
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_05.jpg
+handling wedding_06.jpg, H:\alexBucket\alex\export\wedding\content\images\large, 1ae54979ccce6b3a8a4b2f62ff57f3aa142b0df4
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_06.jpg
+handling wedding_07.jpg, H:\alexBucket\alex\export\wedding\content\images\large, 1f9a74e660a87a0bdb364d9878ba1035faf8ab5f
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_07.jpg
+handling wedding_08.jpg, H:\alexBucket\alex\export\wedding\content\images\large, e705dce62f0277a689b91cfe6ba473d499249af0
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_08.jpg
+handling wedding_09.jpg, H:\alexBucket\alex\export\wedding\content\images\large, 0446a8c2c3326485649516a4358ad7a12cead3f7
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_09.jpg
+handling wedding_10.jpg, H:\alexBucket\alex\export\wedding\content\images\large, 92cc4c7ce5b7b7ee9610f9c9fb72327aa16d6fd1
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_10.jpg
+handling wedding_11.jpg, H:\alexBucket\alex\export\wedding\content\images\large, afdde89704abe03580cfc1b2dc9fcdd9d68b1855
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_11.jpg
+handling wedding_12.jpg, H:\alexBucket\alex\export\wedding\content\images\large, 6e28d3dd0886392cfce21e70f4a7798d086f1220
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_12.jpg
+handling wedding_13.jpg, H:\alexBucket\alex\export\wedding\content\images\large, af50ac4ea5c365d09b78ab128412ece915176296
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_13.jpg
+handling wedding_14.jpg, H:\alexBucket\alex\export\wedding\content\images\large, f3ce3cf073b0217082b3d7caeb70b37c43481fa2
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_14.jpg
+handling wedding_15.jpg, H:\alexBucket\alex\export\wedding\content\images\large, bf4de076c7ee5fd4d22574296eebe2d3f7e62414
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_15.jpg
+handling wedding_16.jpg, H:\alexBucket\alex\export\wedding\content\images\large, 876aa6ad94457be6e52a7c0e5345828bf970fbc8
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_16.jpg
+handling wedding_17.jpg, H:\alexBucket\alex\export\wedding\content\images\large, f587c45591904f6d207a9d750f23c411476db59d
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_17.jpg
+handling wedding_18.jpg, H:\alexBucket\alex\export\wedding\content\images\large, 700331f3a7a9102e04a690e5e7a2d4396fd7d459
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_18.jpg
+handling wedding_19.jpg, H:\alexBucket\alex\export\wedding\content\images\large, 40aae798693ff75ff5e2b0025f51d48fc66670b6
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_19.jpg
+handling wedding_20.jpg, H:\alexBucket\alex\export\wedding\content\images\large, 9fe1fb1bf2ea4663de7025cf3b071ea324a89289
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_20.jpg
+handling wedding_21.jpg, H:\alexBucket\alex\export\wedding\content\images\large, fa9c4196e88984252e5ca13c22b0d257004a9145
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_21.jpg
+handling wedding_22.jpg, H:\alexBucket\alex\export\wedding\content\images\large, 3f43670c76a8e98ee3bc0f8c5eb5bf43fe68c766
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_22.jpg
+handling wedding_23.jpg, H:\alexBucket\alex\export\wedding\content\images\large, bbcc95dcb916457c20fd1726d25de9cec750acc9
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_23.jpg
+handling wedding_24.jpg, H:\alexBucket\alex\export\wedding\content\images\large, 57017d103724f198dd79637bb5d5e57d8b5b8078
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_24.jpg
+handling wedding_25.jpg, H:\alexBucket\alex\export\wedding\content\images\large, 68b47e85d398acc772df4768ae41d339c07f215a
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_25.jpg
+handling wedding_26.jpg, H:\alexBucket\alex\export\wedding\content\images\large, cf6a2c7329a1de6324dbfd323a3e1f61e058d12e
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_26.jpg
+handling wedding_27.jpg, H:\alexBucket\alex\export\wedding\content\images\large, 6a3374f6a0108b30110b00e09793ed4dc26a3e50
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_27.jpg
+handling wedding_28.jpg, H:\alexBucket\alex\export\wedding\content\images\large, 645ed4e1916dcca0dfb285b01b0c8a23ee1e817a
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_28.jpg
+handling wedding_29.jpg, H:\alexBucket\alex\export\wedding\content\images\large, 5086721e35f20393447418ba41ab20f7de7dffc7
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_29.jpg
+handling wedding_30.jpg, H:\alexBucket\alex\export\wedding\content\images\large, 77050d4f40b5a8b2e8782c7627e619cd9aa4a206
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_30.jpg
+handling wedding_31.jpg, H:\alexBucket\alex\export\wedding\content\images\large, ed7f270cfa4a5a47e44346709e67ff8d3e8f0847
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_31.jpg
+handling wedding_32.jpg, H:\alexBucket\alex\export\wedding\content\images\large, a94240b23ef9af4e042a29055199e264d56d1164
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_32.jpg
+handling wedding_33.jpg, H:\alexBucket\alex\export\wedding\content\images\large, 40b1077ebc8dcfa557eb387a1522e37f6fb407fb
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_33.jpg
+handling wedding_34.jpg, H:\alexBucket\alex\export\wedding\content\images\large, 1cf0d8d408528e17e8a9b3c066fe5758fe36c28b
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_34.jpg
+handling wedding_35.jpg, H:\alexBucket\alex\export\wedding\content\images\large, eb39b7a86ef59964d5785a2a9b021e756db63e07
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\large already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\large for wedding_35.jpg
+handling wedding_01.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, 61d7571ab87531044567e5e757cbf6b01a9b2ab9
+already in database
+ inserting dir H:\alexBucket\alex\export\wedding\content\images\thumb
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_01.jpg
+handling wedding_02.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, 06d9503ea500b483ddb40c9cd63818bac66b86db
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_02.jpg
+handling wedding_03.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, 3c69c7bd8c8c235c5cb0208e09bab80e62376571
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_03.jpg
+handling wedding_04.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, 830cf7627a36775f89c6217424720b2369941230
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_04.jpg
+handling wedding_05.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, e216b33ba32a5ebd1f269f3ec59ec9443b9f91f5
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_05.jpg
+handling wedding_06.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, 09e7fe33915c7df21d23c29cac3e240a2b68c704
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_06.jpg
+handling wedding_07.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, 7e7c7d8e69424cf73ce9c4a9a28b9f1605124df4
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_07.jpg
+handling wedding_08.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, af151c82453f4b5415fec01bd31d640fccca2da6
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_08.jpg
+handling wedding_09.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, 1f4985bad222ca8501de2741c094840808fc1a48
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_09.jpg
+handling wedding_10.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, 096f3297395892ede75a208dae0415ce9355c1e2
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_10.jpg
+handling wedding_11.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, c259e2435a6a183bd5adba55a66dd2c01d877798
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_11.jpg
+handling wedding_12.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, 45b035de5cef04d1873b3b15d4acab26d138352c
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_12.jpg
+handling wedding_13.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, a488f22acd65e2459077ea515d48e0c7a519297b
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_13.jpg
+handling wedding_14.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, 71fdd1a90cac807b5ff37a897ade86b48a70a382
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_14.jpg
+handling wedding_15.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, c9c9cc78e999d26e52d4562ad95981ee01d10566
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_15.jpg
+handling wedding_16.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, 83cd2ed0490bff683b96dafa9955a2229554fc11
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_16.jpg
+handling wedding_17.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, 46f14f2319201c37fd6dc892f673e6de5807bd45
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_17.jpg
+handling wedding_18.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, 6ad654252fbc0d56f752f997124670d170a198b8
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_18.jpg
+handling wedding_19.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, 825bcfdd198fa5fcd45f030df9e99b4a70a8fe9a
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_19.jpg
+handling wedding_20.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, 5183e53caf3a66bdb35f54899a473af1c143c37e
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_20.jpg
+handling wedding_21.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, f28032bbfc23859e9dc07403cad206eded6d6241
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_21.jpg
+handling wedding_22.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, 496ac28d5fdc3faff105a15828f9d7c2f4b14aef
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_22.jpg
+handling wedding_23.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, 232cfd0aecc4e6c6e585e44adb3e3b5334347082
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_23.jpg
+handling wedding_24.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, 644431377b52543fbc8c67fd829885e82f844ea3
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_24.jpg
+handling wedding_25.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, 7924eae8a09ba46db48b162d8b464e4279c6a14c
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_25.jpg
+handling wedding_26.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, 953cee51a57582648a989d0db23995b632ec91d6
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_26.jpg
+handling wedding_27.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, f59b035dd52b0aa763eaea23a5ad7587a3102538
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_27.jpg
+handling wedding_28.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, dbf8587126d14fe3de22e3a46b73669b0d55b000
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_28.jpg
+handling wedding_29.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, 2268dacbb4636d87b29821bb634d968dc4ebf19e
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_29.jpg
+handling wedding_30.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, 63e4c6d1e9196f7d7fcb47855d71d4c2ba624099
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_30.jpg
+handling wedding_31.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, d1ba16bb4a79cf38b798ff338c7720f0c757ad03
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_31.jpg
+handling wedding_32.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, a51eabee11c0a6c6af1730f5c86e565582ffa040
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_32.jpg
+handling wedding_33.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, 0d76a32413becac906167c1c18e2fc060636515b
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_33.jpg
+handling wedding_34.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, 79f8ee8ea9b55b626bbf77ab6ab72ae82970f11e
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_34.jpg
+handling wedding_35.jpg, H:\alexBucket\alex\export\wedding\content\images\thumb, 4db02981738242087fd563176205f04fbf74780e
+already in database
+ dir H:\alexBucket\alex\export\wedding\content\images\thumb already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\content\images\thumb for wedding_35.jpg
+handling version_info.png, H:\alexBucket\alex\export\wedding\resources, c784641fbdc0e8dbcd7127994c23380fa11d0d31
+already in database
+ inserting dir H:\alexBucket\alex\export\wedding\resources
+ inserting original dir H:\alexBucket\alex\export\wedding\resources for version_info.png
+handling ie6.css, H:\alexBucket\alex\export\wedding\resources\css, d069bfdbc5c9f54310b731af6aed7bb913a6d8a6
+already in database
+ inserting dir H:\alexBucket\alex\export\wedding\resources\css
+ inserting original dir H:\alexBucket\alex\export\wedding\resources\css for ie6.css
+handling ie7.css, H:\alexBucket\alex\export\wedding\resources\css, b20c35f9032729480f87e75190330af06f9f1005
+already in database
+ dir H:\alexBucket\alex\export\wedding\resources\css already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\resources\css for ie7.css
+handling master.css, H:\alexBucket\alex\export\wedding\resources\css, ba8119b8a85ba61b7d8cad5571095613aaa43440
+already in database
+ dir H:\alexBucket\alex\export\wedding\resources\css already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\resources\css for master.css
+handling live_update.js, H:\alexBucket\alex\export\wedding\resources\js, d3d4c35db15f6e2f48d85ebe396066dd6d6f3185
+already in database
+ inserting dir H:\alexBucket\alex\export\wedding\resources\js
+ inserting original dir H:\alexBucket\alex\export\wedding\resources\js for live_update.js
+handling pngfix.js, H:\alexBucket\alex\export\wedding\resources\js, e6e51197c78975be6c3b07cb046695e22da783a4
+already in database
+ dir H:\alexBucket\alex\export\wedding\resources\js already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\resources\js for pngfix.js
+handling icon_fullsize.png, H:\alexBucket\alex\export\wedding\resources\misc, d606fe58bd2b16c7c2418495810b8449a2caebbc
+already in database
+ inserting dir H:\alexBucket\alex\export\wedding\resources\misc
+ inserting original dir H:\alexBucket\alex\export\wedding\resources\misc for icon_fullsize.png
+handling shadow-grid.gif, H:\alexBucket\alex\export\wedding\resources\misc, 423f73e827b7ec186c5f263b39017a3fe6db86ad
+already in database
+ dir H:\alexBucket\alex\export\wedding\resources\misc already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\resources\misc for shadow-grid.gif
+handling shadow.png, H:\alexBucket\alex\export\wedding\resources\misc, 5aa05d2bd7f08f1840c41c04b600fe0809c444a6
+already in database
+ dir H:\alexBucket\alex\export\wedding\resources\misc already in database, not adding
+ inserting original dir H:\alexBucket\alex\export\wedding\resources\misc for shadow.png
+handling lcat.lrcat, H:\alexBucket\alex\lcat, 07dcf204696e4c136771ade2deedf993a613960a
+not in database, need to add
+copying H:\alexBucket\alex\lcat\lcat.lrcat to H:\objectstore2\07\07DCF204696E4C136771ADE2DEEDF993A613960A
+adding to filelisting
+adding to files table
+ inserting dir H:\alexBucket\alex\lcat
+ inserting original dir H:\alexBucket\alex\lcat for lcat.lrcat
+handling wedding_01.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, a96a4ce03f589040182e3994c301994eafc5afe7
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_01.psd to H:\objectstore2\A9\A96A4CE03F589040182E3994C301994EAFC5AFE7
+adding to filelisting
+adding to files table
+ inserting dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_01.psd
+handling wedding_02.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, d842b449e099d5631388f921201180bf563473e0
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_02.psd to H:\objectstore2\D8\D842B449E099D5631388F921201180BF563473E0
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_02.psd
+handling wedding_03.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, 8362c446439107288cb265aa51ac594ce9cbfe78
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_03.psd to H:\objectstore2\83\8362C446439107288CB265AA51AC594CE9CBFE78
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_03.psd
+handling wedding_04_.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, 763591e2c12109fa715a4b858818145313baa533
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_04_.psd to H:\objectstore2\76\763591E2C12109FA715A4B858818145313BAA533
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_04_.psd
+handling wedding_05.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, 87e6178d9536d9155835f5d6e269af4edbd6fdb0
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_05.psd to H:\objectstore2\87\87E6178D9536D9155835F5D6E269AF4EDBD6FDB0
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_05.psd
+handling wedding_07.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, 71608155402abf73b538cebec64d3d8f558cfafb
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_07.psd to H:\objectstore2\71\71608155402ABF73B538CEBEC64D3D8F558CFAFB
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_07.psd
+handling wedding_08.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, 7d352372cbaacd1a2fe8dfe88f20767bd0bf3694
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_08.psd to H:\objectstore2\7D\7D352372CBAACD1A2FE8DFE88F20767BD0BF3694
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_08.psd
+handling wedding_09.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, a51e1b9f8701608665cd0a7428e71e5ab028d816
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_09.psd to H:\objectstore2\A5\A51E1B9F8701608665CD0A7428E71E5AB028D816
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_09.psd
+handling wedding_10.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, 2ac24dd05c5715b0eb6ffef1a26a4169a522e456
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_10.psd to H:\objectstore2\2A\2AC24DD05C5715B0EB6FFEF1A26A4169A522E456
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_10.psd
+handling wedding_11.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, 9ed110d0e60b6b3b51170ff6728370cc927e8f7c
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_11.psd to H:\objectstore2\9E\9ED110D0E60B6B3B51170FF6728370CC927E8F7C
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_11.psd
+handling wedding_12.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, 7f49896234731ff113d570dc6e006c646c165979
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_12.psd to H:\objectstore2\7F\7F49896234731FF113D570DC6E006C646C165979
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_12.psd
+handling wedding_13.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, 609a5b9ba90d3312ba59637fcb492bc93a56166c
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_13.psd to H:\objectstore2\60\609A5B9BA90D3312BA59637FCB492BC93A56166C
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_13.psd
+handling wedding_14.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, 6c90fd0c680149228beb2d70cda8c87ab603f027
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_14.psd to H:\objectstore2\6C\6C90FD0C680149228BEB2D70CDA8C87AB603F027
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_14.psd
+handling wedding_15.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, 0e350436d1424d9de26c9eab6ac4aea21bdf7735
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_15.psd to H:\objectstore2\0E\0E350436D1424D9DE26C9EAB6AC4AEA21BDF7735
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_15.psd
+handling wedding_16.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, de51ae3f2c7794be3c27191ee426f2cb7a065e49
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_16.psd to H:\objectstore2\DE\DE51AE3F2C7794BE3C27191EE426F2CB7A065E49
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_16.psd
+handling wedding_17.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, 1c16dbb8a2856add815e1cd0904b40bbbc39449d
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_17.psd to H:\objectstore2\1C\1C16DBB8A2856ADD815E1CD0904B40BBBC39449D
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_17.psd
+handling wedding_20.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, 199777fc14fe5c92b9d915060c316dacb9996a75
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_20.psd to H:\objectstore2\19\199777FC14FE5C92B9D915060C316DACB9996A75
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_20.psd
+handling wedding_21.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, eca753196a8dae3ffdf05674c35d5c8a2cb6fc90
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_21.psd to H:\objectstore2\EC\ECA753196A8DAE3FFDF05674C35D5C8A2CB6FC90
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_21.psd
+handling wedding_22.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, cca0ccf644b7e9d1a806e6102214b5b13b93e2a2
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_22.psd to H:\objectstore2\CC\CCA0CCF644B7E9D1A806E6102214B5B13B93E2A2
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_22.psd
+handling wedding_23.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, 274222f1f3e295400d0a957b92e2061b3d82b427
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_23.psd to H:\objectstore2\27\274222F1F3E295400D0A957B92E2061B3D82B427
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_23.psd
+handling wedding_24.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, efec228f803a624a793eb94bc09df0b394eedfb4
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_24.psd to H:\objectstore2\EF\EFEC228F803A624A793EB94BC09DF0B394EEDFB4
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_24.psd
+handling wedding_25.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, e4857e13aa889fcca7e1269e64ab37f82c4d2747
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_25.psd to H:\objectstore2\E4\E4857E13AA889FCCA7E1269E64AB37F82C4D2747
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_25.psd
+handling wedding_26.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, 3620551a3528b37a3a7819bb4daa83afe2ffde0a
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_26.psd to H:\objectstore2\36\3620551A3528B37A3A7819BB4DAA83AFE2FFDE0A
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_26.psd
+handling wedding_29.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, f0425c531a1c5e1ae500aa15eaed2120aa3d2003
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_29.psd to H:\objectstore2\F0\F0425C531A1C5E1AE500AA15EAED2120AA3D2003
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_29.psd
+handling wedding_31.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, afd95be0c5a22587f412591d0f2fa50aeccf2d57
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_31.psd to H:\objectstore2\AF\AFD95BE0C5A22587F412591D0F2FA50AECCF2D57
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_31.psd
+handling wedding_32.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, 48d4c6abfe3db98c2a114c828f8cc17ba32d43bc
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_32.psd to H:\objectstore2\48\48D4C6ABFE3DB98C2A114C828F8CC17BA32D43BC
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_32.psd
+handling wedding_33.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, 58e4aca2ba7a50b5c9c8fca6b509819942e46323
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_33.psd to H:\objectstore2\58\58E4ACA2BA7A50B5C9C8FCA6B509819942E46323
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_33.psd
+handling wedding_34.psd, H:\alexBucket\alex\rawAndPsd\brcPsdToPrint, 76789ce02db5b34cea7e8f53c0c7c7326f9796cf
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\brcPsdToPrint\wedding_34.psd to H:\objectstore2\76\76789CE02DB5B34CEA7E8F53C0C7C7326F9796CF
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\brcPsdToPrint for wedding_34.psd
+handling wedding_04_.psd, H:\alexBucket\alex\rawAndPsd\bwOriginals, 8451727ae857cd5ada60783060ccbd85010757b7
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\bwOriginals\wedding_04_.psd to H:\objectstore2\84\8451727AE857CD5ADA60783060CCBD85010757B7
+adding to filelisting
+adding to files table
+ inserting dir H:\alexBucket\alex\rawAndPsd\bwOriginals
+ inserting original dir H:\alexBucket\alex\rawAndPsd\bwOriginals for wedding_04_.psd
+handling wedding_05.psd, H:\alexBucket\alex\rawAndPsd\bwOriginals, 8076d7ecf5499015a0268f1724dd9484a387ac11
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\bwOriginals\wedding_05.psd to H:\objectstore2\80\8076D7ECF5499015A0268F1724DD9484A387AC11
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\bwOriginals already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\bwOriginals for wedding_05.psd
+handling wedding_07.psd, H:\alexBucket\alex\rawAndPsd\bwOriginals, 8bcdf54b02392c48a53dfce673f893a7fd1c0740
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\bwOriginals\wedding_07.psd to H:\objectstore2\8B\8BCDF54B02392C48A53DFCE673F893A7FD1C0740
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\bwOriginals already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\bwOriginals for wedding_07.psd
+handling wedding_09.psd, H:\alexBucket\alex\rawAndPsd\bwOriginals, 77160f5f0c93460ff521e943ce5c896e4c9994ef
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\bwOriginals\wedding_09.psd to H:\objectstore2\77\77160F5F0C93460FF521E943CE5C896E4C9994EF
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\bwOriginals already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\bwOriginals for wedding_09.psd
+handling wedding_13_bw.psd, H:\alexBucket\alex\rawAndPsd\bwOriginals, 5311ccf232910c26fbff8094fc9ec7cfcd6c8083
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\bwOriginals\wedding_13_bw.psd to H:\objectstore2\53\5311CCF232910C26FBFF8094FC9EC7CFCD6C8083
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\bwOriginals already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\bwOriginals for wedding_13_bw.psd
+handling wedding_14_bw.psd, H:\alexBucket\alex\rawAndPsd\bwOriginals, fdac038910f6224bd84685b7af9848cce9035023
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\bwOriginals\wedding_14_bw.psd to H:\objectstore2\FD\FDAC038910F6224BD84685B7AF9848CCE9035023
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\bwOriginals already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\bwOriginals for wedding_14_bw.psd
+handling wedding_15_bw.psd, H:\alexBucket\alex\rawAndPsd\bwOriginals, cb41a4d6df10feea9a075d6a8496b2047878ba43
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\bwOriginals\wedding_15_bw.psd to H:\objectstore2\CB\CB41A4D6DF10FEEA9A075D6A8496B2047878BA43
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\bwOriginals already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\bwOriginals for wedding_15_bw.psd
+handling wedding_18_bw.psd, H:\alexBucket\alex\rawAndPsd\bwOriginals, 83baec600aaabbdba0d1e81835d6df8e32ddc779
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\bwOriginals\wedding_18_bw.psd to H:\objectstore2\83\83BAEC600AAABBDBA0D1E81835D6DF8E32DDC779
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\bwOriginals already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\bwOriginals for wedding_18_bw.psd
+handling wedding_23_bw.psd, H:\alexBucket\alex\rawAndPsd\bwOriginals, 05b24a8581941c4bc244a7659fed00412fe72049
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\bwOriginals\wedding_23_bw.psd to H:\objectstore2\05\05B24A8581941C4BC244A7659FED00412FE72049
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\bwOriginals already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\bwOriginals for wedding_23_bw.psd
+handling wedding_24_bw.psd, H:\alexBucket\alex\rawAndPsd\bwOriginals, 464465e37902bad3432edd5435617a5023f7b911
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\bwOriginals\wedding_24_bw.psd to H:\objectstore2\46\464465E37902BAD3432EDD5435617A5023F7B911
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\bwOriginals already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\bwOriginals for wedding_24_bw.psd
+handling wedding_25.psd, H:\alexBucket\alex\rawAndPsd\bwOriginals, 76674b03be40472301eeb5a54c2799d8c3201b7b
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\bwOriginals\wedding_25.psd to H:\objectstore2\76\76674B03BE40472301EEB5A54C2799D8C3201B7B
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\bwOriginals already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\bwOriginals for wedding_25.psd
+handling wedding_32.psd, H:\alexBucket\alex\rawAndPsd\bwOriginals, e9e81ac80d7c0bfc1c164cefe384c8e5612ee40f
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\bwOriginals\wedding_32.psd to H:\objectstore2\E9\E9E81AC80D7C0BFC1C164CEFE384C8E5612EE40F
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\bwOriginals already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\bwOriginals for wedding_32.psd
+handling wedding_33.psd, H:\alexBucket\alex\rawAndPsd\bwOriginals, 1821e43494a941b0cacb599be90fc62b4ae1f17e
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\bwOriginals\wedding_33.psd to H:\objectstore2\18\1821E43494A941B0CACB599BE90FC62B4AE1F17E
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\bwOriginals already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\bwOriginals for wedding_33.psd
+handling wedding_01.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, c6a698ecb5fe75849c90aa40951d830de073aae8
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_01.CR2 to H:\objectstore2\C6\C6A698ECB5FE75849C90AA40951D830DE073AAE8
+adding to filelisting
+adding to files table
+ inserting dir H:\alexBucket\alex\rawAndPsd\finalRaw
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_01.CR2
+handling wedding_02.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, 363177d3b03368c2ed33fd41df4a4b3956cc39b1
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_02.CR2 to H:\objectstore2\36\363177D3B03368C2ED33FD41DF4A4B3956CC39B1
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_02.CR2
+handling wedding_03.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, 4450319ec41f37d6869ece3afd98470f288e62e8
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_03.CR2 to H:\objectstore2\44\4450319EC41F37D6869ECE3AFD98470F288E62E8
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_03.CR2
+handling wedding_04.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, c8d87f17b49004f7e5bdc902a8c7cfe7397474e0
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_04.CR2 to H:\objectstore2\C8\C8D87F17B49004F7E5BDC902A8C7CFE7397474E0
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_04.CR2
+handling wedding_05.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, e85905e9b4375bf8c0bff4cad0655203c0d89beb
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_05.CR2 to H:\objectstore2\E8\E85905E9B4375BF8C0BFF4CAD0655203C0D89BEB
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_05.CR2
+handling wedding_06.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, 219dd743f972ca101882e59ccc2b42ef28cf6f76
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_06.CR2 to H:\objectstore2\21\219DD743F972CA101882E59CCC2B42EF28CF6F76
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_06.CR2
+handling wedding_07.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, e6c8b73501dbd8809661bfbf0362e365a2a5756e
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_07.CR2 to H:\objectstore2\E6\E6C8B73501DBD8809661BFBF0362E365A2A5756E
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_07.CR2
+handling wedding_08.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, 09692562fa1f7c38296fae970b85078ccfa3e271
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_08.CR2 to H:\objectstore2\09\09692562FA1F7C38296FAE970B85078CCFA3E271
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_08.CR2
+handling wedding_09.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, b97ff415c0c5f79165154358596e79f73f5ce18a
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_09.CR2 to H:\objectstore2\B9\B97FF415C0C5F79165154358596E79F73F5CE18A
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_09.CR2
+handling wedding_10.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, 09296f1dd6e7c6da584e7b9fe5123d7153546942
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_10.CR2 to H:\objectstore2\09\09296F1DD6E7C6DA584E7B9FE5123D7153546942
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_10.CR2
+handling wedding_11.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, 41f44a0b04b100cd443f24ffb5f2936413fe3172
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_11.CR2 to H:\objectstore2\41\41F44A0B04B100CD443F24FFB5F2936413FE3172
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_11.CR2
+handling wedding_12.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, 62ab38e8d8c2338b27ba451b08a9eb90066ab152
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_12.CR2 to H:\objectstore2\62\62AB38E8D8C2338B27BA451B08A9EB90066AB152
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_12.CR2
+handling wedding_13.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, 3672d735b6da0b97fcd17bb587b06183edcb101f
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_13.CR2 to H:\objectstore2\36\3672D735B6DA0B97FCD17BB587B06183EDCB101F
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_13.CR2
+handling wedding_14.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, 280baffe0738f7f277bfed9f5fc506b2be225265
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_14.CR2 to H:\objectstore2\28\280BAFFE0738F7F277BFED9F5FC506B2BE225265
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_14.CR2
+handling wedding_15.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, 03a3dce2bfd0c87de8fbbe9000ad6f65c798bdcd
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_15.CR2 to H:\objectstore2\03\03A3DCE2BFD0C87DE8FBBE9000AD6F65C798BDCD
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_15.CR2
+handling wedding_16.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, dca6378f5d1b212f72f343b3587b490fc6a33848
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_16.CR2 to H:\objectstore2\DC\DCA6378F5D1B212F72F343B3587B490FC6A33848
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_16.CR2
+handling wedding_17.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, 50693f7a8ded0f8afbf2b81647f86eaec2aa4ec7
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_17.CR2 to H:\objectstore2\50\50693F7A8DED0F8AFBF2B81647F86EAEC2AA4EC7
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_17.CR2
+handling wedding_18.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, f9ee19d9e6012b234c253b7961fbe43a378a79ae
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_18.CR2 to H:\objectstore2\F9\F9EE19D9E6012B234C253B7961FBE43A378A79AE
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_18.CR2
+handling wedding_19.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, d331d65072991d2e78968a458503b53b9e5fd32f
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_19.CR2 to H:\objectstore2\D3\D331D65072991D2E78968A458503B53B9E5FD32F
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_19.CR2
+handling wedding_20.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, c5c7cf2cb4c0c432d2e9a90235cee38e482a86d8
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_20.CR2 to H:\objectstore2\C5\C5C7CF2CB4C0C432D2E9A90235CEE38E482A86D8
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_20.CR2
+handling wedding_21.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, 35204b6ff358cdd3075588c421fc9ffbaebc82ae
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_21.CR2 to H:\objectstore2\35\35204B6FF358CDD3075588C421FC9FFBAEBC82AE
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_21.CR2
+handling wedding_22.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, 3b3f5d79b8887cf0e51540b6607022a7c5c9253c
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_22.CR2 to H:\objectstore2\3B\3B3F5D79B8887CF0E51540B6607022A7C5C9253C
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_22.CR2
+handling wedding_23.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, 9e722a271144fbd44894276f475840d2645ba746
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_23.CR2 to H:\objectstore2\9E\9E722A271144FBD44894276F475840D2645BA746
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_23.CR2
+handling wedding_24.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, dee4b1a544f5b4698d92384925868be4a3cd7c4b
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_24.CR2 to H:\objectstore2\DE\DEE4B1A544F5B4698D92384925868BE4A3CD7C4B
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_24.CR2
+handling wedding_25.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, 2840b125b9476d62869e25fc09517d83f00ad039
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_25.CR2 to H:\objectstore2\28\2840B125B9476D62869E25FC09517D83F00AD039
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_25.CR2
+handling wedding_26.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, 137b609b366b3a4d1f05b76ed3015e2de16844cb
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_26.CR2 to H:\objectstore2\13\137B609B366B3A4D1F05B76ED3015E2DE16844CB
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_26.CR2
+handling wedding_27.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, c998d035065df81604e97c9be8f4eb4705279961
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_27.CR2 to H:\objectstore2\C9\C998D035065DF81604E97C9BE8F4EB4705279961
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_27.CR2
+handling wedding_28.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, 3c6a101840bea907a50a0c4248418421007287d2
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_28.CR2 to H:\objectstore2\3C\3C6A101840BEA907A50A0C4248418421007287D2
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_28.CR2
+handling wedding_29.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, 9db86c77022870d3c44ac832e0c7c60423c03594
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_29.CR2 to H:\objectstore2\9D\9DB86C77022870D3C44AC832E0C7C60423C03594
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_29.CR2
+handling wedding_30.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, a512b8eecf60a17a876c9c3cbcfd3a2d7370a3f8
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_30.CR2 to H:\objectstore2\A5\A512B8EECF60A17A876C9C3CBCFD3A2D7370A3F8
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_30.CR2
+handling wedding_31.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, db4982cb7a027b1807cfdd3855f544656ed9557d
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_31.CR2 to H:\objectstore2\DB\DB4982CB7A027B1807CFDD3855F544656ED9557D
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_31.CR2
+handling wedding_32.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, 36a866a442b78f46aea0612f8b80437163ce4cfc
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_32.CR2 to H:\objectstore2\36\36A866A442B78F46AEA0612F8B80437163CE4CFC
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_32.CR2
+handling wedding_33.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, ea3e5d50479aa8b1590f5b18da407f35ab7d8be8
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_33.CR2 to H:\objectstore2\EA\EA3E5D50479AA8B1590F5B18DA407F35AB7D8BE8
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_33.CR2
+handling wedding_34.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, 08ca1d3f5145928cfdcf9d83e2cde1b9000d7e6d
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_34.CR2 to H:\objectstore2\08\08CA1D3F5145928CFDCF9D83E2CDE1B9000D7E6D
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_34.CR2
+handling wedding_35.CR2, H:\alexBucket\alex\rawAndPsd\finalRaw, c859dd2297387e9ad47fcb3fb5e3406dfbfa773e
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\finalRaw\wedding_35.CR2 to H:\objectstore2\C8\C859DD2297387E9AD47FCB3FB5E3406DFBFA773E
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\finalRaw already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\finalRaw for wedding_35.CR2
+handling wedding_18.psd, H:\alexBucket\alex\rawAndPsd\PsdToPrint, 406d7cb1d890e9de7fc2b5e4625e567d2e053588
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\PsdToPrint\wedding_18.psd to H:\objectstore2\40\406D7CB1D890E9DE7FC2B5E4625E567D2E053588
+adding to filelisting
+adding to files table
+ inserting dir H:\alexBucket\alex\rawAndPsd\PsdToPrint
+ inserting original dir H:\alexBucket\alex\rawAndPsd\PsdToPrint for wedding_18.psd
+handling wedding_27.psd, H:\alexBucket\alex\rawAndPsd\PsdToPrint, e15d708d3ff224514e12e80397303b23d157ae09
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\PsdToPrint\wedding_27.psd to H:\objectstore2\E1\E15D708D3FF224514E12E80397303B23D157AE09
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\PsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\PsdToPrint for wedding_27.psd
+handling wedding_28.psd, H:\alexBucket\alex\rawAndPsd\PsdToPrint, 9021fd128bf99b31e55ceea4b3891e057162130e
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\PsdToPrint\wedding_28.psd to H:\objectstore2\90\9021FD128BF99B31E55CEEA4B3891E057162130E
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\PsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\PsdToPrint for wedding_28.psd
+handling wedding_30.psd, H:\alexBucket\alex\rawAndPsd\PsdToPrint, aa34715f2a0a215a7bea9b57c23354d844a39e4c
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\PsdToPrint\wedding_30.psd to H:\objectstore2\AA\AA34715F2A0A215A7BEA9B57C23354D844A39E4C
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\PsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\PsdToPrint for wedding_30.psd
+handling wedding_35.psd, H:\alexBucket\alex\rawAndPsd\PsdToPrint, 53d654ae247803596cc5ee7e5369ecd5ab16387f
+not in database, need to add
+copying H:\alexBucket\alex\rawAndPsd\PsdToPrint\wedding_35.psd to H:\objectstore2\53\53D654AE247803596CC5EE7E5369ECD5AB16387F
+adding to filelisting
+adding to files table
+ dir H:\alexBucket\alex\rawAndPsd\PsdToPrint already in database, not adding
+ inserting original dir H:\alexBucket\alex\rawAndPsd\PsdToPrint for wedding_35.psd

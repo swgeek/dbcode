@@ -9,10 +9,14 @@ def HashToString(hashValueByteArray):
 	return hexString
 
 
-# TODO: FIX THIS!
+# may have to do this to extract unicode values
+#	asciiString = stringToHash.encode('ascii', 'ignore')
 def HashString(stringToHash):
-	# will not work, need to convert to sequence of bytes
-	hash = hashlib.sha1(stringToHash)
+	asciiString = stringToHash
+	# uncomment this if have problems with the hash because of unicode
+	#asciiString = stringToHash.encode('utf-8')
+
+	hash = hashlib.sha1(asciiString)
 	hashDigest = hash.hexdigest()
 	return hashDigest
 

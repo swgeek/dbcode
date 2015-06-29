@@ -40,3 +40,27 @@ def extractAllFilesFromDirectory(db, dirHash, destinationDir):
 				print "ERROR, file not found"
 				exit(1)
 
+
+def CopyFileIntoDepot(depotRootPath, sourceFilePath, filehash, logger):
+
+		subdir = filehash[0:2]
+		destinationDirPath = os.path.join(depotRootPath, subdir)
+		destinationFilePath = os.path.join(depotRootPath, subdir, filehash)
+
+		if not os.path.isdir(destinationDirPath):
+			os.mkdir(destinationDirPath)
+
+		if os.path.isfile(destinationFilePath):
+			filesize = os.path.getsize(destinationFilePath)
+			sourceFilesize = os.path.getsize(sourceFilePath)
+
+			if filesize != sourceFilesize:
+				logger.log( "ERROR: filesizes do not match for %s and %s" % (sourceFilePath, filehash) )
+				print "ERROR: filesizes do not match for %s and %s" % (sourceFilePath, filehash) 
+				exit(1)
+			else:
+				logger.log("did not copy %s, %s already exists" % (sourceFilePath, filehash))
+
+		else:
+			logger.log("copying %s to %s" % (sourceFilePath, destinationFilePath))
+			shutil.copyfile(sourceFilePath, destinationFilePath)

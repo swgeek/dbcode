@@ -12,11 +12,10 @@ OriginalDirectoriesSchema = "dirPathHash char(40) PRIMARY KEY, dirPath varchar(5
 FilesTable = "files"
 FilesSchema = "filehash char(40) PRIMARY KEY, filesize int, status varchar(60)"
 
-'''
-
 FileListingTable = "fileListing"
 FileListingSchema = "filehash char(40), depotId INTEGER, filesize int, FOREIGN KEY (depotId) REFERENCES objectStores(depotId), PRIMARY KEY (filehash, depotId)"
 
+'''
 OriginalDirectoriesTable = "originalDirectories"
 OriginalDirectoriesSchema = "dirPathHash char(40) PRIMARY KEY, dirPath varchar(500)"
 

@@ -33,6 +33,23 @@ class CoreDb:
             rows = cursor.fetchall()
         return rows
 
+
+    def ExecuteSqlQueryReturningSingleRow(self, sqlStatement):
+        connection = sqlite3.connect(self.dbFilePath)
+        with connection: # if do not use with, then have to do "commit" at end
+            cursor = connection.cursor()
+            cursor.execute(sqlStatement)
+            row = cursor.fetchone()
+        return row
+
+
+    def ExecuteNonQuerySql(self, sqlStatement):
+        connection = sqlite3.connect(self.dbFilePath)
+        with connection: # if do not use with, then have to do "commit" at end
+            cursor = connection.cursor()
+            cursor.execute(sqlStatement)
+
+
 '''
 
     @staticmethod
@@ -72,13 +89,7 @@ class CoreDb:
                 connection.close()
 
 
-    def ExecuteSqlQueryReturningSingleRow(self, sqlStatement):
-        connection = sqlite3.connect(self.dbFilePath)
-        with connection: # if do not use with, then have to do "commit" at end
-            cursor = connection.cursor()
-            cursor.execute(sqlStatement)
-            row = cursor.fetchone()
-        return row
+
 
 
     def ExecuteSqlQueryReturningMultipleRows(self, sqlStatement):
