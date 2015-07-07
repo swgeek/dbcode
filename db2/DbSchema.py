@@ -15,9 +15,11 @@ FilesSchema = "filehash char(40) PRIMARY KEY, filesize int, status varchar(60)"
 FileListingTable = "fileListing"
 FileListingSchema = "filehash char(40), depotId INTEGER, filesize int, FOREIGN KEY (depotId) REFERENCES objectStores(depotId), PRIMARY KEY (filehash, depotId)"
 
+# temporary table used to keep track of files backed up during current backup
+CurrentBackupTable = "currentBackedUp"
+CurrentBackupSchema = "filehash char(40) PRIMARY KEY"
+
 '''
-OriginalDirectoriesTable = "originalDirectories"
-OriginalDirectoriesSchema = "dirPathHash char(40) PRIMARY KEY, dirPath varchar(500)"
 
 DirSubDirTable = "subDirsTable"
 DirSubDirSchema = "dirPathHash char(40), subDirPathHash char(40), PRIMARY KEY (dirPathHash, subDirPathHash)"

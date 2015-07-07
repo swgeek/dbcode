@@ -49,6 +49,10 @@ def getListOfFilesInSubdir(rootDirPath, logger):
 	for dirpath, subDirList, fileList in os.walk(rootDirPath):
 		logger.log(dirpath)
 		for filename in fileList:
+			#filename = filename.encode('utf-8')
+			logger.log(filename)
+			#filename = filename.decode('utf-8').encode("latin-1")
+			#dirpath = dirpath.decode('utf-8').encode("latin-1")
 			filepath = os.path.join(dirpath, filename)
 			filehash = Sha1HashUtilities.HashFile(filepath)
 			filesToAdd.append((filename, dirpath, filehash))

@@ -4,8 +4,8 @@
 import os
 import shutil
 
-sourceDepot = "I:\\objectstore1p2"
-destinationDepot = "E:\\objectstore1p2"
+sourceDepot = "I:\\objectstore1p5"
+destinationDepot = "E:\\objectstore1p5"
 
 if not os.path.exists(sourceDepot):
 	raise Exception("%s does not exist" % sourceDepot)

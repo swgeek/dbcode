@@ -19,7 +19,7 @@ import os
 db = CoreDb.CoreDb("C:\\depotListing\\listingDb.sqlite")
 logger = DbLogger.dbLogger()
 
-dirpath = "H:\\alexBucket"
+dirpath = "H:\\fromDesktop"
 
 objectStores = miscQueries.getAllObjectStores(db)
 logger.log(objectStores)
@@ -38,6 +38,7 @@ logger.log(filesToAdd)
 # doing it individually allows me to break it partway and pick up where I left off
 # find better way to do this, probably have to move to postgres though
 for filename, dirpath, filehash in filesToAdd:
+
 	logger.log("handling %s, %s, %s" % (filename, dirpath, filehash))
 
 	filepath = os.path.join(dirpath, filename)
@@ -78,3 +79,5 @@ for filename, dirpath, filehash in filesToAdd:
 		logger.log(" inserting original dir %s for %s" % (dirpath, filename))
 		miscQueries.insertOriginalDir(db, filehash, filename, dirhash)
 
+logger.log("done")
+print "done"
