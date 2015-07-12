@@ -49,6 +49,26 @@ class CoreDb:
             cursor = connection.cursor()
             cursor.execute(sqlStatement)
 
+    def ExecuteManyNonQuery(self, sqlStatement, entries):
+        connection = sqlite3.connect(self.dbFilePath)
+        with connection: # if do not use with, then have to do "commit" at end
+            cursor = connection.cursor()
+            cursor.executemany(sqlStatement, entries)
+
+    def ExecuteSqlQueryReturningSingleInt(self, sqlStatement):
+        row = self.ExecuteSqlQueryReturningSingleRow(sqlStatement)
+        if row is None:
+            return None
+        value = int(row[0])
+        return value
+
+
+    def ExecuteSqlQueryForSingleString(self, sqlStatement):
+        row = self.ExecuteSqlQueryReturningSingleRow(sqlStatement)
+        if row is None:
+            return None
+        value = str(row[0])
+        return value
 
 '''
 
@@ -117,12 +137,6 @@ class CoreDb:
         yield None
 
  
-    def ExecuteSqlQueryReturningSingleInt(self, sqlStatement):
-        row = self.ExecuteSqlQueryReturningSingleRow(sqlStatement)
-        if row is None:
-            return None
-        value = int(row[0])
-        return value
 
 
     def ExecuteSqlQueryForSingleString(self, sqlStatement):

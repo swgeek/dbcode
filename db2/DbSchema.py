@@ -8,9 +8,11 @@ OriginalDirectoryForFileSchema = "filehash char(40), filename varchar(500), dirP
 OriginalDirectoriesTable = "originalDirectories"
 OriginalDirectoriesSchema = "dirPathHash char(40) PRIMARY KEY, dirPath varchar(500)"
 
+oldFilesTable = "files"
+oldFilesSchema = "filehash char(40) PRIMARY KEY, filesize int, status varchar(60)"
 
-FilesTable = "files"
-FilesSchema = "filehash char(40) PRIMARY KEY, filesize int, status varchar(60)"
+newFilesTable = "filesV2"
+newFilesSchema = "filehash char(40) PRIMARY KEY, filesize int, primaryLocation int, status varchar(60)"
 
 FileListingTable = "fileListing"
 FileListingSchema = "filehash char(40), depotId INTEGER, filesize int, FOREIGN KEY (depotId) REFERENCES objectStores(depotId), PRIMARY KEY (filehash, depotId)"

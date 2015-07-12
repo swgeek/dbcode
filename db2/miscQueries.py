@@ -5,6 +5,12 @@
 
 import DbSchema
 
+# database stuff
+def createTable(db, tableName, tableSchema):
+	createTableCommand = "create table %s (%s);" % (tableName, tableSchema)
+	db.ExecuteNonQuerySql(createTableCommand)
+
+	
 # depot stuff
 def getDepotInfo(db):
 	command = "select * from %s;" % DbSchema.objectStoresTable
@@ -32,7 +38,7 @@ def getAllFilesFromDir(db, dirPathHash):
 
 # this could probably be made more efficient, maybe find a better command
 def checkIfFilehashInDatabase(db, filehash):
-	command = "select filehash from %s where filehash = \"%s\";" % (DbSchema.FilesTable, filehash)
+	command = "select filehash from %s where filehash = \"%s\" limit 1;" % (DbSchema.newFilesTable, filehash)
 	result = db.ExecuteSqlQueryReturningMultipleRows(command)
 	if len(result) > 0:
 		return True
@@ -112,7 +118,12 @@ def insertFileListing(db, filehash, depotId, filesize):
 	db.ExecuteNonQuerySql(command)
 
 
-def insertFileEntry(db, filehash, filesize):
-	command = "insert into %s (filehash, filesize) values (\"%s\", %d)" \
-            % (DbSchema.FilesTable, filehash, filesize)
+def insertFileEntry(db, filehash, filesize, depotId):
+	command = "insert into %s (filehash, filesize, primaryLocation) values (\"%s\", %d, %d)" \
+            % (DbSchema.newFilesTable, filehash, filesize, depotId)
 	db.ExecuteNonQuerySql(command)
+
+def insertMultipleFileEntries(db, entryList):
+	command = "insert into %s (filehash, filesize, primaryLocation) values (?, ?, ?)" \
+            % (DbSchema.newFilesTable)
+	db.ExecuteManyNonQuery(command, entryList)
