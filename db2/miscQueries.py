@@ -5,6 +5,7 @@
 
 import DbSchema
 
+
 # database stuff
 def createTable(db, tableName, tableSchema):
 	createTableCommand = "create table %s (%s);" % (tableName, tableSchema)
@@ -127,3 +128,10 @@ def insertMultipleFileEntries(db, entryList):
 	command = "insert into %s (filehash, filesize, primaryLocation) values (?, ?, ?)" \
             % (DbSchema.newFilesTable)
 	db.ExecuteManyNonQuery(command, entryList)
+
+
+def getDirectoryPath(db, dirPathHash):
+	command = "select dirPath from %s where dirPathHash = \"%s\";" % (DbSchema.OriginalDirectoriesTable, dirPathHash)
+	return db.ExecuteSqlQueryForSingleString(command)
+
+

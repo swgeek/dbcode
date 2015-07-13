@@ -18,7 +18,7 @@ def HashString(stringToHash):
 
 	hash = hashlib.sha1(asciiString)
 	hashDigest = hash.hexdigest()
-	return hashDigest
+	return hashDigest.upper()
 
 
 # note, partial returns an object that will behave like the function passed in

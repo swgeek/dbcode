@@ -21,6 +21,11 @@ FileListingSchema = "filehash char(40), depotId INTEGER, filesize int, FOREIGN K
 CurrentBackupTable = "currentBackedUp"
 CurrentBackupSchema = "filehash char(40) PRIMARY KEY"
 
+TempDirInfoTable = "tempSortedDirs"
+TempDirInfoSchema = "dirPathHash char(40) PRIMARY KEY, totalFileInfo char(40), totalFileSize int, " + \
+						"totalDirInfo char(40), totalDirSize int"
+
+
 '''
 
 DirSubDirTable = "subDirsTable"
