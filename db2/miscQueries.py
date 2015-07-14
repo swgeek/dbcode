@@ -135,3 +135,8 @@ def getDirectoryPath(db, dirPathHash):
 	return db.ExecuteSqlQueryForSingleString(command)
 
 
+def numberOfRows(db, tableName):
+	command = "select count(*) from %s; " % tableName
+	return db.ExecuteSqlQueryReturningSingleInt(command)
+
+

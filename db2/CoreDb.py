@@ -18,7 +18,12 @@ class CoreDb:
             #TODO: should I keep this open all the time? Or open as close as needed? For now do not keep it open
             # note that connect will create empty database file if does not exist already
             dbConnection = sqlite3.connect(dbFilePath)
-        except sqlite.Error, e:
+            #dbConnection.text_factory = lambda x: str(x, 'utf_8')
+            #dbConnection.text_factory = bytes
+            dbConnection.text_factory = str
+            #dbConnection.text_factory = lambda x: unicode(x, "utf-8", "ignore")
+            #dbConnection.text_factory = lambda x: unicode(x, "utf-16", "ignore")
+        except sqlite3.Error, e:
             print "Error %s" % e.args[0]
             sys.exit(1)
 
@@ -27,10 +32,19 @@ class CoreDb:
 
     def ExecuteSqlQueryReturningMultipleRows(self, sqlStatement):
         connection = sqlite3.connect(self.dbFilePath)
-        with connection: # if do not use with, then have to do "commit" at end
-            cursor = connection.cursor()
-            cursor.execute(sqlStatement)
-            rows = cursor.fetchall()
+        #dbConnection.text_factory = lambda x: str(x, 'utf_8')
+        #dbConnection.text_factory = bytes
+        connection.text_factory = str
+        #dbConnection.text_factory = lambda x: unicode(x, "utf-8", "ignore")
+        #dbConnection.text_factory = lambda x: unicode(x, "utf-16", "ignore")
+        try:
+            with connection: # if do not use with, then have to do "commit" at end
+                cursor = connection.cursor()
+                cursor.execute(sqlStatement)
+                rows = cursor.fetchall()
+        except sqlite3.Error, e:
+            print "Error %s" % e.args[0]
+            sys.exit(1)
         return rows
 
 

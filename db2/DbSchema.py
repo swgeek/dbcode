@@ -5,6 +5,9 @@ objectStoresSchema = "depotId INTEGER PRIMARY KEY AUTOINCREMENT, description var
 OriginalDirectoryForFileTable = "originalDirectoryForFile"
 OriginalDirectoryForFileSchema = "filehash char(40), filename varchar(500), dirPathHash char(40), PRIMARY KEY (filehash, filename, dirPathHash)"
 
+DeletedDirectoryForFileTable = "deletedDirectoryForFile"
+DeletedDirectoryForFileSchema = "filehash char(40), filename varchar(500), dirPathHash char(40), PRIMARY KEY (filehash, filename, dirPathHash)"
+
 OriginalDirectoriesTable = "originalDirectories"
 OriginalDirectoriesSchema = "dirPathHash char(40) PRIMARY KEY, dirPath varchar(500)"
 
@@ -25,6 +28,9 @@ TempDirInfoTable = "tempSortedDirs"
 TempDirInfoSchema = "dirPathHash char(40) PRIMARY KEY, totalFileInfo char(40), totalFileSize int, " + \
 						"totalDirInfo char(40), totalDirSize int"
 
+TempDirectoryForFileTable = "TempDirectoryForFile"
+TempDirectoryForFileSchema = "filehash char(40), filename varchar(500), dirPathHash char(40), filesize int," + \
+				" PRIMARY KEY (filehash, filename, dirPathHash)"
 
 '''
 
