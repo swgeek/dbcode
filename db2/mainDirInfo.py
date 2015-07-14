@@ -50,10 +50,10 @@ def doTotalFileInfoForDir(db, dirPathHash, logger):
 	logger.log("original path: %s" % dirpath)
 
 	# get list of files in this dir
-	logger.log("files:")
+	#logger.log("files:")
 	filelist = miscQueries.getAllFilesFromDir(db, dirPathHash)
-	for entry in filelist:
-		logger.log(entry)
+	#for entry in filelist:
+	#	logger.log(entry)
 
 	if not filelist:
 		updateFileInfoForDir(db, dirPathHash, 0)
@@ -61,13 +61,13 @@ def doTotalFileInfoForDir(db, dirPathHash, logger):
 
 	filelist.sort()
 
-	logger.log("sorted and with filesize")
+	#logger.log("sorted and with filesize")
 
 	for entry in filelist:
-		logger.log(entry)
+		#logger.log(entry)
 		filehash = entry[0]
 		filesize = getFileSize(db, filehash)
-		logger.log(filesize)
+		#logger.log(filesize)
 		if filesize is None:
 			logger.log("###################NO FILESIZE FOR %s" % filehash)
 			
@@ -77,14 +77,14 @@ def doTotalFileInfoForDir(db, dirPathHash, logger):
 
 		totalFileSize += filesize
 
-	logger.log("joined into single string")
+	#logger.log("joined into single string")
 
 	singlestring = "".join("".join(x) for x in filelist)
-	logger.log(singlestring)
+	#logger.log(singlestring)
 	singlestringUTF8 = singlestring.encode('utf-8')
-	logger.log(singlestring)
+	#logger.log(singlestring)
 
-	logger.log("singlestring hash")
+	#logger.log("singlestring hash")
 
 	totalFileInfo = Sha1HashUtilities.HashString(singlestringUTF8)
 	logger.log(totalFileInfo)
@@ -108,9 +108,9 @@ logger = DbLogger.dbLogger()
 #logger.log(count)
 
 
-for i in range(300):
+for i in range(50000):
 	dirPathHash = getDirHashWithFileInfoTodo(db)
-	logger.log("doing dirPathHash %s" % dirPathHash)
+	logger.log("%d: doing dirPathHash %s" % (i,dirPathHash))
 	doTotalFileInfoForDir(db, dirPathHash, logger)
 
 
