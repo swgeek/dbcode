@@ -32,6 +32,9 @@ TempDirectoryForFileTable = "TempDirectoryForFile"
 TempDirectoryForFileSchema = "filehash char(40), filename varchar(500), dirPathHash char(40), filesize int," + \
 				" PRIMARY KEY (filehash, filename, dirPathHash)"
 
+TempParentDirTable = "tempParentDirTable"
+TempParentDirSchema = "dirPathHash char(40) PRIMARY KEY, parentDirPathHash char(40)"
+
 '''
 
 DirSubDirTable = "subDirsTable"

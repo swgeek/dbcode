@@ -140,3 +140,8 @@ def numberOfRows(db, tableName):
 	return db.ExecuteSqlQueryReturningSingleInt(command)
 
 
+def setFileStatus(db, fileHash, newStatus):
+	command = "update %s set status = \"%s\" where filehash = \"%s\";" % (DbSchema.newFilesTable, newStatus, fileHash)
+	db.ExecuteNonQuerySql(command)
+
+

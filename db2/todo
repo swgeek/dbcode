@@ -1,5 +1,10 @@
 todo
 
+- remove lightroom preview dirs
+- remove .git dirs
+- remove .svn dirs
+
+
 remove everything from dir:
 I:\m\fromM\opengles-book
 

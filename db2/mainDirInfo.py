@@ -4,178 +4,228 @@ import DbSchema
 import miscQueries
 import Sha1HashUtilities
 import time
-
-def portDataIntoTempDirForFileTable(db):
-
-	dropTableCommand = "drop table %s;" % DbSchema.TempDirectoryForFileTable
-	db.ExecuteNonQuerySql(dropTableCommand)
-	createTableCommand = "create table %s (%s);" % (DbSchema.TempDirectoryForFileTable, DbSchema.TempDirectoryForFileSchema)
-	db.ExecuteNonQuerySql(createTableCommand)
-
-	command = "insert into %s (filehash, filename, dirPathHash, filesize) " % DbSchema.TempDirectoryForFileTable +\
-		"select filehash, filename, dirPathHash, filesize from %s " % DbSchema.OriginalDirectoryForFileTable +\
-		"join %s using (filehash) " % DbSchema.newFilesTable
-	db.ExecuteNonQuerySql(command)
+import ntpath
 
 
-def getEntireTempDirTable(db):
-	command = "select dirPathHash, filehash, filename, filesize from %s;" % DbSchema.TempDirectoryForFileTable 
+def getAllDirs(db):
+	command = "select * from %s;" % DbSchema.OriginalDirectoriesTable
 	result = db.ExecuteSqlQueryReturningMultipleRows(command)
 	return result
 
 
-def getTempDirEntriesNotInOriginalDir(db):
-	command = "select filehash, filename, dirPathHash from %s " % DbSchema.OriginalDirectoryForFileTable +\
-				"where filehash not in (select filehash from %s); " % DbSchema.TempDirectoryForFileTable
-	result = db.ExecuteSqlQueryReturningMultipleRows(command)
-	return result
-
-
-def createDirInfoTable(db):
-	dropTableCommand = "drop table %s;" % DbSchema.TempDirInfoTable
-	db.ExecuteNonQuerySql(dropTableCommand)
-	createTableCommand = "create table %s (%s);" % (DbSchema.TempDirInfoTable, DbSchema.TempDirInfoSchema)
+def createParentDirTable(db):
+	createTableCommand = "create table %s (%s);" % (DbSchema.TempParentDirTable, DbSchema.TempParentDirSchema)
 	db.ExecuteNonQuerySql(createTableCommand)
 
 
-def copyDirHashValues(db):
-	command = "INSERT INTO %s (dirPathHash) SELECT dirPathHash FROM %s;" % (DbSchema.TempDirInfoTable, DbSchema.OriginalDirectoriesTable)
-	db.ExecuteNonQuerySql(command)
+def getAncestorPaths(dirpath):
+	ancestorPaths = []
+	partialPath = "dummy"
+	while dirpath and partialPath:
+		ancestorPaths.append(dirpath)
+		dirpath, partialPath = ntpath.split(dirpath)
+
+	return ancestorPaths
 
 
-def getNumberOfEntries(db, tableName):
-	command = "select count(*) from %s" % tableName
-	return db.ExecuteSqlQueryReturningSingleInt(command)
+def addToDirHashDict(allDirPaths, pathsToAdd):
+	for dirpath in pathsToAdd:
+		dirhash = Sha1HashUtilities.HashString(dirpath)
+		allDirPaths[dirhash] = dirpath
 
 
-def getDirHashWithFileInfoTodo(db, logger):
-	command = "select dirPathHash from %s where totalFileSize is null limit 1" % DbSchema.TempDirInfoTable
-	#command = "select * from %s where totalFileSize > 1000000 limit 1" % DbSchema.TempDirInfoTable
-	#values =  db.ExecuteSqlQueryReturningSingleRow(command)
-	#logger.log(values)
-	#command = "select dirPathHash from %s where totalFileSize > 1000000 limit 1" % DbSchema.TempDirInfoTable
-	values =  db.ExecuteSqlQueryReturningSingleRow(command)
-	if values != None:
-		return values[0]
-
-def updateFileInfoForDir(db, dirPathHash, totalFileSize, totalFileInfo = "0"):
-	command = "update %s set totalFileSize = \"%d\", totalFileInfo = \"%s\" where dirPathHash = \"%s\";" % (DbSchema.TempDirInfoTable, totalFileSize, totalFileInfo, dirPathHash)
-	db.ExecuteNonQuerySql(command)
+def addEntryToOriginalDirsTable(db, dirhash, dirpath):
+	if not miscQueries.checkIfDirhashInDatabase(db, dirhash):
+		logger.log(" inserting dir %s" % dirpath)
+		miscQueries.insertDirHash(db, dirhash, dirpath)
 
 
-def getFileSize(db, filehash):
-	command = "select filesize from %s where filehash = \"%s\";" % (DbSchema.newFilesTable, filehash)
-	return db.ExecuteSqlQueryReturningSingleInt(command)
-
-def getFileEntry(db, filehash):
-	command = "select * from %s where filehash = \"%s\";" % (DbSchema.newFilesTable, filehash)
-	return db.ExecuteSqlQueryReturningSingleRow(command)
-
-
-def getInfoForAllFilesFromDir(db, dirPathHash):
-	command = "select filehash, filename, filesize from %s " % DbSchema.TempDirectoryForFileTable +\
-				"where dirPathHash = \"%s\";" % dirPathHash
+def addEntryToTempDirInfoTable(db, dirhash, dirpath):
+	command = "select dirPathHash from %s where dirPathHash = \"%s\";" % (DbSchema.TempDirInfoTable, dirhash)
 	result = db.ExecuteSqlQueryReturningMultipleRows(command)
-	return result
+	if len(result) > 0:
+		# already in table, do not add
+		return True
+	else:
+		print "################## should not be here ########"
+		# not in table, add. If not in table, then no files, so add 0 size
+		command = "insert into %s (dirPathHash, totalFileInfo, totalFileSize) values (\"%s\", \"0\", 0)" \
+            % (DbSchema.TempDirInfoTable, dirhash)
+		db.ExecuteNonQuerySql(command)
 
 
-def getInfoForAllFilesFromDirUsingList(tempDirTableContents, dirPathHash):
-	result = []
+def insertAncestorDirsIntoDb(db, allDirsFromDb):
+	allDirPaths = {}
 
-	for entry in tempDirTableContents:
-		if entry[0] == dirPathHash:
-			result.append(entry[1:])
+	for i, entry in enumerate(allDirsFromDb):
+		dirpath = entry[1]
+		ancestorDirs = getAncestorPaths(dirpath)
+		logger.log(i)
+		addToDirHashDict(allDirPaths, ancestorDirs)
+	logger.log(len(allDirPaths))
 
-	print "FOUND: %d entries" % len(result)
-	return result
+	for key in allDirPaths:
+		dirhash = key
+		dirpath = allDirPaths[key]
+		#addEntryToOriginalDirsTable(db, dirhash, dirpath)
+		addEntryToTempDirInfoTable(db, dirhash, dirpath)
 
 
-def doTotalFileInfoForDir(db, dirPathHash, tempDirTableContents, logger):
+def insertParentsIntoDb(db, allDirsFromDb, logger):
+	allDirPaths = {}
 
-	totalFileSize = 0
+	for i, entry in enumerate(allDirsFromDb):
+		dirhash = entry[0]
+		dirpath = entry[1]
+		parent = ntpath.dirname(dirpath)
+		logger.log(i)
 
-	logger.log("doing dirPathHash %s" % dirPathHash)	
-
-	dirpath = miscQueries.getDirectoryPath(db, dirPathHash)
-	logger.log("original path: %s" % dirpath)
-
-	# get list of files in this dir
-	#logger.log("files:")
-	filelist = getInfoForAllFilesFromDirUsingList(tempDirTableContents, dirPathHash)
-	#for entry in filelist:
-	#	logger.log(entry)
-
-	if not filelist:
-		updateFileInfoForDir(db, dirPathHash, 0)
-		return
-
-	filelist.sort()
-
-	#logger.log("sorted and with filesize")
-
-	for entry in filelist:
-		logger.log(entry)
-		filehash = entry[0]
-		filesize = entry[2]
-		#logger.log(filesize)
-		if filesize is None:
-			logger.log("###################NO FILESIZE FOR %s" % filehash)
-			
-			logger.log(getFileEntry(db, filehash))
-			exit(1)
-
-		filename = entry[1]
-		logger.log(filename)
-		logger.log(type(filename))
-		filenameUnicode = filename.decode('utf-8')
-		logger.log(filenameUnicode)
-		logger.log(type(filenameUnicode))
-		filenameAscii = filenameUnicode.encode('ascii', 'replace')
-		logger.log(filenameAscii)
-		logger.log(type(filenameAscii))
+		if parent == dirpath:
+			# no parent, leave parent as null
+			command = "insert into %s (dirPathHash) values (\"%s\");" \
+				% (DbSchema.TempParentDirTable, dirhash)
+		else:
+			parentHash = Sha1HashUtilities.HashString(parent)
+			command = "insert into %s (dirPathHash, parentDirPathHash) values (\"%s\", \"%s\");" \
+				% (DbSchema.TempParentDirTable, dirhash, parentHash)
+		db.ExecuteNonQuerySql(command)
 
 
 
-		totalFileSize += filesize
-
-	#logger.log("joined into single string")
-	singlestring = "".join(x[0] + x[1] for x in filelist)
-	#logger.log(singlestring)
-	singlestringUnicode = singlestring.decode('utf-8')
-	#singlestringAscii = singlestringUnicode.encode('ascii', 'replace')
-	singlestringUTF8 = singlestring.encode('utf-8')
-	#logger.log(singlestring)
-
-	totalFileInfo = Sha1HashUtilities.HashString(singlestringUTF8)
-	logger.log(totalFileInfo)
-	logger.log(totalFileSize)
-	logger.log(time.time())
-
-	updateFileInfoForDir(db, dirPathHash, totalFileSize, totalFileInfo)
+def getParentDirs(db):
+	command = "select * from %s;" % DbSchema.TempParentDirTable
+	parentDirs = db.ExecuteSqlQueryReturningMultipleRows(command)
+	return parentDirs
 
 
-def getOriginalDirectoriesForFile(db, filehash):
-	command = "select * from %s where filehash = '%s';" % (DbSchema.OriginalDirectoryForFileTable, filehash)
+def getEntireDirInfoTable(db):
+	dirInfoCache = {}
+	command = "select * from %s;" % DbSchema.TempDirInfoTable
 	results = db.ExecuteSqlQueryReturningMultipleRows(command)
-	return results
+	for entry in results:
+		dirhash = entry[0]
+		totalFileInfo = entry[1]
+		totalFileSize = int(entry[2])
+		totalDirInfo = entry[3]
+		totalDirSize = entry[4]
+		if not totalDirSize is None:
+			totalDirSize = int(totalDirSize)
+
+		dirInfoCache[dirhash] = (totalFileInfo, totalFileSize, totalDirInfo, totalDirInfo)
+
+	return dirInfoCache
+
+
+def getSubDirs(db, dirhash):
+	command = "select dirPathHash from %s where parentDirPathHash = \"%s\";" \
+		% (DbSchema.TempParentDirTable, dirhash)
+	result = db.ExecuteSqlQueryReturningMultipleRows(command)
+	return result
+
+
+def getSubDirsUsingCache(dirhash, parentDirs, logger):
+	subdirs = []
+	for entry in parentDirs:
+		if entry[1] == dirhash:
+			#logger.log(entry)
+			subdirs.append(entry[0])
+	return subdirs
+
+
+def getDirInfo(db, dirhash):
+	command = "select * from %s where dirPathHash = \"%s\";" \
+		% (DbSchema.TempDirInfoTable, dirhash)
+	result = db.ExecuteSqlQueryReturningSingleRow(command)
+	return result
+
+
+def updateDirInfo(db, dirInfoCache, dirhash, totalDirInfo, totalDirSize):
+	command = "update %s set totalDirSize = \"%d\", totalDirInfo = \"%s\" where dirPathHash = \"%s\";" % (DbSchema.TempDirInfoTable, totalDirSize, totalDirInfo, dirhash)
+	db.ExecuteNonQuerySql(command)
+	info = dirInfoCache[dirhash]
+	newInfo = (info[0], info[1], totalDirInfo, totalDirSize)
+	dirInfoCache[dirhash] = newInfo
+
+
+# made mistake, need to clear values. One time only! (Hopefully)
+def TEMPCLEARDirInfo(db):
+	command = "update %s set totalDirSize = NULL, totalDirInfo = NULL;" % DbSchema.TempDirInfoTable
+	db.ExecuteNonQuerySql(command)
+
+
+def updateDirInfoForLeafNode(db, dirhash, dirInfoCache):
+	dirInfo = dirInfoCache[dirhash]
+	totalDirSize = dirInfoCache[dirhash][3]
+	if totalDirSize is None:
+		totalFileInfo = dirInfo[0]
+		totalFileSize = int(dirInfo[1])
+		logger.log("##########inserting: %s, %d" % (totalFileInfo, totalFileSize))
+		# if no subdirectories, then dirInfo and dirSize is same as fileinfo and filesize
+		updateDirInfo(db, dirInfoCache, dirhash, totalFileInfo, totalFileSize)
+	else:
+		logger.log("already has value, skipping")
 
 
 
-db = CoreDb.CoreDb("C:\\depotListing\\listingDb.sqlite")
+
+db = CoreDb.CoreDb("/Users/v724660/fmapp/listingDb.sqlite")
 logger = DbLogger.dbLogger()
 
-tempDirTableContents = getEntireTempDirTable(db)
-logger.log(len(tempDirTableContents))
+allDirsFromDb = getAllDirs(db)
 
-#createDirInfoTable(db)
-#copyDirHashValues(db)
+# cache this to save repeated queries
+parentDirs = getParentDirs(db)
 
-#portDataIntoTempDirForFileTable(db)
+# cache dirInfoTable as well, again to save queries
+dirInfoCache = getEntireDirInfoTable(db)
 
-for i in range(500):
-	logger.log(time.time())
-	dirPathHash = getDirHashWithFileInfoTodo(db, logger)
-	logger.log("%d: doing dirPathHash %s" % (i,dirPathHash))
-	doTotalFileInfoForDir(db, dirPathHash, tempDirTableContents, logger)
+# should not need to do this again, only the first time
+# depends on how I handle imports.
+#insertAncestorDirsIntoDb(db, allDirsFromDb)
+#insertParentsIntoDb(db, allDirsFromDb, logger)
 
+allDirsFromDb = sorted(allDirsFromDb,key=lambda x: x[1], reverse=True)
+
+#for i in range(100):
+#	entry = allDirsFromDb[i]
+for i, entry in enumerate(allDirsFromDb):
+	logger.log("iteration %d" % i)
+	dirhash = entry[0]
+	dirpath = entry[1]
+	#logger.log(dirhash)
+	logger.log(dirpath)
+
+	oldTotalDirSize = dirInfoCache[dirhash][3]
+	if not oldTotalDirSize is None:
+		logger.log("size has value, already inserted, skipping")
+		continue
+
+	subDirs = getSubDirsUsingCache(dirhash, parentDirs, logger)
+	#logger.log(subDirs)
+
+	if subDirs:
+		logger.log("has subdirs, skipping")
+		continue
+
+	logger.log("leaf dir, attempt to insert")
+	updateDirInfoForLeafNode(db, dirhash, dirInfoCache)
+
+
+	#for subDirEntry in subDirs:
+	#	subdirhash = subDirEntry[0]
+	#	subdirpath = miscQueries.getDirectoryPath(db, subdirhash)
+	#	subdirname = ntpath.basename(subdirpath)
+	#	logger.log("\t%s"%subdirhash)
+	#	logger.log("\t%s"%subdirpath)
+	#	logger.log("\t%s"%subdirname)
+
+
+		# get dirsize, dirinfo, dirname
+		#if null, then break out
+
+	# check if has children
+	# if no, then dirsize = totalfilesize, dirhash = fileinfo
+	# if yes, then check if any child has null dirsize/info
+	#      if yes, skip for now
+	#      of no, calculate dirhash etc.
 

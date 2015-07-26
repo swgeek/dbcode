@@ -50,10 +50,15 @@ class CoreDb:
 
     def ExecuteSqlQueryReturningSingleRow(self, sqlStatement):
         connection = sqlite3.connect(self.dbFilePath)
-        with connection: # if do not use with, then have to do "commit" at end
-            cursor = connection.cursor()
-            cursor.execute(sqlStatement)
-            row = cursor.fetchone()
+        connection.text_factory = str
+        try:
+            with connection: # if do not use with, then have to do "commit" at end
+                cursor = connection.cursor()
+                cursor.execute(sqlStatement)
+                row = cursor.fetchone()
+        except sqlite3.Error, e:
+            print "Error %s" % e.args[0]
+            sys.exit(1)
         return row
 
 
@@ -63,11 +68,13 @@ class CoreDb:
             cursor = connection.cursor()
             cursor.execute(sqlStatement)
 
+
     def ExecuteManyNonQuery(self, sqlStatement, entries):
         connection = sqlite3.connect(self.dbFilePath)
         with connection: # if do not use with, then have to do "commit" at end
             cursor = connection.cursor()
             cursor.executemany(sqlStatement, entries)
+
 
     def ExecuteSqlQueryReturningSingleInt(self, sqlStatement):
         row = self.ExecuteSqlQueryReturningSingleRow(sqlStatement)
@@ -81,7 +88,7 @@ class CoreDb:
         row = self.ExecuteSqlQueryReturningSingleRow(sqlStatement)
         if row is None:
             return None
-        value = str(row[0])
+        value = row[0]
         return value
 
 '''

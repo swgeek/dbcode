@@ -99,15 +99,8 @@ def getFilesWithStatus(db, status):
 	return results
 
 
-def DeleteFileFromDepot(depotRootPath, filehash):
-		subdir = filehash[0:2]
-		filepath = os.path.join(depotRootPath, subdir, filehash)
-
-		if not os.path.isfile(filepath):
-			return False
-
-		os.remove(filepath)
-		return True
+#def DeleteFileFromDepot(depotRootPath, filehash):
+# moved to CopyFilesEtc.py
 
 
 def getDirectoriesWithSearchString(db, searchString):

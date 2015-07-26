@@ -64,3 +64,15 @@ def CopyFileIntoDepot(depotRootPath, sourceFilePath, filehash, logger):
 		else:
 			logger.log("copying %s to %s" % (sourceFilePath, destinationFilePath))
 			shutil.copyfile(sourceFilePath, destinationFilePath)
+
+
+# only does disk stuff, assumes db data handled elsewhere
+def DeleteFileFromDepot(depotRootPath, filehash):
+		subdir = filehash[0:2]
+		filepath = os.path.join(depotRootPath, subdir, filehash)
+
+		if not os.path.isfile(filepath):
+			return False
+
+		os.remove(filepath)
+		return True
