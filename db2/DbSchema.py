@@ -24,6 +24,8 @@ FileListingSchema = "filehash char(40), depotId INTEGER, filesize int, FOREIGN K
 CurrentBackupTable = "currentBackedUp"
 CurrentBackupSchema = "filehash char(40) PRIMARY KEY"
 
+
+# TODO: need better name than dirInfo, fileInfo, to general. Make it specific like hash
 TempDirInfoTable = "tempSortedDirs"
 TempDirInfoSchema = "dirPathHash char(40) PRIMARY KEY, totalFileInfo char(40), totalFileSize int, " + \
 						"totalDirInfo char(40), totalDirSize int"

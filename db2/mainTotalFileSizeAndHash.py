@@ -169,6 +169,7 @@ def doTotalFileInfoForDir(db, dirPathHash, tempDirTableContents, logger):
 
 		totalFileSize += filesize
 
+	# string is list of files in format <filehash><filename>
 	singlestring = "".join(x[0] + x[1] for x in filelist)
 	singlestringAscii = stringToAscii(singlestring)
 	logger.log(singlestringAscii)

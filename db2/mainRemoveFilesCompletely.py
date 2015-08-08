@@ -5,6 +5,7 @@
 
 import time
 import os
+import ctypes
 
 import CoreDb
 import DbLogger
@@ -12,11 +13,26 @@ import miscQueries
 import DbSchema
 
 
+def windowsSpecificGetFreeSpace(drive):
+	freeSpace = ctypes.c_ulonglong(0)
+	ctypes.windll.kernel32.GetDiskFreeSpaceExW(ctypes.c_wchar_p(drive), None, None, ctypes.pointer(freeSpace))
+	return freeSpace.value
+
+
 def getCounts(db, logger):
 	count = miscQueries.numberOfRows(db, DbSchema.newFilesTable)
 	logger.log("newFilesTable has %d entries" % count)
 
-	# get size on disk of depots if possible
+	# get size on disk of depots if possible, but for now just get free space
+	depotRoot = "I:\\objectstore1"
+	drive, path = os.path.splitdrive(depotRoot)
+	space = windowsSpecificGetFreeSpace(drive)
+	logger.log("drive %s has %d free space" % (drive, space))
+
+	depotRoot = "H:\\objectstore2"
+	drive, path = os.path.splitdrive(depotRoot)
+	space = windowsSpecificGetFreeSpace(drive)
+	logger.log("drive %s has %d free space" % (drive, space))
 
 
 def getFilesToRemove(db):
@@ -78,7 +94,8 @@ def removeFilesFromFilesTable(db, filesToRemove):
 
 
 
-db = CoreDb.CoreDb("/Users/v724660/fmapp/listingDb.sqlite")
+#db = CoreDb.CoreDb("/Users/v724660/fmapp/listingDb.sqlite")
+db = CoreDb.CoreDb("C:\\depotListing\\listingDb.sqlite")
 logger = DbLogger.dbLogger()
 
 startTime = time.time()
@@ -121,7 +138,7 @@ removeFilesFromDisk(db, filesToRemove)
 logger.log("time: %s" % str(time.time() - startTime))
 
 logger.log("removing files from db tables")
-#removeFilesFromFilesTable(db, filesToRemove)
+removeFilesFromFilesTable(db, filesToRemove)
 
 logger.log("time: %s" % str(time.time() - startTime))
 

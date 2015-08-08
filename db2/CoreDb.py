@@ -91,6 +91,27 @@ class CoreDb:
         value = row[0]
         return value
 
+
+    def ExecuteMultipleSqlStatementsWithRollback(self, sqlStatementList):
+        try:
+            connection = sqlite3.connect(self.dbFilePath)
+            cursor = connection.cursor()
+            for i, statement in enumerate(sqlStatementList):
+                print i
+                cursor.execute(statement)
+            connection.commit()
+        except sqlite3.Error, e:
+            if connection:
+                connection.rollback()
+            print "Error %s" % e.args[0]
+            sys.exit(1)
+        finally:
+            if connection:
+                connection.close()
+
+
+
+
 '''
 
     @staticmethod
@@ -113,21 +134,7 @@ class CoreDb:
             cursor.execute(sqlStatement)
 
 
-    def ExecuteMultipleSqlStatementsWithRollback(self, sqlStatementList):
-        try:
-            connection = sqlite3.connect(self.dbFilePath)
-            cursor = connection.cursor()
-            for statement in sqlStatementList:
-                cursor.execute(statement)
-            connection.commit()
-        except sqlite3.Error, e:
-            if connection:
-                connection.rollback()
-            print "Error %s" % e.args[0]
-            sys.exit(1)
-        finally:
-            if connection:
-                connection.close()
+
 
 
 
