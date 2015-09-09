@@ -5,6 +5,9 @@ import Sha1HashUtilities
 import miscQueries
 import os
 import CopyFilesEtc
+import ctypes
+
+
 
 
 # TODO: subdirectories too!
@@ -43,7 +46,7 @@ def getListOfFilesNotInDb(db, rootDirPath, logger):
 				
 
 
-def getListOfFilesInSubdir(rootDirPath, logger):
+def getListOfFilesInDirAndSubdirs(rootDirPath, logger):
 	filesToAdd = []
 
 	for dirpath, subDirList, fileList in os.walk(rootDirPath):
@@ -54,7 +57,10 @@ def getListOfFilesInSubdir(rootDirPath, logger):
 			#filename = filename.decode('utf-8').encode("latin-1")
 			#dirpath = dirpath.decode('utf-8').encode("latin-1")
 			filepath = os.path.join(dirpath, filename)
-			filehash = Sha1HashUtilities.HashFile(filepath)
-			filesToAdd.append((filename, dirpath, filehash))
+			try:
+				filehash = Sha1HashUtilities.HashFile(filepath)
+				filesToAdd.append((filename, dirpath, filehash))
+			except Exception , e:
+				logger.log("EXCEPTION: %s" % str(e))
 
 	return filesToAdd

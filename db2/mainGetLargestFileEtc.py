@@ -4,11 +4,6 @@ import DbLogger
 import os
 import miscQueries
 
-def getLargestUnsortedFileInfo(db):
-	command = "select * from %s  where status is null order by filesize desc limit 1;" % DbSchema.newFilesTable
-	result = db.ExecuteSqlQueryReturningSingleRow(command)
-	return result
-
 
 def getOldFileInfo(db, filehash):
 	command = "select * from %s where filehash = '%s';" % (DbSchema.oldFilesTable, filehash)
@@ -130,13 +125,11 @@ logger = DbLogger.dbLogger()
 dirTableContents = getEntireOriginalDirTable(db)
 logger.log(len(dirTableContents))
 
-#rootDir = "I:\\m\\fromUsbProbDups\\fromMac_20130912\\codeExercises\\opengles-book-samples-read-only"
-rootDir = "I:\\m\\fromUsbProbDups\\moved\\fromMac20130729\\moveToUsb\\opengles-book"
-#searchString = "opengles-book"
-logger.log(miscQueries.numberOfRows(db, DbSchema.OriginalDirectoryForFileTable))
-logger.log(miscQueries.numberOfRows(db, DbSchema.OriginalDirectoriesTable))
-dirs = getDirectoriesWithSearchString(db, rootDir)
-logger.log(len(dirs))
+#rootDir = "I:\\m\\fromUsbProbDups\\moved\\fromMac20130729\\moveToUsb\\opengles-book"
+#logger.log(miscQueries.numberOfRows(db, DbSchema.OriginalDirectoryForFileTable))
+#logger.log(miscQueries.numberOfRows(db, DbSchema.OriginalDirectoriesTable))
+#dirs = getDirectoriesWithSearchString(db, rootDir)
+#logger.log(len(dirs))
 #for entry in dirs:
 #	logger.log(entry)
 
@@ -146,6 +139,7 @@ logger.log(len(dirs))
 #dirs = getDirectoriesWithSearchString(db, rootDir)
 #logger.log(len(dirs))
 
+'''
 for i, entry in enumerate(dirs):
 	dirhash = entry[0]
 	dirpath = entry[1]
@@ -170,12 +164,12 @@ for i, entry in enumerate(dirs):
 	deleteDirEntries(db, dirhash)
 logger.log(miscQueries.numberOfRows(db, DbSchema.OriginalDirectoryForFileTable))
 logger.log(miscQueries.numberOfRows(db, DbSchema.OriginalDirectoriesTable))
+'''
 
 
-exit(1)
 ##############################
-#largestRow = getLargestUnsortedFileInfo(db)
-largestRow = (u'E3ED49B8581DE969A2FF2FC0B5DBB07B6FEBBB7C', 3954050048L, 1, None)
+largestRow = miscQueries.getLargestFile(db)
+#largestRow = (u'E3ED49B8581DE969A2FF2FC0B5DBB07B6FEBBB7C', 3954050048L, 1, None)
 
 
 logger.log("largest row:")
@@ -196,11 +190,21 @@ for row in dirs:
 	logger.log(filename)
 	dirpath = getOriginalDirPathForDirHash(db, dirhash)
 	logger.log(dirpath)
+	logger.log("(\"%s\",\"%s\",0)," % (dirhash, dirpath))
 	logger.log("")
 	continue
 
-	# this part is manual, e.g. here assuming only one filename and one directory
 
+if len(dirs) == 1:
+	logger.log("only one dir, yay!")
+	dirhash = dirs[0][2]
+	logger.log("contents of dir:")
+	# this part is manual, e.g. here assuming only one filename and one directory
+	filesInDir = getFilesFromDir(db, dirhash)
+	for fileinfo in filesInDir:
+		logger.log(fileinfo)
+
+	exit(1)
 	# newDir
 	#fileList = getFilesFromDir(db, dirhash)
 	fileList = getUnsortedFilesFromDir(db, dirhash)

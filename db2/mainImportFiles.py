@@ -1,83 +1,90 @@
-
+# probably more efficient to batch this somehow
+# doing it individually allows me to break it partway and pick up where I left off
+# maybe create filelist?
 import CoreDb
-import miscQueries
-import CopyFilesEtc
-import HashFilesEtc
 import DbLogger
-import Sha1HashUtilities
+import HashFilesEtc
 import os
-
-# TODO: get rid of filesize from files and filelisting. 
-# have only status in files, rename to filestatus
-# have only depot location in listing. Can have multiple entries here!
-# have new table with filesize
-# should I also have hash for filename? Then can use that in originalDirectory for file.
-# option. Use filesize as part of name, e.g. filehash_filesize. not sure on this one.
-# advantage: easy to check if file copied properly. Probably better not to, have database table for size and use that.
-
+import miscQueries
+import FileUtils
+import Sha1HashUtilities
 
 db = CoreDb.CoreDb("C:\\depotListing\\listingDb.sqlite")
 logger = DbLogger.dbLogger()
 
-dirpath = "H:\\fromDesktop"
+dirpath = "H:\\fromAir_20150809"
+depotRoot = "I:\\objectstore1"
 
-objectStores = miscQueries.getAllObjectStores(db)
-logger.log(objectStores)
+depotInfo = miscQueries.getDepotInfo(db)
+logger.log("depotInfo:")
+for entry in depotInfo:
+	logger.log(entry)
+depotId = 1 # hardcode for now
 
-# quick test of 
-# should I use depotId instead of path? probably better
-depotRoot = "H:\\objectstore2"
-#depotId = miscQueries.GetObjectStoreId(db, depotRoot)
-depotId = 2
-logger.log("got depotId %d" % depotId)
+dirsAddedToDb = 0
+filesAdded = 0
+fileLocationsAdded = 0
+dirsAlreadyInDb = 0
+filesAlreadyInDb = 0
+fileLocationsAlreadyInDb = 0
 
-filesToAdd = HashFilesEtc.getListOfFilesInSubdir(dirpath, logger)
-logger.log(filesToAdd)
+filesToAdd = HashFilesEtc.getListOfFilesInDirAndSubdirs(dirpath, logger)
+logger.log("got: %d files" % len(filesToAdd))
 
-# probably more efficient to batch this somehow
-# doing it individually allows me to break it partway and pick up where I left off
-# find better way to do this, probably have to move to postgres though
+# add directories to database
+allDirs = set()
 for filename, dirpath, filehash in filesToAdd:
+	allDirs.add(dirpath)
 
-	logger.log("handling %s, %s, %s" % (filename, dirpath, filehash))
-
-	filepath = os.path.join(dirpath, filename)
-
-	filehash = filehash.upper()
-
-	if miscQueries.checkIfFilehashInDatabase(db, filehash):
-		logger.log("already in database")
-	else:
-		logger.log("not in database, need to add")
-		CopyFilesEtc.CopyFileIntoDepot(depotRoot, filepath, filehash, logger)
-		filesize = os.path.getsize(filepath)
-
-		if miscQueries.checkIfFileListingEntryInDatabase(db, filehash, depotId):
-			logger.log("already in filelisting, not adding")
-		else:
-			logger.log("adding to filelisting")
-			miscQueries.insertFileListing(db, filehash, depotId, filesize)
-
-		logger.log("adding to files table")
-		miscQueries.insertFileEntry(db, filehash, filesize)
-
-	# can make this more efficient by putting directories in at earlier stage, so 
-	# do not repeatly try to insert same dir
-
-	# add dirhash, dirpath to originalDirectories
+for dirpath in allDirs:
+	logger.log("inserting directory %s" % dirpath)
 	dirhash = Sha1HashUtilities.HashString(dirpath).upper()
 	if miscQueries.checkIfDirhashInDatabase(db, dirhash):
 		logger.log(" dir %s already in database, not adding" % dirpath)
+		dirsAlreadyInDb += 1
 	else:
 		logger.log(" inserting dir %s" % dirpath)
 		miscQueries.insertDirHash(db, dirhash, dirpath)
+		dirsAddedToDb += 1
+
+
+for filename, dirpath, filehash in filesToAdd:
+	logger.log("adding file: %s, %s, %s" % (filename, dirpath, filehash))
+
+	filepath = os.path.join(dirpath, filename)
+	filehash = filehash.upper()
+
+	# if file not already in depot/database, insert
+	if miscQueries.checkIfFilehashInDatabase(db, filehash):
+		logger.log("already in database")
+		filesAlreadyInDb += 1
+	else:
+		logger.log("not in database, need to add")
+		FileUtils.CopyFileIntoDepot(depotRoot, filepath, filehash, logger)
+		filesize = os.path.getsize(filepath)
+		logger.log("adding to files table")
+		miscQueries.insertFileEntry(db, filehash, filesize, depotId)
+		filesAdded += 1
+
+	# enter directory info for file
+	# hate to hash dirpath again and again - save from earlier? or not worth the savings?
+	dirhash = Sha1HashUtilities.HashString(dirpath).upper()
 
 	# add filehash, filename, dirhash to originalDirectoryForFile
 	if miscQueries.checkIfFileDirectoryInDatabase(db, filehash, filename, dirhash):
 		logger.log(" original dir %s for %s already in database, not adding" % (dirpath, filename))
+		fileLocationsAlreadyInDb += 1
 	else:
 		logger.log(" inserting original dir %s for %s" % (dirpath, filename))
 		miscQueries.insertOriginalDir(db, filehash, filename, dirhash)
+		fileLocationsAdded += 1
 
 logger.log("done")
-print "done"
+
+logger.log("added %d dirs" % dirsAddedToDb)
+logger.log("added %d files" % filesAdded)
+logger.log("added %d fileLocations" % fileLocationsAdded)
+logger.log(" %d dirs already in db" % dirsAlreadyInDb)
+logger.log(" %d files already in db" % filesAlreadyInDb)
+logger.log(" %d fileLocations already in db" % fileLocationsAlreadyInDb)
+

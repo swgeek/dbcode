@@ -406,11 +406,11 @@ def listDuplicateDirsBySize(db, logger):
 		if s in path2.lower():
 			continue
 
-		#s = "carbonite".lower()
-		#if s in path1.lower():
-		#	continue
-		#if s in path2.lower():
-		#	continue
+		s = "carbonite".lower()
+		if s in path1.lower():
+			continue
+		if s in path2.lower():
+			continue
 
 
 
@@ -460,7 +460,7 @@ def listDirsBySize(db, logger):
 	dirInfoList = sorted(dirInfoList, key=lambda x:x[2], reverse=True)
 
 	dirListBySize = []
-	for i in range(10000):
+	for i in range(20000):
 		dirhash = dirInfoList[i][0]
 		dirsize = dirInfoList[i][2]
 		dirpath = dirpathDict[dirhash]
@@ -474,12 +474,13 @@ def listDirsBySize(db, logger):
 
 
 
+dbpath = "C:\\depotListing\\listingDb.sqlite"
 
-db = CoreDb.CoreDb("/Users/v724660/fmapp/listingDb.sqlite")
+db = CoreDb.CoreDb(dbpath)
 logger = DbLogger.dbLogger()
 
 #populateDirInfoFields(db, logger)
 
-listDuplicateDirsBySize(db, logger)
+#listDuplicateDirsBySize(db, logger)
 
-#listDirsBySize(db, logger)
+listDirsBySize(db, logger)

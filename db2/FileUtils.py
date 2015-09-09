@@ -6,6 +6,7 @@
 import os
 import shutil
 import miscQueries
+import ctypes
 
 
 def CopyFileFromDepot(db, depotRootPath, destinationDirPath, filehash, newFilename):
@@ -22,7 +23,6 @@ def CopyFileFromDepot(db, depotRootPath, destinationDirPath, filehash, newFilena
 		shutil.copyfile(sourcePath, destinationPath)
 
 		return True
-
 
 
 def extractAllFilesFromDirectory(db, dirHash, destinationDir):
@@ -76,3 +76,38 @@ def DeleteFileFromDepot(depotRootPath, filehash):
 
 		os.remove(filepath)
 		return True
+
+
+def windowsSpecificGetFreeSpace(drive):
+	freeSpace = ctypes.c_ulonglong(0)
+	ctypes.windll.kernel32.GetDiskFreeSpaceExW(ctypes.c_wchar_p(drive), None, None, ctypes.pointer(freeSpace))
+	return freeSpace.value
+
+
+def getFreeSpaceOnDepotDrive(depotRoot):
+	# get size on disk of depots if possible, but for now just get free space
+	drive, path = os.path.splitdrive(depotRoot)
+	space = windowsSpecificGetFreeSpace(drive)
+	return space
+
+
+# nothing to do with database, simply copies depot from one drive to another.
+# this will only work for depots, as make assumption that only directories at top level
+# and only files at bottom level. May generalize, may not.
+# assumes enough space available
+def copyDepot(sourceDepotRoot, destinationDepotRoot):
+
+	if not os.path.exists(sourceDepotRoot):
+		raise Exception("%s does not exist" % sourceDepotRoot)
+
+	if not os.path.exists(destinationDepotRoot):
+		raise Exception("%s does not exist" % destinationDepotRoot)
+
+	for dirName in os.listdir(sourceDepotRoot):
+		print "copying %s" % dirName
+		sourceDirPath = os.path.join(sourceDepotRoot, dirName)
+		destDirPath = os.path.join(destinationDepotRoot, dirName)
+	#	if not os.path.exists(destDirPath):
+	#		os.mkdir(destDirPath)
+		shutil.copytree(sourceDirPath, destDirPath)
+

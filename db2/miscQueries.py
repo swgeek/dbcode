@@ -124,6 +124,7 @@ def insertFileEntry(db, filehash, filesize, depotId):
             % (DbSchema.newFilesTable, filehash, filesize, depotId)
 	db.ExecuteNonQuerySql(command)
 
+
 def insertMultipleFileEntries(db, entryList):
 	command = "insert into %s (filehash, filesize, primaryLocation) values (?, ?, ?)" \
             % (DbSchema.newFilesTable)
@@ -145,3 +146,42 @@ def setFileStatus(db, fileHash, newStatus):
 	db.ExecuteNonQuerySql(command)
 
 
+def getFilesWithStatus(db, status, count = None):
+	command = "select * from %s where status is '%s'" % (DbSchema.newFilesTable, status)
+	if count:
+		command += " limit %d" % count
+	command += ";"
+	values = db.ExecuteSqlQueryReturningMultipleRows(command)
+	return values
+
+
+def getLargestFile(db):
+	command = "select * from %s  where status is null order by filesize desc limit 1;" % DbSchema.newFilesTable
+	#command = "select * from %s  order by filesize desc limit 1;" % DbSchema.newFilesTable
+	result = db.ExecuteSqlQueryReturningSingleRow(command)
+	return result
+
+
+def getCounts(db):
+	countsList = []
+	count = numberOfRows(db, DbSchema.OriginalDirectoriesTable)
+	countsList.append(("OriginalDirectoriesTable", count))
+
+	count = numberOfRows(db, DbSchema.OriginalDirectoryForFileTable)
+	countsList.append(("OriginalDirectoryForFileTable", count))
+
+	count = numberOfRows(db, DbSchema.newFilesTable)
+	countsList.append(("newFilesTable", count))
+
+	command = "select count(*) from %s where status = \"toRemoveCompletely\"; " \
+		% (DbSchema.newFilesTable)
+	count = db.ExecuteSqlQueryReturningSingleInt(command)
+	countsList.append(("files with status \"toRemoveCompletely\"", count))
+
+	return countsList
+
+
+def getOriginalDirectoriesForFile(db, filehash):
+	command = "select * from %s where filehash = '%s';" % (DbSchema.OriginalDirectoryForFileTable, filehash)
+	results = db.ExecuteSqlQueryReturningMultipleRows(command)
+	return results

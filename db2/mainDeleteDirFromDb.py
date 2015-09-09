@@ -69,9 +69,6 @@ def clearDirInfo(db, dirhash):
 
 
 def clearAncestorDirInfo(sqlCommandList, dirhash, logger):
-	#logger.log("sql command list")
-	#logger.log(sqlCommandList)
-	ancestorDirs = []
 	parent = getParent(db, dirhash)
 	while parent:
 		logger.log("parent is:")
@@ -79,13 +76,8 @@ def clearAncestorDirInfo(sqlCommandList, dirhash, logger):
 		logger.log(miscQueries.getDirectoryPath(db, parent))
 		command = "update %s set totalDirSize = NULL, totalDirInfo = NULL where dirPathHash = \"%s\";" % (DbSchema.TempDirInfoTable, parent)
 		sqlCommandList.append(command)
-		ancestorDirs.append(parent)
 		parent = getParent(db, parent)
 
-	#logger.log("sql command list")
-	#logger.log(sqlCommandList)
-	#logger.log(ancestorDirs)
-	return ancestorDirs
 
 
 def getSubDirsUsingCache(parentDirsCache, dirhash):
@@ -146,14 +138,14 @@ def getFilesFromDirUsingCache(origDirsForFileCache, searchHash):
 def deleteDirEntries(sqlCommandList, dirPathHash):
 
 
-	command = "delete from %s where dirPathHash = '%s';" % (DbSchema.TempDirInfoTable, dirPathHash)
-	sqlCommandList.append(command)
+	#command = "delete from %s where dirPathHash = '%s';" % (DbSchema.TempDirInfoTable, dirPathHash)
+	#sqlCommandList.append(command)
 
 	#command = "delete from %s where dirPathHash = '%s';" % (DbSchema.TempDirectoryForFileTable, dirPathHash)
 	#sqlCommandList.append(command)
 
-	command = "delete from %s where dirPathHash = '%s';" % (DbSchema.TempParentDirTable, dirPathHash)
-	sqlCommandList.append(command)
+	#command = "delete from %s where dirPathHash = '%s';" % (DbSchema.TempParentDirTable, dirPathHash)
+	#sqlCommandList.append(command)
 
 	command = "delete from %s where dirPathHash = '%s';" % (DbSchema.OriginalDirectoryForFileTable, dirPathHash)
 	sqlCommandList.append(command)
@@ -172,7 +164,7 @@ def removeDirAndContents(db, dirhash, dirpath):
 
 	# get parent, move up the chain and invalidate dirInfo
 	# TODO: use parentdirs cache instead!
-	ancestorDirs = clearAncestorDirInfo(sqlCommandList, dirhash, logger)
+	clearAncestorDirInfo(sqlCommandList, dirhash, logger)
 
 	# cache this to save repeated queries
 	logger.log("get parent dirs table")
@@ -202,13 +194,13 @@ def removeDirAndContents(db, dirhash, dirpath):
 
 	logger.log("got %d files" % len(allFilesToDelete))
 
-	logger.log("set file status to be removed")
+	logger.log("set file status to be removed if this is only dir")
 	for i, filehash in enumerate(allFilesToDelete):
 		if not i%100:
 			logger.log("at file %d" % i)
 		dirsForFile = origDirsForFileDict[filehash]
 		if len(dirsForFile) == 1:
-			miscQueries.setFileStatus(db, filehash, "toRemoveCompletely")
+			#miscQueries.setFileStatus(db, filehash, "toRemoveCompletely")
 			command = "update %s set status = \"%s\" where filehash = \"%s\";" % (DbSchema.newFilesTable, "toRemoveCompletely", filehash)
 			sqlCommandList.append(command)
 
@@ -297,26 +289,20 @@ def removeDuplicateDirAndContents(db, dirhash, dirpath):
 
 def getUserCreatedDirsList():
 	dirs = [ 
-('613E7B2101D3B49B44E37A1518E6100411B09726', 'F:\\20141213_om_working\\set1\\resources\\misc', 42917), 
-#('0582B3D75AAE378FAF0DCA09F16A346710150DBF', 'G:\\ed\\p3e1\\m\\SeanBdayWeb\\resources\\misc', 42917), 
-#('95F842B8153EA9F169A0E250AE0F90DE2A5E1BD8', 'I:\\m9\\Alans_v3\\summerparty2013\\resources\\css', 9257), 
-('01D8AB37A64E0025C2CDFE520CE9C6470ED41E39', 'G:\\ed\\p3e1\\myweb\\mpatelNet\\sj\\resources\\css', 9257), 
 
+('4AE4191F86A786EFCFCEF3511C9639339C36799A', 'J:\\m2drive\\m6\\dvds3\\strobist', 0)
 	]
 	return dirs
 
 
-
-db = CoreDb.CoreDb("/Users/v724660/fmapp/listingDb.sqlite")
+dbpath = "C:\\depotListing\\listingDb.sqlite"
+#dbpath = "/Users/v724660/fmapp/listingDb.sqlite"
+db = CoreDb.CoreDb(dbpath)
 logger = DbLogger.dbLogger()
 
 logger.log("time: %s" % str(time.time()))
 getCounts(db, logger)
 logger.log("time: %s" % str(time.time()))
-
-#dirs = getDirectoriesEndingWithString(db, "lightroomCatalog Previews.lrdata")
-#dirs = miscQueries.getDirectoriesContainingString(db, "Previews")
-
 
 dirs = getUserCreatedDirsList()
 
@@ -325,13 +311,10 @@ logger.log("got %d dirs to delete" % len(dirs))
 for i, (dirhash, dirpath, size) in enumerate(dirs):
 	logger.log("removing main dir number %d" % i)
 	logger.log("time: %s" % str(time.time()))
-	removeDuplicateDirAndContents(db, dirhash, dirpath)
-	#removeDirAndContents(db, dirhash, dirpath)
+	#removeDuplicateDirAndContents(db, dirhash, dirpath)
+	removeDirAndContents(db, dirhash, dirpath)
 
 
 logger.log("time: %s" % str(time.time()))
-
 getCounts(db, logger)
-
 logger.log("time: %s" % str(time.time()))
-

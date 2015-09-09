@@ -51,12 +51,13 @@ def getFilesWithDirLocations(db):
 	return fileSet
 
 
+'''
 def getFilesWithTempDirLocations(db):
 	command = "select distinct(filehash) from %s; " % (DbSchema.TempDirectoryForFileTable)
 	result = db.ExecuteSqlQueryReturningMultipleRows(command)
 	fileSet = set([x[0] for x in result])
 	return fileSet
-
+'''
 
 # only does disk stuff, assumes db data handled elsewhere
 def DeleteFileFromDepot(depotRootPath, filehash):
@@ -85,8 +86,8 @@ def removeFilesFromDisk(db, filesToRemove):
 
 def removeFilesFromFilesTable(db, filesToRemove):
 	for filehash in filesToRemove:
-		command = "delete from %s where filehash = '%s';" % (DbSchema.FileListingTable, filehash)
-		db.ExecuteNonQuerySql(command)
+		#command = "delete from %s where filehash = '%s';" % (DbSchema.FileListingTable, filehash)
+		#db.ExecuteNonQuerySql(command)
 
 		command = "delete from %s where filehash = '%s';" % (DbSchema.newFilesTable, filehash)
 		db.ExecuteNonQuerySql(command)
@@ -119,15 +120,15 @@ filesToRemove = filesToRemove - filesWithDirs
 logger.log("now %d files to remove" % len(filesToRemove))
 logger.log("time: %s" % str(time.time() - startTime))
 
-logger.log("getting getFilesWithTempDirLocations")
-filesWithDirs = getFilesWithTempDirLocations(db)
-logger.log("filesWithTempDirs has %d entries" % len(filesWithDirs))
-logger.log("time: %s" % str(time.time() - startTime))
+#logger.log("getting getFilesWithTempDirLocations")
+#filesWithDirs = getFilesWithTempDirLocations(db)
+#logger.log("filesWithTempDirs has %d entries" % len(filesWithDirs))
+#logger.log("time: %s" % str(time.time() - startTime))
 
 # do not delete any files with dir locations
-filesToRemove = filesToRemove - filesWithDirs
-logger.log("now %d files to remove" % len(filesToRemove))
-logger.log("time: %s" % str(time.time() - startTime))
+#filesToRemove = filesToRemove - filesWithDirs
+#logger.log("now %d files to remove" % len(filesToRemove))
+#logger.log("time: %s" % str(time.time() - startTime))
 
 # mark unused as do not need any more
 filesWithDirs = None
