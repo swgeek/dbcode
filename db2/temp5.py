@@ -94,8 +94,8 @@ def logTimestamp(logger):
 	logger.log("time: %s" % time.strftime("%H:%M:%S"))
 
 
-#dbpath = "C:\\depotListing\\listingDb.sqlite"
-dbpath = "/Users/v724660/fmapp/listingDb.sqlite"
+dbpath = "C:\\depotListing\\listingDb.sqlite"
+#dbpath = "/Users/v724660/fmapp/listingDb.sqlite"
 db = CoreDb.CoreDb(dbpath)
 logger = DbLogger.dbLogger()
 
@@ -105,6 +105,17 @@ logger.log("getting all dirs")
 allDirsList, dirpathDict = getAllDirs(db)
 logger.log("Have %d dirs" % len(dirpathDict))
 
+newlist = [x[1] for x in allDirsList]
+newlist.sort()
+
+for dirInfo in newlist:
+	t = "\"" + dirInfo.replace("\\", "\\\\") + "\","
+
+	logger.log(t)
+
+
+	
+exit(1)
 logTimestamp(logger)
 logger.log("getting parent dirs")
 

@@ -66,6 +66,8 @@ def CopyFileIntoDepot(depotRootPath, sourceFilePath, filehash, logger):
 			shutil.copyfile(sourceFilePath, destinationFilePath)
 
 
+
+
 # only does disk stuff, assumes db data handled elsewhere
 def DeleteFileFromDepot(depotRootPath, filehash):
 		subdir = filehash[0:2]
@@ -107,7 +109,36 @@ def copyDepot(sourceDepotRoot, destinationDepotRoot):
 		print "copying %s" % dirName
 		sourceDirPath = os.path.join(sourceDepotRoot, dirName)
 		destDirPath = os.path.join(destinationDepotRoot, dirName)
-	#	if not os.path.exists(destDirPath):
-	#		os.mkdir(destDirPath)
+
+		if not os.path.exists(destDirPath):
+			os.mkdir(destDirPath)
 		shutil.copytree(sourceDirPath, destDirPath)
 
+
+
+# similar to copyFileFromDepot, but moves instead of copying. 
+# useful for moving corrupted files out of the depot.
+def MoveFileFromDepot(db, depotRootPath, destinationDirPath, filehash, newFilename):
+
+		subdir = filehash[0:2]
+		sourcePath = os.path.join(depotRootPath, subdir, filehash)
+		destinationPath = os.path.join(destinationDirPath, newFilename)
+
+		if not os.path.isfile(sourcePath):
+			return False
+
+		print "moving %s to %s" % (sourcePath, destinationPath)
+
+		shutil.move(sourcePath, destinationPath)
+
+		return True
+
+
+def getPathOfFileInDepot(depotRootPath, filehash):
+		subdir = filehash[0:2].upper()
+		filepath = os.path.join(depotRootPath, subdir, filehash)
+
+		if os.path.isfile(filepath):
+			return filepath
+		else:
+			return None

@@ -8,8 +8,8 @@ import DbSchema
 
 logger = DbLogger.dbLogger()
 
-#dbpath = "C:\\depotListing\\listingDb.sqlite"
-dbpath = "/Users/v724660/fmapp/listingDb.sqlite"
+dbpath = "C:\\depotListing\\listingDb.sqlite"
+#dbpath = "/Users/v724660/fmapp/listingDb.sqlite"
 db = CoreDb.CoreDb(dbpath)
 
 list = miscQueries.getFilesWithStatus(db, "deleted")

@@ -8,15 +8,11 @@ import CopyFilesEtc
 import ctypes
 
 
-
-
 # TODO: subdirectories too!
 def checkIfFilesInDirAreInDatabase(db, dirpath):
 	for filename in os.listdir(dirpath):
 		filepath = os.path.join(dirpath, filename)
 		print checkIfFileInDatabase(db, filepath)
-
-
 
 #
 # will eventually split stuff into threads (e.g. check if in db in one thread, 

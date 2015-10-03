@@ -5,7 +5,6 @@
 
 import DbSchema
 
-
 # database stuff
 def createTable(db, tableName, tableSchema):
 	createTableCommand = "create table %s (%s);" % (tableName, tableSchema)
@@ -25,6 +24,30 @@ def getFilesContainingString(db, searchString):
 	return result
 
 
+# bit confusing, returns a dictionary mapping files to a set of directories,
+# and also a dictionary mapping dirs to a set of files
+def cacheOrigDirsForFileTable(db):
+	command = "select * from %s;" % DbSchema.OriginalDirectoryForFileTable
+	results = db.ExecuteSqlQueryReturningMultipleRows(command)
+
+	origDirsForFileDict = {}
+	origFilesForDirDict = {}
+	for row in results:
+		filehash = row[0]
+		filename = row[1]
+		dirpathhash = row[2]
+		if filehash in origDirsForFileDict:
+			origDirsForFileDict[filehash].append(dirpathhash)
+		else:
+			origDirsForFileDict[filehash] = [dirpathhash]
+
+		if dirpathhash in origFilesForDirDict:
+			origFilesForDirDict[dirpathhash].append((filehash, filename))
+		else:
+			origFilesForDirDict[dirpathhash] = [(filehash, filename)]
+
+	return origDirsForFileDict, origFilesForDirDict
+
 def getDirectoriesContainingString(db, searchString):
 	command = "select * from %s where dirPath like \'%%%s%%\';" % (DbSchema.OriginalDirectoriesTable, searchString)
 	result = db.ExecuteSqlQueryReturningMultipleRows(command)
@@ -36,6 +59,25 @@ def getAllFilesFromDir(db, dirPathHash):
 	result = db.ExecuteSqlQueryReturningMultipleRows(command)
 	return result
 
+
+def getAllFilesFromDirAndSubdirs(db, dirpathRoot):
+	command = "select dirPathHash from %s where dirPath like \'%s%%\';" % (DbSchema.OriginalDirectoriesTable, dirpathRoot)
+	result = db.ExecuteSqlQueryReturningMultipleRows(command)
+	filelist = []
+	for dirhash in result:
+		filelist += getAllFilesFromDir(db, dirhash)
+		
+	return filelist
+
+
+def getAllPathsAndFilenamesFromDirAndSubdirs(db, dirpathRoot):
+	command = "select * from %s where dirPath like \'%s%%\';" % (DbSchema.OriginalDirectoriesTable, dirpathRoot)
+	result = db.ExecuteSqlQueryReturningMultipleRows(command)
+	dirfilelist = {}
+	for dirhash, dirpath in result:
+		dirfilelist[dirpath] = getAllFilesFromDir(db, dirhash)
+		
+	return dirfilelist
 
 # this could probably be made more efficient, maybe find a better command
 def checkIfFilehashInDatabase(db, filehash):
@@ -155,6 +197,13 @@ def getFilesWithStatus(db, status, count = None):
 	return values
 
 
+def getCountOfFilesWithStatus(db, status):
+	command = "select count(*) from %s where status is '%s';" % (DbSchema.newFilesTable, status)
+	count = db.ExecuteSqlQueryReturningSingleInt(command)
+	return count
+
+
+
 def getLargestFile(db):
 	command = "select * from %s  where status is null order by filesize desc limit 1;" % DbSchema.newFilesTable
 	#command = "select * from %s  order by filesize desc limit 1;" % DbSchema.newFilesTable
@@ -182,6 +231,12 @@ def getCounts(db):
 
 
 def getOriginalDirectoriesForFile(db, filehash):
+
 	command = "select * from %s where filehash = '%s';" % (DbSchema.OriginalDirectoryForFileTable, filehash)
 	results = db.ExecuteSqlQueryReturningMultipleRows(command)
 	return results
+
+
+def deleteDirectoryEntryForFile(db,  filehash, dirhash):
+	command = "delete from %s where filehash = '%s' and dirPathHash = '%s';" % (DbSchema.OriginalDirectoryForFileTable, filehash, dirhash)
+	db.ExecuteNonQuerySql(command)

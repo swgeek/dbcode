@@ -32,4 +32,4 @@ def HashFile(filename):
 		for buf in iter(partial(f.read, 2**10), b''):
 			shahash.update(buf)
 
-	return shahash.hexdigest()
+	return shahash.hexdigest().upper()
