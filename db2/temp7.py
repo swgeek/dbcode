@@ -19,7 +19,7 @@ db = CoreDb.CoreDb(dbpath)
 
 
 
-'''
+
 sourceDir = "H:\\tryagain\91"
 destinationDir = "E:\\tryagain\91"
 
@@ -55,3 +55,4 @@ for fileinfo in filelist:
 		destinationDirPath = "E:\\copy"
 		if not FileUtils.CopyFileFromDepot(db, depotRootPath, destinationDirPath, filehash, filehash):
 			logger.log("could not copy %s" % filehash)
+'''

@@ -1,8 +1,7 @@
 # delete everything under a particular directory
-# from mainGetLargestFileEtc, not sure if need to refactor, so may throw this away
-# gets largest file and deletes
-# comment out delete for first run, uncomment if want to delete
-
+#
+# similar to temp9, but not sure if temp9 works properly.
+# keeping it simple, no cache, so easier to see what I am doing here...
 import os.path
 
 import miscQueries
@@ -12,15 +11,6 @@ import time
 import DbSchema
 import FileUtils
 
-def getOldFileInfo(db, filehash):
-	command = "select * from %s where filehash = '%s';" % (DbSchema.oldFilesTable, filehash)
-	result = db.ExecuteSqlQueryReturningSingleRow(command)
-	return result
-
-def getNewFileInfo(db, filehash):
-	command = "select * from %s where filehash = '%s';" % (DbSchema.newFilesTable, filehash)
-	result = db.ExecuteSqlQueryReturningSingleRow(command)
-	return result
 
 def getOriginalDirPathForDirHash(db, dirhash):
 	command = "select dirPath from %s where dirPathHash = '%s';" % (DbSchema.OriginalDirectoriesTable, dirhash)
@@ -29,8 +19,10 @@ def getOriginalDirPathForDirHash(db, dirhash):
 
 
 def getOriginalDirectoriesForFile(db, filehash):
-	command = "select * from %s where filehash = '%s';" % (DbSchema.OriginalDirectoryForFileTable, filehash)
+	command = "select dirPathHash from %s where filehash = '%s';" % (DbSchema.OriginalDirectoryForFileTable, filehash)
 	results = db.ExecuteSqlQueryReturningMultipleRows(command)
+	# change from list of tuples to list of dirhash values
+	results = [x[0] for x in results]
 	return results
 
 
@@ -70,50 +62,46 @@ def deleteDirEntries(db, dirhash, logger):
 	db.ExecuteNonQuerySql(command)
 
 
-# some problems here if same file with two names in a directory.
-# think this deletes the directory but not the file
-# check
-def setToRemoveStatusForFilesInDirUsingCache(db, dirhash, logger, origDirsForFileDict, origFilesForDirDict):
+def setToRemoveStatusForFilesInDir(db, dirhash, logger):
 
-	filelist = origFilesForDirDict.get(dirhash)
+	filelist = getFilesFromDir(db, dirhash)
 	if not filelist:
-		deleteDirEntries(db, dirhash, logger)
-		logger.log("no files found for this dir")
+		logger.log("\tno files in this dir")
 		return
 
 	for filehash, filename in filelist:
-		logger.log("filehash: %s, filename: %s" % (filehash, filename))
+		logger.log("\t%s: %s" % (filehash, filename))
 
-		dirs = origDirsForFileDict[filehash]
+		dirInfo = getOriginalDirectoriesForFile(db, filehash)
 
-		if len(dirs) > 1:
-			# what if all the dirs are the same value?
-			logger.log("multiple locations, not deleting file")
-			origDirsForFileDict[filehash].remove(dirhash)
+		logger.log("\t in dirs: %s" % str(dirInfo))
+
+		dirInfoSet = set(dirInfo)
+
+		if dirhash not in dirInfoSet:
+			logger.log("################### ERROR: this dirhash not in list of dirs")
+			logger.log(str(dirInfoSet))
 			continue
 
-		for newdirhash in dirs:
-			if dirhash != newdirhash:
-				logger.log("dirhash does not match, not deleting")
-				continue
+		if len(dirInfoSet) > 1:
+			logger.log("multiple locations, not deleting file")
+			continue
 
+		# this is the only directory the file exists in, safe to remove
 		logger.log("set toremove status for %s" % filehash)
 		miscQueries.setFileStatus(db, filehash, "toRemove")
-		origDirsForFileDict[filehash] = None
 
-	deleteDirEntries(db, dirhash, logger)
 
 
 def setToDeleteAllFilesFromDirAndSubdirs(db, logger, dirpathRoot):
 	logger.log("removing files from %s" % dirpathRoot)
 
-	origDirsForFileDict, origFilesForDirDict = miscQueries.cacheOrigDirsForFileTable(db)
-
 	dirlist = miscQueries.getDirectoriesContainingString(db, dirpathRoot)
 	logger.log("got %d dirs" % len(dirlist))
 	for dirhash, dirpath in dirlist:
-		logger.log("setting status for %s: %s" % (dirhash, dirpath))
-		setToRemoveStatusForFilesInDirUsingCache(db, dirhash, logger, origDirsForFileDict, origFilesForDirDict)
+		logger.log("removing directory %s: %s" % (dirhash, dirpath))
+		setToRemoveStatusForFilesInDir(db, dirhash, logger)
+		deleteDirEntries(db, dirhash, logger)
 
 
 
@@ -123,5 +111,6 @@ dbpath = "C:\\depotListing\\listingDb.sqlite"
 #dbpath = "/Users/v724660/db/listingDb.sqlite"
 db = CoreDb.CoreDb(dbpath)
 
-dirpath = "K:\\20150411_AnDinnerThinkFinal"
+dirpath  = "C:\\Users\\m_000\\Desktop\\m4\\VSProjects_thinkMostlyPlayTemp"
+
 setToDeleteAllFilesFromDirAndSubdirs(db, logger, dirpath)

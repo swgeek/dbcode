@@ -110,8 +110,8 @@ def copyDepot(sourceDepotRoot, destinationDepotRoot):
 		sourceDirPath = os.path.join(sourceDepotRoot, dirName)
 		destDirPath = os.path.join(destinationDepotRoot, dirName)
 
-		if not os.path.exists(destDirPath):
-			os.mkdir(destDirPath)
+		#if not os.path.exists(destDirPath):
+		#	os.mkdir(destDirPath)
 		shutil.copytree(sourceDirPath, destDirPath)
 
 
@@ -142,3 +142,13 @@ def getPathOfFileInDepot(depotRootPath, filehash):
 			return filepath
 		else:
 			return None
+
+
+def getListOfAllFilesInDir(rootDirPath):
+	allfiles = []
+
+	for dirpath, subDirList, subdirFiles in os.walk(rootDirPath):
+		for filename in subdirFiles:
+			allfiles.append((dirpath, filename))
+
+	return allfiles

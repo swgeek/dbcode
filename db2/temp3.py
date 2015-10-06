@@ -15,8 +15,7 @@ startTime = time.time()
 
 logger.log("start time: %s => time 0" % str(time.time()))
 
-searchString = "C:\\Users\\m_000\\Desktop\\m4\\VSProjects_thinkMostlyPlayTemp"
-searchString = "E:\\backupOnCavalry\\p4\\robertbThinkFromCarbonite"
+searchString = "AnDinner"
 dirInfo = miscQueries.getDirectoriesContainingString(db, searchString)
 
 dirList = [x[1] for x in dirInfo]
