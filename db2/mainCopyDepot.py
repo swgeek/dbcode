@@ -1,5 +1,9 @@
 import FileUtils
+import DbLogger
 
-sourceDepotRoot = "F:\\store2part2"
-destinationDepotRoot = "E:\\objectstore2"
-FileUtils.copyDepot(sourceDepotRoot, destinationDepotRoot)
+
+logger = DbLogger.dbLogger()
+
+sourceDepotRoot = "I:\\objectstoreTodo"
+destinationDepotRoot = "F:\\objectstore1backup"
+FileUtils.copyDepot(sourceDepotRoot, destinationDepotRoot, logger)

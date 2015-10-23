@@ -99,6 +99,11 @@ def checkIfFileListingEntryInDatabase(db, filehash, depotId):
 		return False
 
 
+def getFileInfo(db, filehash):
+	command = "select * from %s where filehash = '%s';" % (DbSchema.newFilesTable, filehash)
+	result = db.ExecuteSqlQueryReturningSingleRow(command)
+	return result
+
 # this could probably be made more efficient, maybe find a better command
 def checkIfDirhashInDatabase(db, dirPathHash):
 	command = "select dirPathHash from %s where dirPathHash = \"%s\";" % (DbSchema.OriginalDirectoriesTable, dirPathHash)
@@ -185,11 +190,15 @@ def numberOfRows(db, tableName):
 
 def setFileStatus(db, fileHash, newStatus):
 	command = "update %s set status = \"%s\" where filehash = \"%s\";" % (DbSchema.newFilesTable, newStatus, fileHash)
+	if newStatus is None:
+		command =  "update %s set status = null where filehash = \"%s\";" % (DbSchema.newFilesTable, fileHash)
 	db.ExecuteNonQuerySql(command)
 
 
 def getFilesWithStatus(db, status, count = None):
 	command = "select * from %s where status is '%s'" % (DbSchema.newFilesTable, status)
+	if status is None:
+		command = "select * from %s where status is null" % DbSchema.newFilesTable
 	if count:
 		command += " limit %d" % count
 	command += ";"
@@ -199,9 +208,17 @@ def getFilesWithStatus(db, status, count = None):
 
 def getCountOfFilesWithStatus(db, status):
 	command = "select count(*) from %s where status is '%s';" % (DbSchema.newFilesTable, status)
+	if status is None:
+		command =  "select count(*) from %s where status is null;" % DbSchema.newFilesTable
 	count = db.ExecuteSqlQueryReturningSingleInt(command)
 	return count
 
+
+def getStatusTypes(db):
+	command = "select distinct(status) from %s;" % DbSchema.newFilesTable
+	results = db.ExecuteSqlQueryReturningMultipleRows(command)
+	statusList = [x[0] for x in results]
+	return statusList
 
 
 def getLargestFile(db):

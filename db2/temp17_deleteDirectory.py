@@ -111,6 +111,6 @@ dbpath = "C:\\depotListing\\listingDb.sqlite"
 #dbpath = "/Users/v724660/db/listingDb.sqlite"
 db = CoreDb.CoreDb(dbpath)
 
-dirpath  = "C:\\Users\\m_000\\Desktop\\m4\\VSProjects_thinkMostlyPlayTemp"
+dirpath  = "A:\\fromAir_20151012\\2015\\2015-05-02"	
 
 setToDeleteAllFilesFromDirAndSubdirs(db, logger, dirpath)

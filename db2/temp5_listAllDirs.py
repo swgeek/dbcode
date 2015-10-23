@@ -1,4 +1,4 @@
-
+# lists all dirs for now
 #
 # trying for some stuff from mainDirInfo.
 # this one will only get largest directory, not duplicates.
@@ -109,7 +109,7 @@ newlist = [x[1] for x in allDirsList]
 newlist.sort()
 
 for dirInfo in newlist:
-	t = "\"" + dirInfo.replace("\\", "\\\\") + "\","
+	t = "\"" + dirInfo.replace("\\", "\\\\") + "\""
 
 	logger.log(t)
 

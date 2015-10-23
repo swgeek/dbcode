@@ -8,7 +8,7 @@ import FileUtils
 
 def deleteFileFromDisk(filehash, logger):
 	depotRoot1 = "I:\\objectstore1"
-	depotRoot2 = "F:\\objectstore2"
+	depotRoot2 = "E:\\objectstore2"
 	deleted = FileUtils.DeleteFileFromDepot(depotRoot1, filehash)
 	if deleted:
 		logger.log("deleted %s from %s" % (filehash, depotRoot1))

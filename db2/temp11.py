@@ -16,9 +16,18 @@ def getCounts(db, logger):
 	logger.log("newFilesTable has %d entries" % count)
 
 
+def getStatusCounts(db, logger):
+	statusList = miscQueries.getStatusTypes(db)
+	for status in statusList:
+		if status == "None":
+			status = None
+		count = miscQueries.getCountOfFilesWithStatus(db, status)
+		logger.log("%s: %d" % (status, count))
+
+
 def getWindowsSpace(logger):
 	drive1 = "I:"
-	drive2 = "F:"
+	drive2 = "E:"
 
 	spaceForDepot1 = FileUtils.windowsSpecificGetFreeSpace(drive1)
 	logger.log("drive for %s has: %d free" % (drive1, spaceForDepot1) )
@@ -33,4 +42,5 @@ dbpath = "C:\\depotListing\\listingDb.sqlite"
 db = CoreDb.CoreDb(dbpath)
 
 getCounts(db, logger)
+getStatusCounts(db, logger)
 getWindowsSpace(logger)

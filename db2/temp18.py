@@ -75,7 +75,12 @@ dbpath = "C:\\depotListing\\listingDb.sqlite"
 #dbpath = "/Users/v724660/db/listingDb.sqlite"
 db = CoreDb.CoreDb(dbpath)
 
-rootDirPath  = "E:\\20150411_AnDinnerThinkFinal"
+
+
+#### TODO:
+# 1) specify directory in database, see if any files in that tree are missing on disk
+# 2) (maybe) find highest common directories in list of dirs we find, see if files in those trees are missing on disk
+rootDirPath  = "E:\\extract\\A_\\fromAir_20151012\\2015\\2015-05-02"
 
 excludeList = ["custom.css", "logo.png"]
 filehashAndPathList = getFilehashListFromDirPath(rootDirPath, logger)
@@ -100,4 +105,10 @@ else:
 	logger.log("no new files in db")
 
 
+diff2 = filehashSet - allFilesInDbSet
+if diff2:
+	logger.log("these files are in dir but not in db")
+	logger.log(str(diff2))
+else:
+	logger.log("no new files in dir")
 

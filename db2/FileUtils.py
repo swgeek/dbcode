@@ -9,6 +9,28 @@ import miscQueries
 import ctypes
 
 
+
+def getDepotList():
+	# hardcoding depot root dirs for now, but should get these from database
+	depotList = ["I:\\objectstore1", "E:\\objectstore2"]
+	for depotPath in depotList:
+		if not os.path.isdir(depotPath):
+			print "%s does not exist" % depotPath
+			exit(1)
+	return depotList
+
+
+
+def getFilepathOnDisk(filehash):
+	subdir = filehash[0:2]
+	depotList = getDepotList()
+	for depotPath in depotList:
+		filepath = os.path.join(depotPath, subdir, filehash)
+		if os.path.isfile(filepath):
+			return filepath
+	return None
+
+
 def CopyFileFromDepot(db, depotRootPath, destinationDirPath, filehash, newFilename):
 
 		subdir = filehash[0:2]
@@ -97,7 +119,7 @@ def getFreeSpaceOnDepotDrive(depotRoot):
 # this will only work for depots, as make assumption that only directories at top level
 # and only files at bottom level. May generalize, may not.
 # assumes enough space available
-def copyDepot(sourceDepotRoot, destinationDepotRoot):
+def copyDepot(sourceDepotRoot, destinationDepotRoot, logger):
 
 	if not os.path.exists(sourceDepotRoot):
 		raise Exception("%s does not exist" % sourceDepotRoot)
@@ -106,7 +128,10 @@ def copyDepot(sourceDepotRoot, destinationDepotRoot):
 		raise Exception("%s does not exist" % destinationDepotRoot)
 
 	for dirName in os.listdir(sourceDepotRoot):
-		print "copying %s" % dirName
+		if logger:
+			logger.log("copying %s" % dirName)
+		else:
+			print "copying %s" % dirName
 		sourceDirPath = os.path.join(sourceDepotRoot, dirName)
 		destDirPath = os.path.join(destinationDepotRoot, dirName)
 

@@ -13,7 +13,7 @@ dbpath = "C:\\depotListing\\listingDb.sqlite"
 #dbpath = "/Users/v724660/db/listingDb.sqlite"
 db = CoreDb.CoreDb(dbpath)
 
-rootDirPath  = "E:\\20150411_AnDinnerThinkFinal"
+rootDirPath  = "E:\\20141115_hss"
 
 filelist = FileUtils.getListOfAllFilesInDir(rootDirPath)
 

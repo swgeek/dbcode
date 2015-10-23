@@ -15,7 +15,7 @@ import FileUtils
 
 def extractAllFilesFromDirAndSubdirs(db, logger, extractDir, dirpathRoot):
 	depotRoot1 = "I:\\objectstore1"
-	depotRoot2 = "F:\\objectstore2"
+	depotRoot2 = "E:\\objectstore2"
 	logger.log("extracting files from %s to %s" % (dirpathRoot, extractDir))
 	dirfilelist = miscQueries.getAllPathsAndFilenamesFromDirAndSubdirs(db, dirpathRoot)
 	logger.log("got %d dirs" % len(dirfilelist.keys()))
@@ -44,8 +44,14 @@ dbpath = "C:\\depotListing\\listingDb.sqlite"
 #dbpath = "/Users/v724660/db/listingDb.sqlite"
 db = CoreDb.CoreDb(dbpath)
 
-dirpath  = "K:\\20150411_AnDinnerThinkFinal"
+dirpath  = ""	
+dirpath  = ""	
+dirpath  = ""	
+dirpath  = ""	
+dirpath  = ""	
+dirpath  = "A:\\fromAir_20151012\\2015\\2015-05-14"	
 
-extractDir = "F:\\extract"
+
+extractDir = "E:\\extract"
 extractAllFilesFromDirAndSubdirs(db, logger,extractDir,dirpath )
 
